@@ -751,7 +751,7 @@ footer p {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     z-index: 999; /* Below the bottom sheet */
     opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Fade animation */
+    transition: opacity 0.5s ease-in-out; /* Match the new duration */
     pointer-events: none; /* Allow scrolling through the overlay */
 }
 
@@ -770,7 +770,7 @@ footer p {
     padding: 25px; /* Increased padding for iOS-like spacing */
     box-sizing: border-box;
     transform: translateY(100%); /* Start off-screen */
-    transition: transform 0.3s ease-in-out; /* Smooth slide-up animation */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother animation with custom easing */
 }
 
 .app-bottom-sheet.slide-up {
