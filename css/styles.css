@@ -881,13 +881,21 @@ footer p {
 
     /* Adjust hero section margin-top on mobile to close the gap */
     .hero {
-        margin-top: 157px; /* Adjusted to match approximate header height on mobile */
+        margin-top: 130px; /* Reduced to close the gap */
+        height: 80vh; /* Increased to ensure content fits */
+    }
+
+    .hero-content {
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for true centering */
+        padding: 20px; /* Add padding to prevent cropping */
     }
 
     .hero h1 {
         font-size: 36px;
         white-space: normal;
         line-height: 1.1;
+        max-width: 90%; /* Prevent text from being too wide */
     }
 
     .hero .btn {
@@ -900,6 +908,7 @@ footer p {
         font-size: 20px;
         white-space: normal;
         line-height: 1.1;
+        max-width: 90%; /* Prevent text from being too wide */
     }
 
     .intro h2 {
