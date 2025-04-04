@@ -113,26 +113,40 @@
                 const overlay = document.getElementById('app-bottom-sheet-overlay');
                 const dismissLink = document.getElementById('dismiss-bottom-sheet');
                 const grabHandle = document.querySelector('.grab-handle');
+                const downloadBtn = document.querySelector('.app-download-btn');
 
-                if (!bottomSheet || !overlay || !dismissLink || !grabHandle) {
+                if (!bottomSheet || !overlay || !dismissLink || !grabHandle || !downloadBtn) {
                     console.error('Bottom sheet elements not found:', {
                         bottomSheet: !!bottomSheet,
                         overlay: !!overlay,
                         dismissLink: !!dismissLink,
-                        grabHandle: !!grabHandle
+                        grabHandle: !!grabHandle,
+                        downloadBtn: !!downloadBtn
                     });
                     return;
                 }
 
-                // Always show the bottom sheet and overlay on page load
-                console.log('Showing bottom sheet and overlay');
-                bottomSheet.style.display = 'block';
-                overlay.style.display = 'block';
-                console.log('Adding slide-up class');
-                bottomSheet.classList.add('slide-up');
+                // Detect if the device is iOS or iPadOS
+                const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+                console.log('Is iOS/iPadOS device:', isIOS);
 
-                // Lock scrolling when the bottom sheet is visible
-                document.body.classList.add('no-scroll');
+                // Only show the bottom sheet on iOS/iPadOS devices
+                if (isIOS) {
+                    console.log('Showing bottom sheet and overlay');
+                    bottomSheet.style.display = 'block';
+                    overlay.style.display = 'block';
+                    console.log('Adding slide-up class');
+                    bottomSheet.classList.add('slide-up');
+
+                    // Lock scrolling when the bottom sheet is visible
+                    document.body.classList.add('no-scroll');
+                } else {
+                    console.log('Not an iOS/iPadOS device, hiding bottom sheet');
+                    bottomSheet.style.display = 'none';
+                    overlay.style.display = 'none';
+                    document.body.classList.remove('no-scroll');
+                    return; // Exit the script if not iOS/iPadOS
+                }
 
                 // Dismiss the banner when "Not now" is clicked
                 dismissLink.addEventListener('click', function (e) {
@@ -154,12 +168,17 @@
                     }, 300); // Match the animation duration
                 }
 
-                // Touch events for mobile
+                // Touch events for mobile (attached to the entire bottom sheet)
                 let touchStartY = 0;
                 let touchCurrentY = 0;
                 let isDragging = false;
 
-                grabHandle.addEventListener('touchstart', function (e) {
+                bottomSheet.addEventListener('touchstart', function (e) {
+                    // Prevent dragging if the touch starts on the button or link
+                    if (e.target === downloadBtn || e.target === dismissLink) {
+                        console.log('Touch started on button or link, not dragging');
+                        return;
+                    }
                     e.preventDefault();
                     isDragging = true;
                     touchStartY = e.touches[0].clientY;
@@ -167,7 +186,7 @@
                     bottomSheet.style.transition = 'none'; // Disable transition during drag
                 });
 
-                grabHandle.addEventListener('touchmove', function (e) {
+                bottomSheet.addEventListener('touchmove', function (e) {
                     if (!isDragging) return;
                     e.preventDefault(); // Prevent page scrolling during drag
                     touchCurrentY = e.touches[0].clientY;
@@ -180,7 +199,7 @@
                     overlay.style.opacity = Math.max(0, Math.min(1, opacity));
                 });
 
-                grabHandle.addEventListener('touchend', function () {
+                bottomSheet.addEventListener('touchend', function () {
                     if (!isDragging) return;
                     isDragging = false;
                     bottomSheet.setAttribute('data-dragging', 'false');
@@ -195,7 +214,7 @@
                     }
                 });
 
-                // Mouse events for desktop
+                // Mouse events for desktop (though not used on iOS/iPadOS, kept for completeness)
                 let mouseStartY = 0;
                 let mouseCurrentY = 0;
 
