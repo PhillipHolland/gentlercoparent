@@ -14,21 +14,22 @@ body {
 header {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding: 20px 40px 5px; /* Reduced bottom padding from 20px to 5px */
+    padding: 15px 40px 32px; /* Bottom padding set to 32px to match social icons height */
     background-color: #BADFE7;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    min-height: 200px;
+    min-height: 180px;
 }
 
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .logo a {
@@ -37,7 +38,7 @@ header {
 }
 
 .logo img {
-    width: 480px; /* Increased by 20% from 400px */
+    width: 480px;
     height: auto;
     max-width: 100%;
     display: block;
@@ -48,7 +49,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 10px 0 0; /* Reduced bottom margin from 10px to 0 */
+    margin: 0;
 }
 
 .social-icons a {
@@ -711,8 +712,12 @@ footer p {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .header {
-        padding: 15px 20px 2px; /* Reduced bottom padding from 15px to 2px */
-        min-height: 160px;
+        padding: 10px 20px 28px; /* Bottom padding set to 28px to match social icons height */
+        min-height: 140px;
+    }
+
+    .logo {
+        padding: 2px 0;
     }
 
     .logo img {
@@ -720,7 +725,12 @@ footer p {
     }
 
     .social-icons {
-        margin: 5px 0 0; /* Reduced top margin from 10px to 5px, kept bottom margin at 0 */
+        margin: 0;
+    }
+
+    .social-icons a {
+        width: 28px;
+        height: 28px;
     }
 
     .hero h1 {
@@ -779,11 +789,6 @@ footer p {
 
     .footer-links a {
         font-size: 14px;
-    }
-
-    .social-icons a {
-        width: 28px;
-        height: 28px;
     }
 
     footer p {
