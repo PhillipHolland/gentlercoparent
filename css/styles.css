@@ -223,20 +223,20 @@ header {
     width: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden; /* Prevent overflow issues */
+    overflow: hidden;
 }
 
 .banner-container {
     width: 100%;
-    max-width: 1200px; /* Adjust to the image's natural width */
-    margin: 0 auto; /* Center the container */
-    display: block; /* Ensure no inline spacing issues */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
 }
 
 .banner-container img {
     width: 100%;
-    height: auto; /* Maintain natural proportions */
-    display: block; /* Remove any inline spacing */
+    height: auto;
+    display: block;
 }
 
 /* CTA Section */
