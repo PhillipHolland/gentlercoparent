@@ -19,6 +19,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     overscroll-behavior-x: none;
+    overscroll-behavior-y: contain; /* Prevent iOS overscroll/refresh */
 }
 
 /* Header */
@@ -789,6 +790,7 @@ footer p {
     border-radius: 2px;
     margin: 0 auto 10px;
     cursor: grab; /* Indicate draggability on desktop */
+    touch-action: none; /* Prevent default touch behaviors like scrolling */
 }
 
 .app-bottom-sheet[data-dragging="true"] .grab-handle {
@@ -819,8 +821,8 @@ footer p {
 }
 
 .app-bottom-sheet .app-download-btn {
-    background-color: #a3c7d6;
-    color: #388083;
+    background-color: #000000; /* Black background */
+    color: #F6F6F2; /* Light-colored lettering */
     padding: 15px 35px; /* Slightly larger for iOS touch targets */
     border-radius: 30px;
     text-decoration: none;
@@ -834,8 +836,8 @@ footer p {
 }
 
 .app-bottom-sheet .app-download-btn:hover {
-    background-color: #000000;
-    color: #F6F6F2;
+    background-color: #a3c7d6; /* Revert to original background on hover */
+    color: #388083; /* Revert to original text color on hover */
 }
 
 .app-bottom-sheet .dismiss-link {

@@ -165,6 +165,7 @@
 
                 grabHandle.addEventListener('touchmove', function (e) {
                     if (!isDragging) return;
+                    e.preventDefault(); // Prevent page scrolling during drag
                     touchCurrentY = e.touches[0].clientY;
                     let deltaY = touchCurrentY - touchStartY;
                     if (deltaY < 0) deltaY = 0; // Prevent dragging up past original position
@@ -182,7 +183,7 @@
                     bottomSheet.style.transition = 'transform 0.2s ease-in-out'; // Re-enable transition
                     const sheetHeight = bottomSheet.offsetHeight;
                     const deltaY = touchCurrentY - touchStartY;
-                    if (deltaY > sheetHeight * 0.5) { // Dismiss if dragged down more than 50%
+                    if (deltaY > sheetHeight * 0.3) { // Lowered threshold to 30% for easier dismissal
                         dismissBottomSheet();
                     } else { // Snap back to original position
                         bottomSheet.style.transform = 'translateY(0)';
@@ -220,7 +221,7 @@
                     bottomSheet.style.transition = 'transform 0.2s ease-in-out';
                     const sheetHeight = bottomSheet.offsetHeight;
                     const deltaY = mouseCurrentY - mouseStartY;
-                    if (deltaY > sheetHeight * 0.5) {
+                    if (deltaY > sheetHeight * 0.3) {
                         dismissBottomSheet();
                     } else {
                         bottomSheet.style.transform = 'translateY(0)';
