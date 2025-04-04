@@ -21,7 +21,6 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    height: auto;
     min-height: 140px;
 }
 
@@ -38,9 +37,10 @@ header {
 }
 
 .logo img {
-    height: 82.5px;
-    width: auto;
+    width: 200px;
+    height: auto;
     max-width: 100%;
+    display: block;
 }
 
 /* Social Icons (Header, Footer, and Contact Page) */
@@ -230,7 +230,7 @@ header {
     width: 100%;
     height: auto;
     display: block;
-    max-width: 1200px; /* Adjust to the image's natural width */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -420,9 +420,7 @@ footer p {
 
 /* About Discover Section */
 .about-discover {
-    background-color: #F6F<%@
-
-F6F2;
+    background-color: #F6F6F2;
     padding: 60px 40px;
     text-align: center;
 }
@@ -712,6 +710,15 @@ F6F2;
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        min-height: 120px;
+    }
+
+    .logo img {
+        width: 150px; /* Adjust for smaller screens */
+    }
+
     .hero h1 {
         font-size: 48px;
     }
@@ -742,6 +749,10 @@ F6F2;
     }
 
     .video-section video {
+        max-width: 100%;
+    }
+
+    .banner-image {
         max-width: 100%;
     }
 
