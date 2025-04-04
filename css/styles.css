@@ -96,7 +96,7 @@ header {
     height: 70vh;
     position: relative;
     padding: 0 20px;
-    margin-top: 143px;
+    margin-top: 143px; /* Default for desktop */
     overflow: visible;
     width: 100%;
     max-width: 100%;
@@ -877,6 +877,11 @@ footer p {
         to {
             transform: translateY(0);
         }
+    }
+
+    /* Adjust hero section margin-top on mobile to close the gap */
+    .hero {
+        margin-top: 157px; /* Adjusted to match approximate header height on mobile */
     }
 
     .hero h1 {
