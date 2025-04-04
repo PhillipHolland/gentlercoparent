@@ -7,8 +7,8 @@
 html {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling at the root */
-    overscroll-behavior-x: none; /* Prevent overscroll swiping */
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
 }
 
 body {
@@ -35,7 +35,7 @@ header {
     top: 0;
     z-index: 1000;
     min-height: 0;
-    overflow-x: hidden; /* Ensure no overflow in header */
+    overflow-x: hidden;
 }
 
 .logo {
@@ -72,7 +72,7 @@ header {
     width: 32px;
     height: 32px;
     transition: opacity 0.3s ease;
-    min-width: 0; /* Allow shrinking in flexbox */
+    min-width: 0;
 }
 
 .social-icons img {
@@ -163,7 +163,7 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease;
     border: 2px solid #BADFE7;
     z-index: 2;
-    max-width: 90%; /* Ensure button fits within viewport */
+    max-width: 90%;
 }
 
 /* Default Button Style for Light Backgrounds */
@@ -733,39 +733,136 @@ footer p {
     }
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .header {
-        padding: 10px 20px 14px;
-        min-height: 0;
+/* App Bottom Sheet Overlay */
+.app-bottom-sheet-overlay {
+    display: none; /* Hidden by default, shown via JavaScript */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 999; /* Below the bottom sheet */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Fade animation */
+    pointer-events: none; /* Allow scrolling through the overlay */
+}
+
+/* App Bottom Sheet */
+.app-bottom-sheet {
+    display: none; /* Hidden by default, shown via JavaScript */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #BADFE7; /* Site's blue color */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 1000;
+    padding: 25px; /* Increased padding for iOS-like spacing */
+    box-sizing: border-box;
+    transform: translateY(100%); /* Start off-screen */
+    transition: transform 0.3s ease-in-out; /* Smooth slide-up animation */
+}
+
+.app-bottom-sheet.slide-up {
+    transform: translateY(0); /* Slide up to final position */
+}
+
+.app-bottom-sheet.slide-down {
+    transform: translateY(100%); /* Slide down to dismiss */
+}
+
+.app-bottom-sheet[data-dragging="true"] {
+    transition: none; /* Disable transition during drag */
+}
+
+.app-bottom-sheet-content {
+    text-align: center;
+}
+
+.grab-handle {
+    width: 40px;
+    height: 4px;
+    background-color: #999; /* Darker gray for contrast on blue */
+    border-radius: 2px;
+    margin: 0 auto 10px;
+    cursor: grab; /* Indicate draggability on desktop */
+}
+
+.app-bottom-sheet[data-dragging="true"] .grab-handle {
+    cursor: grabbing; /* Change cursor during drag */
+}
+
+.app-bottom-sheet-logo {
+    max-width: 80%; /* Fit within the bottom sheet */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.app-bottom-sheet h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #2a5b6d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.app-bottom-sheet p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.app-bottom-sheet .app-download-btn {
+    background-color: #a3c7d6;
+    color: #388083;
+    padding: 15px 35px; /* Slightly larger for iOS touch targets */
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px; /* Larger font size for iOS-like design */
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid #BADFE7;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.app-bottom-sheet .app-download-btn:hover {
+    background-color: #000000;
+    color: #F6F6F2;
+}
+
+.app-bottom-sheet .dismiss-link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+    display: block;
+}
+
+.app-bottom-sheet .dismiss-link:hover {
+    text-decoration: underline;
+}
+
+/* Show the bottom sheet and overlay on mobile in portrait orientation */
+@media (max-width: 768px) and (orientation: portrait) {
+    .app-bottom-sheet {
+        display: block; /* Shown by default on mobile in portrait, controlled by JavaScript */
     }
 
-    .logo {
-        padding: 0;
-    }
-
-    .logo img {
-        width: 360px;
-        max-width: 100%;
-    }
-
-    .social-icons {
-        margin: 0;
-        flex-wrap: wrap;
-    }
-
-    .social-icons a {
-        width: 28px;
-        height: 28px;
-        min-width: 0;
-    }
-
-    .hero {
-        margin-top: 112px;
+    .app-bottom-sheet-overlay {
+        display: block;
+        opacity: 1; /* Fade in when shown */
     }
 
     .hero h1 {
-        font-size: 36px; /* Reduced font size to prevent overflow */
+        font-size: 36px;
         white-space: normal;
         line-height: 1.1;
     }
@@ -773,11 +870,11 @@ footer p {
     .hero .btn {
         padding: 15px 30px;
         font-size: 18px;
-        max-width: 80%; /* Further constrained to fit viewport */
+        max-width: 80%;
     }
 
     .hero .subheading {
-        font-size: 20px; /* Reduced font size to prevent overflow */
+        font-size: 20px;
         white-space: normal;
         line-height: 1.1;
     }
