@@ -854,11 +854,21 @@ footer p {
 @media (max-width: 768px) and (orientation: portrait) {
     .app-bottom-sheet {
         display: block; /* Shown by default on mobile in portrait, controlled by JavaScript */
+        animation: slideUp 0.3s ease-in-out forwards; /* Fallback CSS animation */
     }
 
     .app-bottom-sheet-overlay {
         display: block;
         opacity: 1; /* Fade in when shown */
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
     }
 
     .hero h1 {

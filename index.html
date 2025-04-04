@@ -124,13 +124,12 @@
                     return;
                 }
 
-                // Check if the banner has been dismissed
-                if (!localStorage.getItem('appBottomSheetDismissed')) {
-                    console.log('Showing bottom sheet and overlay');
-                    bottomSheet.style.display = 'block';
-                    overlay.style.display = 'block';
-                    bottomSheet.classList.add('slide-up');
-                }
+                // Always show the bottom sheet and overlay on page load
+                console.log('Showing bottom sheet and overlay');
+                bottomSheet.style.display = 'block';
+                overlay.style.display = 'block';
+                console.log('Adding slide-up class');
+                bottomSheet.classList.add('slide-up');
 
                 // Dismiss the banner when "Not now" is clicked
                 dismissLink.addEventListener('click', function (e) {
@@ -147,7 +146,7 @@
                     setTimeout(() => {
                         bottomSheet.style.display = 'none';
                         overlay.style.display = 'none';
-                        localStorage.setItem('appBottomSheetDismissed', 'true');
+                        // Removed localStorage.setItem to allow the sheet to reappear on every page load
                     }, 300); // Match the animation duration
                 }
 
@@ -191,7 +190,11 @@
                     }
                 });
 
-  (e) {
+                // Mouse events for desktop
+                let mouseStartY = 0;
+                let mouseCurrentY = 0;
+
+                grabHandle.addEventListener('mousedown', function (e) {
                     e.preventDefault();
                     isDragging = true;
                     mouseStartY = e.clientY;
