@@ -15,7 +15,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 40px 5px; /* Reduced bottom padding from 20px to 5px */
     background-color: #BADFE7;
     position: fixed;
     width: 100%;
@@ -48,7 +48,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 10px 0;
+    margin: 10px 0 0; /* Reduced bottom margin from 10px to 0 */
 }
 
 .social-icons a {
@@ -711,15 +711,18 @@ footer p {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .header {
-        padding: 15px 20px;
+        padding: 15px 20px 2px; /* Reduced bottom padding from 15px to 2px */
         min-height: 160px;
     }
 
     .logo img {
-        width: 360px; /* Increased by 20% from 300px */
+        width: 360px;
     }
 
-    /* Existing media query styles */
+    .social-icons {
+        margin: 5px 0 0; /* Reduced top margin from 10px to 5px, kept bottom margin at 0 */
+    }
+
     .hero h1 {
         font-size: 48px;
     }
