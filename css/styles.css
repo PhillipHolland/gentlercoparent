@@ -4,14 +4,21 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling at the root */
+    overscroll-behavior-x: none; /* Prevent overscroll swiping */
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     color: #333;
     background-color: #F6F6F2;
-    width: 100%; /* Ensure body fits viewport width */
-    max-width: 100%; /* Prevent body from exceeding viewport */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overscroll-behavior-x: none; /* Prevent overscroll swiping */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
 }
 
 /* Header */
@@ -24,10 +31,11 @@ header {
     background-color: #BADFE7;
     position: fixed;
     width: 100%;
-    max-width: 100%; /* Ensure header fits viewport */
+    max-width: 100%;
     top: 0;
     z-index: 1000;
     min-height: 0;
+    overflow-x: hidden; /* Ensure no overflow in header */
 }
 
 .logo {
@@ -45,7 +53,7 @@ header {
 .logo img {
     width: 480px;
     height: auto;
-    max-width: 100%; /* Ensure logo scales down to fit viewport */
+    max-width: 100%;
     display: block;
 }
 
@@ -64,16 +72,13 @@ header {
     width: 32px;
     height: 32px;
     transition: opacity 0.3s ease;
+    min-width: 0; /* Allow shrinking in flexbox */
 }
 
 .social-icons img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-.social-icons a:hover {
-    opacity: 0.7;
 }
 
 /* Hero Section (Index Page) */
@@ -86,8 +91,9 @@ header {
     padding: 0 20px;
     margin-top: 143px;
     overflow: visible;
-    width: 100%; /* Ensure hero fits viewport width */
-    max-width: 100%; /* Prevent hero from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .hero::before {
@@ -138,7 +144,7 @@ header {
     margin-bottom: 20px;
     text-transform: uppercase;
     width: 100%;
-    max-width: 100%; /* Ensure subheading fits viewport */
+    max-width: 100%;
 }
 
 .hero .btn {
@@ -157,6 +163,7 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease;
     border: 2px solid #BADFE7;
     z-index: 2;
+    max-width: 90%; /* Ensure button fits within viewport */
 }
 
 /* Default Button Style for Light Backgrounds */
@@ -169,8 +176,9 @@ header {
     background-color: #BADFE7;
     padding: 60px 40px;
     text-align: center;
-    width: 100%; /* Ensure intro fits viewport width */
-    max-width: 100%; /* Prevent intro from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .intro h2 {
@@ -196,8 +204,9 @@ header {
     color: #fff;
     padding: 60px 40px;
     text-align: center;
-    width: 100%; /* Ensure video section fits viewport width */
-    max-width: 100%; /* Prevent video section from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .video-section h2 {
@@ -229,7 +238,7 @@ header {
 /* Banner Section */
 .banner-section {
     width: 100%;
-    max-width: 100%; /* Ensure banner section fits viewport */
+    max-width: 100%;
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -249,8 +258,9 @@ header {
     color: #fff;
     padding: 60px 40px;
     text-align: center;
-    width: 100%; /* Ensure CTA fits viewport width */
-    max-width: 100%; /* Prevent CTA from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .cta h2 {
@@ -287,8 +297,9 @@ header {
     background-color: #C2EDCE;
     padding: 60px 40px;
     text-align: center;
-    width: 100%; /* Ensure final message fits viewport width */
-    max-width: 100%; /* Prevent final message from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .final-message p {
@@ -310,8 +321,9 @@ footer {
     background-color: #BADFE7;
     padding: 40px 40px;
     text-align: center;
-    width: 100%; /* Ensure footer fits viewport width */
-    max-width: 100%; /* Prevent footer from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .footer-links {
@@ -344,8 +356,9 @@ footer p {
     text-align: center;
     position: relative;
     margin-top: 140px;
-    width: 100%; /* Ensure about-hero fits viewport width */
-    max-width: 100%; /* Prevent about-hero from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .about-hero::before {
@@ -382,7 +395,8 @@ footer p {
     text-align: left;
     max-width: 800px;
     margin: 0 auto;
-    width: 100%; /* Ensure about-journey fits viewport width */
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .about-journey h3 {
@@ -418,8 +432,9 @@ footer p {
     color: #fff;
     padding: 60px 40px;
     text-align: center;
-    width: 100%; /* Ensure about-cta fits viewport width */
-    max-width: 100%; /* Prevent about-cta from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .about-cta h3 {
@@ -434,8 +449,9 @@ footer p {
     background-color: #F6F6F2;
     padding: 60px 40px;
     text-align: center;
-    width: 100%; /* Ensure about-discover fits viewport width */
-    max-width: 100%; /* Prevent about-discover from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .about-discover h3 {
@@ -479,8 +495,9 @@ footer p {
     text-align: center;
     position: relative;
     margin-top: 140px;
-    width: 100%; /* Ensure contact-hero fits viewport width */
-    max-width: 100%; /* Prevent contact-hero from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-hero::before {
@@ -515,8 +532,9 @@ footer p {
     background-color: #F6F6F2;
     padding: 60px 40px;
     text-align: center;
-    width: 100%; /* Ensure contact-main fits viewport width */
-    max-width: 100%; /* Prevent contact-main from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-main .content {
@@ -540,7 +558,8 @@ footer p {
     max-width: 600px;
     margin: 0 auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure contact-form fits viewport width */
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-form form {
@@ -621,8 +640,9 @@ footer p {
     padding: 60px 40px;
     text-align: left;
     margin-top: 140px;
-    width: 100%; /* Ensure privacy-policy fits viewport width */
-    max-width: 100%; /* Prevent privacy-policy from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .privacy-policy .content {
@@ -664,8 +684,9 @@ footer p {
     padding: 60px 40px;
     text-align: left;
     margin-top: 140px;
-    width: 100%; /* Ensure usage-agreement fits viewport width */
-    max-width: 100%; /* Prevent usage-agreement from exceeding viewport */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .usage-agreement .content {
@@ -725,17 +746,18 @@ footer p {
 
     .logo img {
         width: 360px;
-        max-width: 100%; /* Ensure logo scales down to fit viewport */
+        max-width: 100%;
     }
 
     .social-icons {
         margin: 0;
-        flex-wrap: wrap; /* Allow social icons to wrap if needed */
+        flex-wrap: wrap;
     }
 
     .social-icons a {
         width: 28px;
         height: 28px;
+        min-width: 0;
     }
 
     .hero {
@@ -743,23 +765,26 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 48px;
-        white-space: normal; /* Allow text to wrap */
+        font-size: 36px; /* Reduced font size to prevent overflow */
+        white-space: normal;
+        line-height: 1.1;
     }
 
     .hero .btn {
         padding: 15px 30px;
         font-size: 18px;
+        max-width: 80%; /* Further constrained to fit viewport */
     }
 
     .hero .subheading {
-        font-size: 24px;
-        white-space: normal; /* Allow text to wrap */
+        font-size: 20px; /* Reduced font size to prevent overflow */
+        white-space: normal;
+        line-height: 1.1;
     }
 
     .intro h2 {
         font-size: 28px;
-        white-space: normal; /* Allow text to wrap */
+        white-space: normal;
     }
 
     .intro p {
@@ -768,7 +793,7 @@ footer p {
 
     .video-section h2 {
         font-size: 28px;
-        white-space: normal; /* Allow text to wrap */
+        white-space: normal;
     }
 
     .video-section p {
@@ -785,7 +810,7 @@ footer p {
 
     .cta h2 {
         font-size: 28px;
-        white-space: normal; /* Allow text to wrap */
+        white-space: normal;
     }
 
     .cta .subheading {
@@ -799,7 +824,7 @@ footer p {
 
     .final-message p {
         font-size: 16px;
-        white-space: normal; /* Allow text to wrap */
+        white-space: normal;
     }
 
     .footer-links a {
@@ -817,7 +842,7 @@ footer p {
 
     .about-hero h2 {
         font-size: 36px;
-        white-space: normal; /* Allow text to wrap */
+        white-space: normal;
     }
 
     .about-hero .hero-text {
@@ -860,7 +885,7 @@ footer p {
 
     .contact-hero h2 {
         font-size: 36px;
-        white-space: normal; /* Allow text to wrap */
+        white-space: normal;
     }
 
     .contact-main p {
