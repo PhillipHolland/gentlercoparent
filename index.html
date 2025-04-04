@@ -131,6 +131,9 @@
                 console.log('Adding slide-up class');
                 bottomSheet.classList.add('slide-up');
 
+                // Lock scrolling when the bottom sheet is visible
+                document.body.classList.add('no-scroll');
+
                 // Dismiss the banner when "Not now" is clicked
                 dismissLink.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -146,7 +149,8 @@
                     setTimeout(() => {
                         bottomSheet.style.display = 'none';
                         overlay.style.display = 'none';
-                        // Removed localStorage.setItem to allow the sheet to reappear on every page load
+                        // Unlock scrolling when the bottom sheet is dismissed
+                        document.body.classList.remove('no-scroll');
                     }, 300); // Match the animation duration
                 }
 

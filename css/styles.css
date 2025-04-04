@@ -22,6 +22,12 @@ body {
     overscroll-behavior-y: contain; /* Prevent iOS overscroll/refresh */
 }
 
+body.no-scroll {
+    position: fixed; /* Lock scroll position */
+    width: 100%; /* Prevent width changes */
+    overflow: hidden; /* Prevent scrolling */
+}
+
 /* Header */
 header {
     display: flex;
