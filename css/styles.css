@@ -734,7 +734,7 @@ footer p {
     }
 
     .hero {
-        margin-top: 124px; /* Adjusted to match header height on mobile (assuming 5:1 logo aspect ratio: 72px logo + 28px icons + 24px padding) */
+        margin-top: 112px; /* Adjusted to match header height on mobile (assuming 6:1 logo aspect ratio: 60px logo + 28px icons + 24px padding) */
     }
 
     .hero h1 {
