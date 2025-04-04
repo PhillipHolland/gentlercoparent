@@ -223,19 +223,24 @@ header {
     width: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; /* Prevents overflow issues */
 }
 
 .banner-container {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
+    padding-top: 33.333%; /* Adjust this based on your image’s aspect ratio */
+    max-width: 1200px; /* Optional: match the image’s natural width */
     margin: 0 auto;
-    display: block;
 }
 
-.banner-container img {
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain; /* Scales the image while preserving proportions */
     display: block;
 }
 
