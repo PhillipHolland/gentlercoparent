@@ -218,6 +218,7 @@ header {
     border-radius: 10px;
 }
 
+/* Banner Section */
 .banner-section {
     width: 100%;
     padding: 0;
@@ -229,7 +230,7 @@ header {
     height: auto;
     display: block;
     margin: 0 auto;
-    object-fit: contain; /* Ensure the entire image is visible without cropping */
+    object-fit: contain; /* Maintain proportions without cropping */
 }
 
 /* CTA Section */
@@ -588,6 +589,21 @@ footer p {
 .contact-form .btn:hover {
     background-color: #388083;
     color: #fff;
+}
+
+/* Success/Error Messages */
+.success-message {
+    color: #388083;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
 }
 
 /* Privacy Policy Section */
