@@ -127,6 +127,11 @@ header {
     padding-top: 20px;
 }
 
+/* Hide the <br> by default (desktop) */
+.mobile-break {
+    display: none;
+}
+
 .hero h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 72px;
@@ -881,7 +886,7 @@ footer p {
 
     /* Adjust hero section margin-top on mobile to close the gap */
     .hero {
-        margin-top: 130px; /* Reduced to close the gap */
+        margin-top: 125px; /* Further reduced to close the sliver of a gap */
         height: 80vh; /* Increased to ensure content fits */
     }
 
@@ -889,6 +894,11 @@ footer p {
         top: 50%; /* Center vertically */
         transform: translateY(-50%); /* Adjust for true centering */
         padding: 20px; /* Add padding to prevent cropping */
+    }
+
+    /* Show the <br> on mobile to control the line break */
+    .mobile-break {
+        display: inline; /* Show the <br> on mobile */
     }
 
     .hero h1 {
