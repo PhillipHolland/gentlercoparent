@@ -223,19 +223,20 @@ header {
     width: 100%;
     padding: 0;
     margin: 0;
+    overflow: hidden; /* Prevent overflow issues */
 }
 
 .banner-container {
     width: 100%;
-    aspect-ratio: 3 / 1; /* Adjust based on the image's natural aspect ratio */
-    position: relative;
+    max-width: 1200px; /* Adjust to the image's natural width */
+    margin: 0 auto; /* Center the container */
+    display: block; /* Ensure no inline spacing issues */
 }
 
 .banner-container img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
+    height: auto; /* Maintain natural proportions */
+    display: block; /* Remove any inline spacing */
 }
 
 /* CTA Section */
