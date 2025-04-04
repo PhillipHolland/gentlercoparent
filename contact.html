@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=6742896499">
+    <title>Contact - Gentler Coparent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logos/main-logo.png" alt="Gentler Coparent Logo">
+            </a>
+        </div>
+        <div class="social-icons">
+            <a href="http://facebook.com/gentlercoparent" target="_blank">
+                <img src="images/icons/facebook.svg" alt="Facebook">
+            </a>
+            <a href="http://instagram.com/gentlercoparent" target="_blank">
+                <img src="images/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="http://x.com/gentlercoparent" target="_blank">
+                <img src="images/icons/x-twitter.svg" alt="X">
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="hero-text">
+            <h2>We want to hear from you!</h2>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="contact-main">
+        <div class="content">
+            <p>Hello and thank you for reaching out to us at Gentler Coparent. We understand deeply the challenges and complexities that come with navigating high-conflict coparenting situations. Having been where you are, we recognize the importance of clear, empathetic, and effective communication.</p>
+            <p>We're here to support you on this journey and are eager to hear from you. Whether you have questions, need guidance, or are seeking assistance with our AI tool, please let us know how we can help. Together, we can work towards creating a more harmonious and cooperative coparenting environment for you and your family.</p>
+           
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xkgjqpdz" method="POST">
+                    <div class="form-item name-fields">
+                        <div class="field first-name">
+                            <input type="text" name="fname" placeholder="First Name" aria-label="First Name" required>
+                        </div>
+                        <div class="field last-name">
+                            <input type="text" name="lname" placeholder="Last Name" aria-label="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <input type="email" name="email" placeholder="Email" aria-label="Email" required>
+                    </div>
+                    <div class="form-item">
+                        <textarea name="message" placeholder="Message" aria-label="Message" required rows="5"></textarea>
+                    </div>
+                    <div class="form-button-wrapper">
+                        <input type="submit" value="Send" class="btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="privacy-policy.html">PRIVACY POLICY</a>
+            <a href="usage-agreement.html">USAGE AGREEMENT</a>
+        </div>
+        <div class="social-icons">
+            <a href="http://facebook.com/gentlercoparent" target="_blank">
+                <img src="images/icons/facebook.svg" alt="Facebook">
+            </a>
+            <a href="http://instagram.com/gentlercoparent" target="_blank">
+                <img src="images/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="http://x.com/gentlercoparent" target="_blank">
+                <img src="images/icons/x-twitter.svg" alt="X">
+            </a>
+        </div>
+        <p>© 2025, Gentler Coparent - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('input[type="submit"]');
+            submitButton.disabled = true; // Disable the button while submitting
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success: Show a success message
+                    form.innerHTML = '<p class="success-message">Thank you! Your message has been sent.</p>';
+                } else {
+                    // Error: Show an error message
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error: Show an error message
+                form.insertAdjacentHTML('beforeend', '<p class="error-message">There was an error submitting your form. Please try again later.</p>');
+                submitButton.disabled = false; // Re-enable the button
+            }
+        });
+    </script>
+</body>
+</html>
