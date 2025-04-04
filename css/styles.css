@@ -16,13 +16,13 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 15px 40px 32px; /* Bottom padding set to 32px to match social icons height */
+    padding: 15px 40px 16px; /* Reduced bottom padding from 32px to 16px (50%) */
     background-color: #BADFE7;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    min-height: 0; /* Removed min-height to let header collapse to natural content height */
+    min-height: 0;
 }
 
 .logo {
@@ -712,12 +712,12 @@ footer p {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .header {
-        padding: 10px 20px 28px; /* Bottom padding set to 28px to match social icons height */
-        min-height: 0; /* Removed min-height */
+        padding: 10px 20px 14px; /* Reduced bottom padding from 28px to 14px (50%) */
+        min-height: 0;
     }
 
     .logo {
-        padding: 0; /* Removed padding */
+        padding: 0;
     }
 
     .logo img {
