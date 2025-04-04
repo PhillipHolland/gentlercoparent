@@ -79,7 +79,7 @@ header {
     height: 70vh;
     position: relative;
     padding: 0 20px;
-    margin-top: 140px;
+    margin-top: 143px; /* Adjusted to match header height on desktop (assuming 6:1 logo aspect ratio: 80px logo + 32px icons + 31px padding) */
     overflow: visible;
 }
 
@@ -712,7 +712,7 @@ footer p {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .header {
-        padding: 10px 20px 14px; /* Reduced bottom padding from 28px to 14px (50%) */
+        padding: 10px 20px 14px;
         min-height: 0;
     }
 
@@ -731,6 +731,10 @@ footer p {
     .social-icons a {
         width: 28px;
         height: 28px;
+    }
+
+    .hero {
+        margin-top: 172px; /* Already correct for mobile */
     }
 
     .hero h1 {
