@@ -460,7 +460,7 @@ footer p {
     margin-bottom: 20px;
 }
 
-/* Style the Download Now button to match the home page */
+/* Style the Download Now button on the About page to match the home page */
 .download-btn {
     display: block; /* Ensure it can be centered */
     margin: 30px auto 0; /* Add more padding above the button, center horizontally */
@@ -859,14 +859,14 @@ footer p {
     /* Adjust hero section for mobile */
     .hero {
         position: relative;
-        margin-top: var(--header-height); /* Use margin-top instead of top for proper flow */
-        height: 300px; /* Reduced by 12px to close the bottom gap (from 378px) */
-        background-size: 150% auto; /* Original sizing */
-        background-position: center top; /* Align top of image with top of section */
-        background-repeat: no-repeat; /* Prevent tiling */
-        background-color: #BADFE7; /* Fallback to match intro section */
-        padding: 0; /* Remove padding */
-        margin-bottom: 0; /* Ensure no gap below */
+        margin-top: var(--header-height);
+        height: 366px;
+        background-size: 150% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #BADFE7;
+        padding: 0;
+        margin-bottom: 0;
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
@@ -874,12 +874,12 @@ footer p {
 
     .hero-content {
         position: absolute;
-        top: 30%; /* Revert to previous vertical position */
+        top: 21.6%; /* Raised by the height of the first line (from 30% to 21.6%) */
         left: 50%;
-        transform: translateX(-64%); /* Shift left from -60% to -64% (additional 4% for the width of "H") */
+        transform: translateX(-64%);
         z-index: 2;
-        text-align: center; /* Center-align text */
-        padding: 0; /* Remove padding */
+        text-align: center;
+        padding: 0;
     }
 
     /* Ensure no line break on mobile, matching desktop */
@@ -907,9 +907,10 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 105px; /* Adjusted for new section height (108px * 366/378) */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Center the button */
+        bottom: 153px; /* Lowered by the button height (105px + 48px) */
+        left: 50%;
+        transform: translateX(-50%);
+        border: 2px solid #000000; /* Changed to black border */
     }
 
     /* Match the Download Now button on the About page to the home page on mobile */
@@ -921,8 +922,8 @@ footer p {
     }
 
     .intro {
-        position: relative; /* Ensure proper stacking */
-        margin-top: 0; /* Starts right after hero */
+        position: relative;
+        margin-top: 0;
         background-color: #BADFE7;
     }
 
