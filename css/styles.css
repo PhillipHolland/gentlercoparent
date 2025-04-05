@@ -853,11 +853,12 @@ footer p {
     .hero {
         margin-top: 125px; /* Further reduced to close the sliver of a gap */
         height: 80vh; /* Increased to ensure content fits */
+        background-position: center 20%; /* Adjust to match screenshot cropping */
     }
 
     .hero-content {
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Adjust for true centering */
+        top: 35%; /* Adjusted to match text position in screenshot */
+        transform: translateY(-50%); /* Center vertically */
         padding: 20px; /* Add padding to prevent cropping */
     }
 
@@ -877,7 +878,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 86px; /* Raise the button by its height (56px) from 30px */
+        bottom: 100px; /* Adjusted to match button position in screenshot, raised further */
     }
 
     .hero .subheading {
