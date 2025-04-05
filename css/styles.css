@@ -740,7 +740,7 @@ footer p {
     padding: 25px; /* Increased padding for iOS-like spacing */
     box-sizing: border-box;
     transform: translateY(100%); /* Start off-screen */
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother animation with custom easing */
+    transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1); /* Smoother animation with custom easing */
 }
 
 .app-bottom-sheet.slide-up {
@@ -859,11 +859,11 @@ footer p {
     }
 
     .hero-content {
-        top: 26%; /* Lowered by 50% of first line height (from 24% to 26%) */
-        left: 18%; /* Adjusted for equal left and right padding */
-        transform: translateY(0); /* Remove vertical centering */
-        align-items: flex-start; /* Align items to the left */
-        text-align: left; /* Left-align text */
+        top: 26%; /* Lowered by 50% of first line height */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center the container */
+        align-items: center; /* Center items */
+        text-align: center; /* Center-align text */
         padding: 20px; /* Maintain padding */
     }
 
