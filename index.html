@@ -213,6 +213,13 @@
                 animate(deltaY);
             });
 
+            // Dismiss when tapping outside the sheet
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    dismissBottomSheet();
+                }
+            });
+
             // Dismiss button
             dismissLink.addEventListener('click', (e) => {
                 e.preventDefault();
