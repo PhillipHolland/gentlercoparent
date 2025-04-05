@@ -853,8 +853,8 @@ footer p {
     .hero {
         margin-top: 144px; /* Adjusted to match header height (81px logo + 32px social icons + 31px padding) */
         height: 80vh; /* Maintain section height */
-        background-size: 150% auto; /* Stretch width to crop sides, fit height to section */
-        background-position: center; /* Center the image vertically and horizontally */
+        background-size: 260% auto; /* Adjusted to fill the height of the section */
+        background-position: center top; /* Align top of image with top of section */
         background-repeat: no-repeat; /* Prevent tiling */
         position: relative; /* Ensure positioning context for the button */
         padding: 0; /* Remove padding */
