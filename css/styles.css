@@ -286,7 +286,7 @@ header {
 .cta {
     background-color: #000;
     color: #fff;
-    padding: 60px 40px;
+    padding: 60 PX 40px;
     text-align: center;
     width: 100%;
     max-width: 100%;
@@ -853,8 +853,8 @@ footer p {
 
     /* Adjust hero section for mobile */
     .hero {
-        margin-top: 140px; /* Adjusted to close top gap (assumed header height) */
-        height: 390px; /* Adjusted to match image height on 390px-wide viewport */
+        margin-top: 132px; /* Adjusted to close top gap (based on screenshot) */
+        height: 380px; /* Adjusted to match image height and close bottom gap */
         background-size: 150% auto; /* Original cropping */
         background-position: center top; /* Align top of image with top of section */
         background-repeat: no-repeat; /* Prevent tiling */
@@ -902,7 +902,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 109px; /* Adjusted for new section height (189px * 390/675) */
+        bottom: 110px; /* Adjusted for new section height (189px * 380/675) */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the button */
     }
@@ -970,7 +970,7 @@ footer p {
 
     .about-hero {
         padding: 80px 20px 40px;
-        margin-top: 140px; /* Match mobile header height */
+        margin-top: 132px; /* Match mobile header height */
     }
 
     .about-hero h2 {
@@ -1000,7 +1000,7 @@ footer p {
 
     .contact-hero {
         padding: 80px 20px 40px;
-        margin-top: 140px; /* Match mobile header height */
+        margin-top: 132px; /* Match mobile header height */
     }
 
     .contact-hero h2 {
@@ -1033,7 +1033,7 @@ footer p {
 
     .privacy-policy {
         padding: 80px 20px 40px;
-        margin-top: 140px; /* Match mobile header height */
+        margin-top: 132px; /* Match mobile header height */
     }
 
     .privacy-policy h3 {
@@ -1050,7 +1050,7 @@ footer p {
 
     .usage-agreement {
         padding: 80px 20px 40px;
-        margin-top: 140px; /* Match mobile header height */
+        margin-top: 132px; /* Match mobile header height */
     }
 
     .usage-agreement h3 {
