@@ -113,14 +113,16 @@
             const dismissLink = document.getElementById('dismiss-bottom-sheet');
             const grabHandle = document.querySelector('.grab-handle');
             const downloadBtn = document.querySelector('.app-download-btn');
+            const content = document.querySelector('.app-bottom-sheet-content');
 
-            if (!bottomSheet || !overlay || !dismissLink || !grabHandle || !downloadBtn) {
+            if (!bottomSheet || !overlay || !dismissLink || !grabHandle || !downloadBtn || !content) {
                 console.error('Bottom sheet elements not found:', {
                     bottomSheet: !!bottomSheet,
                     overlay: !!overlay,
                     dismissLink: !!dismissLink,
                     grabHandle: !!grabHandle,
-                    downloadBtn: !!downloadBtn
+                    downloadBtn: !!downloadBtn,
+                    content: !!content
                 });
                 return;
             }
@@ -129,32 +131,19 @@
             const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
             console.log('Is iOS/iPadOS device:', isIOS);
 
-            // Only show the bottom sheet on iOS/iPadOS devices
             if (isIOS) {
-                console.log('Showing bottom sheet and overlay');
                 bottomSheet.style.display = 'block';
                 overlay.style.display = 'block';
-                console.log('Adding slide-up class');
                 bottomSheet.classList.add('slide-up');
-
-                // Lock scrolling when the bottom sheet is visible
                 document.body.classList.add('no-scroll');
             } else {
-                console.log('Not an iOS/iPadOS device, hiding bottom sheet');
                 bottomSheet.style.display = 'none';
                 overlay.style.display = 'none';
                 document.body.classList.remove('no-scroll');
-                return; // Exit the script if not iOS/iPadOS
+                return;
             }
 
-            // Dismiss the banner when "Not now" is clicked
-            dismissLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                console.log('Dismissing bottom sheet via Not now link');
-                dismissBottomSheet();
-            });
-
-            // Function to dismiss the bottom sheet
+            // Dismiss the sheet
             function dismissBottomSheet() {
                 bottomSheet.classList.remove('slide-up');
                 bottomSheet.classList.add('slide-down');
@@ -162,119 +151,112 @@
                 setTimeout(() => {
                     bottomSheet.style.display = 'none';
                     overlay.style.display = 'none';
-                    // Unlock scrolling when the bottom sheet is dismissed
                     document.body.classList.remove('no-scroll');
-                }, 500); // Match the new animation duration (0.5s)
+                }, 300); // Shorter duration for native feel
             }
 
-            // Touch events for mobile (attached to the entire bottom sheet)
+            // Detent positions (as percentages of window height)
+            const detents = [
+                { height: 0, label: 'full' },         // Full height (0px translate)
+                { height: window.innerHeight * 0.25, label: 'medium' }, // 25% height
+                { height: window.innerHeight * 0.5,  label: 'large' }   // 50% height
+            ];
+            let currentDetentIndex = 0; // Start at full height
+
+            // Touch state
             let touchStartY = 0;
             let touchCurrentY = 0;
+            let touchStartTime = 0;
+            let velocity = 0;
             let isDragging = false;
             let animationFrameId = null;
 
-            const animate = () => {
-                if (isDragging) {
-                    const deltaY = touchCurrentY - touchStartY;
-                    if (deltaY < 0) deltaY = 0; // Prevent dragging up past original position
-                    bottomSheet.style.transform = `translateY(${deltaY}px)`;
-                    const sheetHeight = bottomSheet.offsetHeight;
-                    const opacity = 1 - (deltaY / sheetHeight);
-                    overlay.style.opacity = Math.max(0, Math.min(1, opacity));
-                    animationFrameId = requestAnimationFrame(animate);
+            // Animate with momentum and detents
+            const animate = (targetY) => {
+                if (isDragging) return;
+                let startY = parseFloat(bottomSheet.style.transform.replace('translateY(', '').replace('px)', '') || 0);
+                let currentY = startY;
+                const duration = 300; // ms
+                const startTime = performance.now();
+
+                const easeOutQuad = (t) => t * (2 - t); // Easing function for natural deceleration
+
+                function step(timestamp) {
+                    const progress = Math.min((timestamp - startTime) / duration, 1);
+                    const easedProgress = easeOutQuad(progress);
+                    currentY = startY + (targetY - startY) * easedProgress;
+
+                    // Apply rubber band effect at edges
+                    const maxY = window.innerHeight - bottomSheet.offsetHeight;
+                    if (currentY < -20) currentY = -20 * (1 - easeOutQuad(1 - (-currentY / 20))); // Bounce at top
+                    if (currentY > maxY + 20) currentY = maxY + 20 * easeOutQuad((currentY - maxY) / 20); // Bounce at bottom
+
+                    bottomSheet.style.transform = `translateY(${Math.round(currentY)}px)`;
+                    overlay.style.opacity = Math.max(0, 1 - (currentY / (window.innerHeight * 0.5)));
+
+                    if (progress < 1) {
+                        animationFrameId = requestAnimationFrame(step);
+                    } else {
+                        // Snap to nearest detent
+                        const distances = detents.map(d => Math.abs(currentY - d.height));
+                        const nearestIndex = distances.indexOf(Math.min(...distances));
+                        currentDetentIndex = nearestIndex;
+                        if (nearestIndex === detents.length - 1 && currentY > detents[nearestIndex].height) {
+                            dismissBottomSheet();
+                        } else {
+                            bottomSheet.style.transform = `translateY(${detents[nearestIndex].height}px)`;
+                        }
+                    }
                 }
+
+                animationFrameId = requestAnimationFrame(step);
             };
 
-            bottomSheet.addEventListener('touchstart', function (e) {
-                // Prevent dragging if the touch starts on the button or link
-                if (e.target === downloadBtn || e.target === dismissLink) {
-                    console.log('Touch started on button or link, not dragging');
-                    return;
-                }
+            // Handle touch events
+            bottomSheet.addEventListener('touchstart', (e) => {
+                if (e.target === downloadBtn || e.target === dismissLink) return;
                 e.preventDefault();
                 isDragging = true;
                 touchStartY = e.touches[0].clientY;
-                bottomSheet.setAttribute('data-dragging', 'true');
-                bottomSheet.style.transition = 'none'; // Disable transition during drag
-                animationFrameId = requestAnimationFrame(animate);
-            });
-
-            bottomSheet.addEventListener('touchmove', function (e) {
-                if (!isDragging) return;
-                touchCurrentY = e.touches[0].clientY;
-            }, { passive: true });
-
-            bottomSheet.addEventListener('touchend', function () {
-                if (!isDragging) return;
-                isDragging = false;
-                bottomSheet.setAttribute('data-dragging', 'false');
-                bottomSheet.style.transition = 'transform 0.5s ease-in-out'; // Re-enable transition
-                const sheetHeight = bottomSheet.offsetHeight;
-                const deltaY = touchCurrentY - touchStartY;
-                const windowHeight = window.innerHeight;
-                const mediumDetent = windowHeight * 0.25; // 25% of screen height
-                const largeDetent = windowHeight * 0.5;  // 50% of screen height
-                const currentY = deltaY;
-
-                if (deltaY > sheetHeight * 0.3) {
-                    dismissBottomSheet();
-                } else if (currentY < mediumDetent && currentY > 0) {
-                    bottomSheet.style.transform = `translateY(${mediumDetent}px)`;
-                    overlay.style.opacity = 0.7;
-                } else if (currentY < largeDetent && currentY >= mediumDetent) {
-                    bottomSheet.style.transform = `translateY(${largeDetent}px)`;
-                    overlay.style.opacity = 0.4;
-                } else {
-                    bottomSheet.style.transform = 'translateY(0)';
-                    overlay.style.opacity = '1';
-                }
-                cancelAnimationFrame(animationFrameId);
-            });
-
-            // Mouse events for desktop (though not used on iOS/iPadOS, kept for completeness)
-            let mouseStartY = 0;
-            let mouseCurrentY = 0;
-
-            grabHandle.addEventListener('mousedown', function (e) {
-                e.preventDefault();
-                isDragging = true;
-                mouseStartY = e.clientY;
+                touchStartTime = performance.now();
                 bottomSheet.setAttribute('data-dragging', 'true');
                 bottomSheet.style.transition = 'none';
-            });
+                cancelAnimationFrame(animationFrameId);
+            }, { passive: false });
 
-            grabHandle.addEventListener('mousemove', function (e) {
+            bottomSheet.addEventListener('touchmove', (e) => {
                 if (!isDragging) return;
-                mouseCurrentY = e.clientY;
-                let deltaY = mouseCurrentY - mouseStartY;
-                if (deltaY < 0) deltaY = 0;
-                bottomSheet.style.transform = `translateY(${deltaY}px)`;
-                const sheetHeight = bottomSheet.offsetHeight;
-                const opacity = 1 - (deltaY / sheetHeight);
-                overlay.style.opacity = Math.max(0, Math.min(1, opacity));
-            });
+                const currentTime = performance.now();
+                const deltaTime = currentTime - touchStartTime;
+                touchCurrentY = e.touches[0].clientY;
+                const deltaY = touchCurrentY - touchStartY;
+                velocity = deltaY / deltaTime; // Velocity in px/ms
+                bottomSheet.style.transform = `translateY(${Math.max(0, deltaY)}px)`;
+                overlay.style.opacity = Math.max(0, 1 - (deltaY / (window.innerHeight * 0.5)));
+                touchStartTime = currentTime;
+            }, { passive: true });
 
-            grabHandle.addEventListener('mouseup', function () {
+            bottomSheet.addEventListener('touchend', () => {
                 if (!isDragging) return;
                 isDragging = false;
                 bottomSheet.setAttribute('data-dragging', 'false');
-                bottomSheet.style.transition = 'transform 0.5s ease-in-out';
-                const sheetHeight = bottomSheet.offsetHeight;
-                const deltaY = mouseCurrentY - mouseStartY;
-                if (deltaY > sheetHeight * 0.3) {
-                    dismissBottomSheet();
-                } else {
-                    bottomSheet.style.transform = 'translateY(0)';
-                    overlay.style.opacity = '1';
-                }
+                const deltaY = touchCurrentY - touchStartY;
+                const momentumDistance = velocity * 200; // Adjust multiplier for momentum feel
+                const targetY = Math.min(0, Math.max(window.innerHeight - bottomSheet.offsetHeight, parseFloat(bottomSheet.style.transform.replace('translateY(', '').replace('px)', '') || 0) + momentumDistance));
+
+                animate(targetY);
             });
 
-            // Prevent default scrolling behavior during drag on mobile
-            bottomSheet.addEventListener('touchmove', function (e) {
-                if (isDragging) {
-                    e.preventDefault();
-                }
+            // Dismiss button
+            dismissLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                dismissBottomSheet();
             });
+
+            // Prevent default scrolling during drag
+            bottomSheet.addEventListener('touchmove', (e) => {
+                if (isDragging) e.preventDefault();
+            }, { passive: false });
         });
     </script>
 </body>
