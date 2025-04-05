@@ -100,8 +100,10 @@
             <img src="images/logos/main-logo.png" alt="Gentler Coparent Logo" class="app-bottom-sheet-logo">
             <h3>Get the Gentler Coparent App</h3>
             <p>Transform your co-parenting experience today.</p>
-            <a href="https://apps.apple.com/app/id6742896499" class="btn app-download-btn">FREE TRIAL</a>
-            <a href="#" id="dismiss-bottom-sheet" class="dismiss-link">Not now</a>
+            <div class="button-container">
+                <a href="https://apps.apple.com/app/id6742896499" class="btn app-download-btn">FREE TRIAL</a>
+                <button id="dismiss-bottom-sheet" class="btn dismiss-btn">Not Now</button>
+            </div>
         </div>
     </div>
 
@@ -110,15 +112,15 @@
         document.addEventListener('DOMContentLoaded', function () {
             const bottomSheet = document.getElementById('app-bottom-sheet');
             const overlay = document.getElementById('app-bottom-sheet-overlay');
-            const dismissLink = document.getElementById('dismiss-bottom-sheet');
+            const dismissBtn = document.getElementById('dismiss-bottom-sheet');
             const grabHandle = document.querySelector('.grab-handle');
             const downloadBtn = document.querySelector('.app-download-btn');
 
-            if (!bottomSheet || !overlay || !dismissLink || !grabHandle || !downloadBtn) {
+            if (!bottomSheet || !overlay || !dismissBtn || !grabHandle || !downloadBtn) {
                 console.error('Bottom sheet elements not found:', {
                     bottomSheet: !!bottomSheet,
                     overlay: !!overlay,
-                    dismissLink: !!dismissLink,
+                    dismissBtn: !!dismissBtn,
                     grabHandle: !!grabHandle,
                     downloadBtn: !!downloadBtn
                 });
@@ -145,7 +147,7 @@
             function dismissBottomSheet() {
                 bottomSheet.classList.remove('slide-up');
                 bottomSheet.classList.add('slide-down');
-                overlay.style.opacity = '0'; // Immediate opacity change, no transition
+                overlay.style.opacity = '0';
 
                 const handler = (e) => {
                     if (e.target === bottomSheet && e.propertyName === 'transform' && bottomSheet.classList.contains('slide-down')) {
@@ -170,7 +172,7 @@
 
             // Document-wide click handler to dismiss the bottom sheet
             document.addEventListener('click', (e) => {
-                if (e.target === downloadBtn || downloadBtn.contains(e.target)) {
+                if (e.target === downloadBtn || downloadBtn.contains(e.target) || e.target === dismissBtn || dismissBtn.contains(e.target)) {
                     return;
                 }
                 if (bottomSheet.style.display === 'block') {
@@ -178,9 +180,8 @@
                 }
             });
 
-            // Dedicated click handler for "Not now" link
-            dismissLink.addEventListener('click', (e) => {
-                e.preventDefault();
+            // Dedicated click handler for "Not now" button
+            dismissBtn.addEventListener('click', (e) => {
                 if (bottomSheet.style.display === 'block') {
                     dismissBottomSheet();
                 }
@@ -192,19 +193,19 @@
             let isDragging = false;
 
             bottomSheet.addEventListener('touchstart', (e) => {
-                if (e.target === downloadBtn || e.target === dismissLink) return;
+                if (e.target === downloadBtn || e.target === dismissBtn) return;
                 e.preventDefault();
                 isDragging = true;
                 touchStartY = e.touches[0].clientY;
                 bottomSheet.setAttribute('data-dragging', 'true');
-                bottomSheet.style.transition = 'none'; // Disable transition during drag
+                bottomSheet.style.transition = 'none';
             }, { passive: false });
 
             bottomSheet.addEventListener('touchmove', (e) => {
                 if (!isDragging) return;
                 touchCurrentY = e.touches[0].clientY;
                 const deltaY = touchCurrentY - touchStartY;
-                bottomSheet.style.transform = `translateY(${deltaY}px)`; // Real-time update
+                bottomSheet.style.transform = `translateY(${deltaY}px)`;
                 overlay.style.opacity = Math.max(0, 1 - (Math.abs(deltaY) / (window.innerHeight * 0.5)));
             }, { passive: true });
 
@@ -215,11 +216,9 @@
                 const deltaY = touchCurrentY - touchStartY;
 
                 if (deltaY > window.innerHeight * 0.3) {
-                    // Ensure a smooth transition from the current position to fully dismissed
                     bottomSheet.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.6, 1)';
                     dismissBottomSheet();
                 } else {
-                    // Snap back to the top
                     bottomSheet.style.transition = 'transform 0.7s ease-out';
                     bottomSheet.style.transform = 'translateY(0)';
                     overlay.style.opacity = '1';
