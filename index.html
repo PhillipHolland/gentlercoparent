@@ -148,15 +148,26 @@
                 overlay.style.opacity = '0';
 
                 // Use transitionend to hide the bottom sheet after the animation completes
-                bottomSheet.addEventListener('transitionend', function handler(e) {
-                    if (e.propertyName === 'transform' && bottomSheet.classList.contains('slide-down')) {
+                const handler = (e) => {
+                    // Ensure we only handle the transform transition on the bottom sheet
+                    if (e.target === bottomSheet && e.propertyName === 'transform' && bottomSheet.classList.contains('slide-down')) {
                         bottomSheet.style.display = 'none';
                         overlay.style.display = 'none';
                         document.body.classList.remove('no-scroll');
-                        // Remove the event listener to avoid multiple triggers
                         bottomSheet.removeEventListener('transitionend', handler);
                     }
-                });
+                };
+                bottomSheet.addEventListener('transitionend', handler);
+
+                // Fallback: If transitionend doesn't fire within 1 second, force dismissal
+                setTimeout(() => {
+                    if (bottomSheet.style.display === 'block') {
+                        bottomSheet.style.display = 'none';
+                        overlay.style.display = 'none';
+                        document.body.classList.remove('no-scroll');
+                        bottomSheet.removeEventListener('transitionend', handler);
+                    }
+                }, 1000);
             }
 
             // Document-wide click handler to dismiss the bottom sheet
@@ -166,6 +177,14 @@
                     return;
                 }
                 // Dismiss the bottom sheet if it's visible
+                if (bottomSheet.style.display === 'block') {
+                    dismissBottomSheet();
+                }
+            });
+
+            // Dedicated click handler for "Not now" link to ensure reliability
+            dismissLink.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default navigation behavior
                 if (bottomSheet.style.display === 'block') {
                     dismissBottomSheet();
                 }
@@ -199,7 +218,7 @@
                 bottomSheet.setAttribute('data-dragging', 'false');
                 bottomSheet.style.transition = 'transform 0.7s ease-out'; // Smooth settle with new easing
                 const deltaY = touchCurrentY - touchStartY;
-                if (deltaY > window.innerHeight * 0.4) { // Increased threshold for dismissal
+                if (deltaY > window.innerHeight * 0.3) { // Reduced threshold back to 0.3
                     dismissBottomSheet();
                 } else {
                     bottomSheet.style.transform = 'translateY(0)'; // Snap back
