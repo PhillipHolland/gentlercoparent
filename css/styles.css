@@ -860,7 +860,7 @@ footer p {
     .hero {
         position: relative;
         margin-top: var(--header-height);
-        height: 307px; /* Reduced by 60px to raise the intro section (from 367px) */
+        height: 307px;
         background-size: 150% auto;
         background-position: center top;
         background-repeat: no-repeat;
@@ -907,7 +907,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 169px; /* Adjusted for new section height (202px * 307/367) */
+        bottom: 48px; /* Set to the button height to create a buffer equal to the button height */
         left: 50%;
         transform: translateX(-50%);
         border: 2px solid #000000;
