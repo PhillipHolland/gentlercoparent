@@ -145,11 +145,9 @@
             function dismissBottomSheet() {
                 bottomSheet.classList.remove('slide-up');
                 bottomSheet.classList.add('slide-down');
-                overlay.style.opacity = '0';
+                overlay.style.opacity = '0'; // Immediate opacity change, no transition
 
-                // Use transitionend to hide the bottom sheet after the animation completes
                 const handler = (e) => {
-                    // Ensure we only handle the transform transition on the bottom sheet
                     if (e.target === bottomSheet && e.propertyName === 'transform' && bottomSheet.classList.contains('slide-down')) {
                         bottomSheet.style.display = 'none';
                         overlay.style.display = 'none';
@@ -172,19 +170,17 @@
 
             // Document-wide click handler to dismiss the bottom sheet
             document.addEventListener('click', (e) => {
-                // Prevent dismissal if clicking the download button
                 if (e.target === downloadBtn || downloadBtn.contains(e.target)) {
                     return;
                 }
-                // Dismiss the bottom sheet if it's visible
                 if (bottomSheet.style.display === 'block') {
                     dismissBottomSheet();
                 }
             });
 
-            // Dedicated click handler for "Not now" link to ensure reliability
+            // Dedicated click handler for "Not now" link
             dismissLink.addEventListener('click', (e) => {
-                e.preventDefault(); // Prevent default navigation behavior
+                e.preventDefault();
                 if (bottomSheet.style.display === 'block') {
                     dismissBottomSheet();
                 }
@@ -209,19 +205,23 @@
                 touchCurrentY = e.touches[0].clientY;
                 const deltaY = touchCurrentY - touchStartY;
                 bottomSheet.style.transform = `translateY(${deltaY}px)`; // Real-time update
-                overlay.style.opacity = Math.max(0, 1 - (Math.abs(deltaY) / (window.innerHeight * 0.5))); // Adjust opacity
+                overlay.style.opacity = Math.max(0, 1 - (Math.abs(deltaY) / (window.innerHeight * 0.5)));
             }, { passive: true });
 
             bottomSheet.addEventListener('touchend', () => {
                 if (!isDragging) return;
                 isDragging = false;
                 bottomSheet.setAttribute('data-dragging', 'false');
-                bottomSheet.style.transition = 'transform 0.7s ease-out'; // Smooth settle with new easing
                 const deltaY = touchCurrentY - touchStartY;
-                if (deltaY > window.innerHeight * 0.3) { // Reduced threshold back to 0.3
+
+                if (deltaY > window.innerHeight * 0.3) {
+                    // Ensure a smooth transition from the current position to fully dismissed
+                    bottomSheet.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.6, 1)';
                     dismissBottomSheet();
                 } else {
-                    bottomSheet.style.transform = 'translateY(0)'; // Snap back
+                    // Snap back to the top
+                    bottomSheet.style.transition = 'transform 0.7s ease-out';
+                    bottomSheet.style.transform = 'translateY(0)';
                     overlay.style.opacity = '1';
                 }
             });
