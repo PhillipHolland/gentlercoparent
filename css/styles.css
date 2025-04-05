@@ -97,6 +97,7 @@ header {
     position: relative;
     padding: 0 20px;
     margin-top: 143px; /* Default for desktop */
+    margin-bottom: 0; /* Ensure no gap below */
     overflow: visible;
     width: 100%;
     max-width: 100%;
@@ -203,6 +204,7 @@ header {
 .intro {
     background-color: #BADFE7;
     padding: 60px 40px;
+    margin-top: 0; /* Ensure no gap above */
     text-align: center;
     width: 100%;
     max-width: 100%;
@@ -852,12 +854,13 @@ footer p {
     /* Adjust hero section for mobile */
     .hero {
         margin-top: 144px; /* Adjusted to match header height (81px logo + 32px social icons + 31px padding) */
-        height: 390px; /* Match the image height to remove negative space */
-        background-size: 150% auto; /* Revert to original cropping */
-        background-position: center; /* Revert to original centering */
+        height: 390px; /* Match the image height */
+        background-size: 150% auto; /* Original cropping */
+        background-position: center top; /* Align top of image with top of section */
         background-repeat: no-repeat; /* Prevent tiling */
         position: relative; /* Ensure positioning context for the button */
         padding: 0; /* Remove padding */
+        margin-bottom: 0; /* Ensure no gap below */
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
