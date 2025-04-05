@@ -859,7 +859,7 @@ footer p {
     }
 
     .hero-content {
-        top: 15%; /* Lower the text below the top border */
+        top: 24%; /* Lower the text so top of "HARMONIZE" aligns with bottom of subheading */
         left: 10%; /* Position at the left */
         transform: translateY(0); /* Remove vertical centering */
         align-items: flex-start; /* Align items to the left */
@@ -890,7 +890,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 100px; /* Higher than the lower border of the image */
+        bottom: 172px; /* Raised by 130% of button height (from 100px to 172px) */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the button */
     }
