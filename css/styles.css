@@ -861,21 +861,17 @@ footer p {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
-        display: flex; /* Use flexbox to center content */
-        flex-direction: column;
-        align-items: center; /* Center horizontally */
-        justify-content: flex-start; /* Align content at the top */
     }
 
     .hero-content {
-        position: static; /* Remove absolute positioning */
-        z-index: 2;
-        width: 100%;
+        position: absolute;
+        top: 26%; /* Restore previous vertical position */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center the container */
         max-width: 60%; /* Constrain the container to 60% width */
-        margin: 0 auto; /* Center the container */
-        margin-top: 26%; /* Match previous top: 26% for vertical positioning */
+        z-index: 2;
         text-align: center; /* Center-align text */
-        padding: 20px; /* Apply padding here */
+        padding: 0; /* Remove padding */
     }
 
     /* Ensure no line break on mobile, matching desktop */
@@ -888,14 +884,12 @@ footer p {
         white-space: nowrap; /* Keep "Harmonize Your Co-Parenting" on one line */
         line-height: 1.1;
         margin-bottom: 5px; /* Reduced gap between h1 and subheading */
-        width: 100%; /* Fill the container */
     }
 
     .hero .subheading {
         font-size: 14px; /* Reduced to match first line length */
         white-space: nowrap; /* Prevent line break, match h1 width */
         line-height: 1.1;
-        width: 100%; /* Fill the container */
     }
 
     .hero .btn {
