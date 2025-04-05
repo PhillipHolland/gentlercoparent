@@ -834,7 +834,7 @@ footer p {
 /* Show the bottom sheet and overlay on mobile in portrait orientation */
 @media (max-width: 768px) and (orientation: portrait) {
     :root {
-        --header-height: 128px; /* Adjust based on actual header height */
+        --header-height: 126px; /* Adjusted to close the remaining top gap */
     }
 
     .app-bottom-sheet {
@@ -861,9 +861,8 @@ footer p {
         position: relative;
         top: var(--header-height); /* Starts hero right below the header */
         margin-top: 0; /* Remove old margin */
-        min-height: 375px; /* Minimum height to ensure visibility */
-        height: auto; /* Let it grow naturally */
-        background-size: cover; /* Image fills the section completely */
+        height: 375px; /* Fixed height to match image */
+        background-size: 150% auto; /* Revert to original sizing */
         background-position: center top; /* Align top of image with top of section */
         background-repeat: no-repeat; /* Prevent tiling */
         background-color: #BADFE7; /* Fallback to match intro section */
@@ -920,6 +919,12 @@ footer p {
         font-size: 18px;
         max-width: 80%;
         margin: 30px auto 0; /* Maintain the increased padding above on mobile */
+    }
+
+    .intro {
+        position: relative; /* Ensure proper stacking */
+        margin-top: 0; /* Starts right after hero */
+        background-color: #BADFE7;
     }
 
     .intro h2 {
