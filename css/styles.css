@@ -853,13 +853,13 @@ footer p {
     .hero {
         margin-top: 125px; /* Maintain existing margin */
         height: 80vh; /* Maintain section height */
-        background-size: contain; /* Size down to fit width, no cropping */
+        background-size: 150% auto; /* Stretch width to crop sides, fit height to section */
         background-position: center; /* Center the image vertically and horizontally */
         background-repeat: no-repeat; /* Prevent tiling */
     }
 
     .hero-content {
-        top: 40%; /* Adjusted to center text over the image */
+        top: 30%; /* Move text higher to reduce gap */
         transform: translateY(-50%); /* Center vertically within the adjusted top */
         padding: 20px; /* Maintain padding */
     }
@@ -880,7 +880,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 120px; /* Adjusted to align with image content, raised further */
+        bottom: 80px; /* Reduced to bring button closer to text */
     }
 
     .hero .subheading {
