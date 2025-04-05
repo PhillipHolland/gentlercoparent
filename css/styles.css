@@ -907,7 +907,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 24px; /* Set to the button height to create a buffer equal to the button height */
+        bottom: 48px;
         left: 50%;
         transform: translateX(-50%);
         border: 2px solid #000000;
@@ -925,6 +925,7 @@ footer p {
         position: relative;
         margin-top: 0;
         background-color: #BADFE7;
+        padding: 30px 40px; /* Reduced top and bottom padding from 60px to 30px */
     }
 
     .intro h2 {
