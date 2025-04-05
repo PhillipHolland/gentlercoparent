@@ -865,7 +865,7 @@ footer p {
 
     .hero-content {
         position: absolute;
-        top: 26%; /* Restore previous vertical position */
+        top: 30%; /* Lowered from 26% to 30% */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the container */
         max-width: 60%; /* Constrain the container to 60% width */
@@ -884,12 +884,14 @@ footer p {
         white-space: nowrap; /* Keep "Harmonize Your Co-Parenting" on one line */
         line-height: 1.1;
         margin-bottom: 5px; /* Reduced gap between h1 and subheading */
+        max-width: 100%; /* Ensure it doesn't exceed the parent */
     }
 
     .hero .subheading {
         font-size: 14px; /* Reduced to match first line length */
         white-space: nowrap; /* Prevent line break, match h1 width */
         line-height: 1.1;
+        max-width: 100%; /* Ensure it doesn't exceed the parent */
     }
 
     .hero .btn {
