@@ -849,17 +849,19 @@ footer p {
         }
     }
 
-    /* Adjust hero section margin-top on mobile to close the gap */
+    /* Adjust hero section for mobile */
     .hero {
-        margin-top: 125px; /* Further reduced to close the sliver of a gap */
-        height: 80vh; /* Increased to ensure content fits */
-        background-position: center 20%; /* Adjust to match screenshot cropping */
+        margin-top: 125px; /* Maintain existing margin */
+        height: 80vh; /* Maintain section height */
+        background-size: contain; /* Size down to fit width, no cropping */
+        background-position: center; /* Center the image vertically and horizontally */
+        background-repeat: no-repeat; /* Prevent tiling */
     }
 
     .hero-content {
-        top: 35%; /* Adjusted to match text position in screenshot */
-        transform: translateY(-50%); /* Center vertically */
-        padding: 20px; /* Add padding to prevent cropping */
+        top: 40%; /* Adjusted to center text over the image */
+        transform: translateY(-50%); /* Center vertically within the adjusted top */
+        padding: 20px; /* Maintain padding */
     }
 
     /* Show the <br> on mobile to control the line break */
@@ -878,7 +880,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 100px; /* Adjusted to match button position in screenshot, raised further */
+        bottom: 120px; /* Adjusted to align with image content, raised further */
     }
 
     .hero .subheading {
