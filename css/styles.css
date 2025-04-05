@@ -20,6 +20,7 @@ body {
     overflow-x: hidden;
     overscroll-behavior-x: none;
     overscroll-behavior-y: contain; /* Prevent iOS overscroll/refresh */
+    margin: 0; /* Reset default body margin */
 }
 
 body.no-scroll {
@@ -832,6 +833,10 @@ footer p {
 
 /* Show the bottom sheet and overlay on mobile in portrait orientation */
 @media (max-width: 768px) and (orientation: portrait) {
+    :root {
+        --header-height: 128px; /* Adjust based on actual header height */
+    }
+
     .app-bottom-sheet {
         display: block; /* Shown by default on mobile in portrait, controlled by JavaScript */
         animation: slideUp 0.3s ease-in-out forwards; /* Fallback CSS animation */
@@ -853,13 +858,15 @@ footer p {
 
     /* Adjust hero section for mobile */
     .hero {
-        margin-top: 130px; /* Adjusted to close top gap */
-        height: 375px; /* Matches calculated image height exactly */
-        background-size: 150% auto; /* Original cropping */
+        position: relative;
+        top: var(--header-height); /* Starts hero right below the header */
+        margin-top: 0; /* Remove old margin */
+        min-height: 375px; /* Minimum height to ensure visibility */
+        height: auto; /* Let it grow naturally */
+        background-size: cover; /* Image fills the section completely */
         background-position: center top; /* Align top of image with top of section */
         background-repeat: no-repeat; /* Prevent tiling */
         background-color: #BADFE7; /* Fallback to match intro section */
-        position: relative; /* Ensure positioning context for the button */
         padding: 0; /* Remove padding */
         margin-bottom: 0; /* Ensure no gap below */
         width: 100%;
@@ -902,7 +909,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 108px; /* Adjusted for new section height (189px * 375/675) */
+        bottom: 108px; /* Adjusted for section height */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the button */
     }
@@ -970,7 +977,8 @@ footer p {
 
     .about-hero {
         padding: 80px 20px 40px;
-        margin-top: 130px; /* Match mobile header height */
+        top: var(--header-height);
+        margin-top: 0;
     }
 
     .about-hero h2 {
@@ -1000,7 +1008,8 @@ footer p {
 
     .contact-hero {
         padding: 80px 20px 40px;
-        margin-top: 130px; /* Match mobile header height */
+        top: var(--header-height);
+        margin-top: 0;
     }
 
     .contact-hero h2 {
@@ -1033,7 +1042,8 @@ footer p {
 
     .privacy-policy {
         padding: 80px 20px 40px;
-        margin-top: 130px; /* Match mobile header height */
+        top: var(--header-height);
+        margin-top: 0;
     }
 
     .privacy-policy h3 {
@@ -1050,7 +1060,8 @@ footer p {
 
     .usage-agreement {
         padding: 80px 20px 40px;
-        margin-top: 130px; /* Match mobile header height */
+        top: var(--header-height);
+        margin-top: 0;
     }
 
     .usage-agreement h3 {
