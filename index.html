@@ -150,8 +150,20 @@
                     bottomSheet.style.display = 'none';
                     overlay.style.display = 'none';
                     document.body.classList.remove('no-scroll');
-                }, 300);
+                }, 700); // Match the new transition duration (0.7s)
             }
+
+            // Document-wide click handler to dismiss the bottom sheet
+            document.addEventListener('click', (e) => {
+                // Prevent dismissal if clicking the download button
+                if (e.target === downloadBtn || downloadBtn.contains(e.target)) {
+                    return;
+                }
+                // Dismiss the bottom sheet if it's visible
+                if (bottomSheet.style.display === 'block') {
+                    dismissBottomSheet();
+                }
+            });
 
             // Touch events for mobile
             let touchStartY = 0;
@@ -179,7 +191,7 @@
                 if (!isDragging) return;
                 isDragging = false;
                 bottomSheet.setAttribute('data-dragging', 'false');
-                bottomSheet.style.transition = 'transform 0.3s ease-out'; // Smooth settle
+                bottomSheet.style.transition = 'transform 0.7s linear'; // Smooth settle with new duration
                 const deltaY = touchCurrentY - touchStartY;
                 if (deltaY > window.innerHeight * 0.3) { // Dismiss threshold
                     dismissBottomSheet();
@@ -187,19 +199,6 @@
                     bottomSheet.style.transform = 'translateY(0)'; // Snap back
                     overlay.style.opacity = '1';
                 }
-            });
-
-            // Dismiss when tapping outside the sheet
-            overlay.addEventListener('click', (e) => {
-                if (e.target === overlay) {
-                    dismissBottomSheet();
-                }
-            });
-
-            // Dismiss button
-            dismissLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                dismissBottomSheet();
             });
 
             // Prevent default scrolling during drag
