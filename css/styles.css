@@ -856,12 +856,17 @@ footer p {
         background-size: 150% auto; /* Stretch width to crop sides, fit height to section */
         background-position: center; /* Center the image vertically and horizontally */
         background-repeat: no-repeat; /* Prevent tiling */
+        position: relative; /* Ensure positioning context */
     }
 
     .hero-content {
+        position: absolute;
         top: 26%; /* Lowered by 50% of first line height */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the container */
+        width: 100%; /* Ensure full width for centering */
+        display: flex;
+        flex-direction: column;
         align-items: center; /* Center items */
         text-align: center; /* Center-align text */
         padding: 20px; /* Maintain padding */
@@ -878,6 +883,8 @@ footer p {
         line-height: 1.1;
         max-width: 60%; /* Fit within 60% of the image width */
         margin-bottom: 5px; /* Reduced gap between h1 and subheading */
+        margin-left: auto; /* Center within container */
+        margin-right: auto; /* Center within container */
     }
 
     .hero .subheading {
@@ -885,6 +892,8 @@ footer p {
         white-space: nowrap; /* Prevent line break, match h1 width */
         line-height: 1.1;
         max-width: 60%; /* Fit within 60% of the image width, matches h1 */
+        margin-left: auto; /* Center within container */
+        margin-right: auto; /* Center within container */
     }
 
     .hero .btn {
