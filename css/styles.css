@@ -860,7 +860,7 @@ footer p {
     .hero {
         position: relative;
         margin-top: var(--header-height);
-        height: 367px; /* Adjusted to close the gap with the intro section */
+        height: 307px; /* Reduced by 60px to raise the intro section (from 367px) */
         background-size: 150% auto;
         background-position: center top;
         background-repeat: no-repeat;
@@ -874,7 +874,7 @@ footer p {
 
     .hero-content {
         position: absolute;
-        top: 13.1%; /* Reapplied: Raised by 31px (same as previous adjustment) */
+        top: 13.1%;
         left: 50%;
         transform: translateX(-64%);
         z-index: 2;
@@ -907,7 +907,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 202px; /* Reapplied: Lowered by the button height (201px + 48px, adjusted for new height) */
+        bottom: 169px; /* Adjusted for new section height (202px * 307/367) */
         left: 50%;
         transform: translateX(-50%);
         border: 2px solid #000000;
@@ -923,7 +923,7 @@ footer p {
 
     .intro {
         position: relative;
-        margin-top: 0; /* Unchanged to maintain section alignment */
+        margin-top: 0;
         background-color: #BADFE7;
     }
 
