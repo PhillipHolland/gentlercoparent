@@ -463,7 +463,7 @@ footer p {
 /* Style the Download Now button on the About page to match the home page */
 .download-btn {
     display: block; /* Ensure it can be centered */
-    margin: 15px auto 0; /* Add more padding above the button, center horizontally */
+    margin: 30px auto 0; /* Add more padding above the button, center horizontally */
     max-width: 90%; /* Match home page max-width */
 }
 
@@ -907,7 +907,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 24px;
+        bottom: 24px; /* Updated by you */
         left: 50%;
         transform: translateX(-50%);
         border: 2px solid #000000;
@@ -925,7 +925,7 @@ footer p {
         position: relative;
         margin-top: 0;
         background-color: #BADFE7;
-        padding: 30px 40px; /* Reduced top and bottom padding from 60px to 30px */
+        padding: 30px 40px 20px 40px; /* Reduced bottom padding by 33% (from 30px to 20px) */
     }
 
     .intro h2 {
