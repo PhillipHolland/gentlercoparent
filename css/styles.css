@@ -274,7 +274,7 @@ header {
 
 .banner-image {
     width: 100%;
-    height:  auto;
+    height: auto;
     display: block;
     max-width: 1200px;
     margin: 0 auto;
@@ -859,8 +859,8 @@ footer p {
     }
 
     .hero-content {
-        top: 24%; /* Maintain position for subheading */
-        left: 10%; /* Position at the left */
+        top: 26%; /* Lowered by 50% of first line height (from 24% to 26%) */
+        left: 18%; /* Adjusted for equal left and right padding */
         transform: translateY(0); /* Remove vertical centering */
         align-items: flex-start; /* Align items to the left */
         text-align: left; /* Left-align text */
@@ -877,11 +877,11 @@ footer p {
         white-space: nowrap; /* Keep "Harmonize Your Co-Parenting" on one line */
         line-height: 1.1;
         max-width: 60%; /* Fit within 60% of the image width */
-        margin-bottom: 5px; /* Reduce gap between h1 and subheading */
+        margin-bottom: 5px; /* Reduced gap between h1 and subheading */
     }
 
     .hero .subheading {
-        font-size: 16px; /* Smaller text */
+        font-size: 14px; /* Reduced to match first line length */
         white-space: nowrap; /* Prevent line break, match h1 width */
         line-height: 1.1;
         max-width: 60%; /* Fit within 60% of the image width, matches h1 */
@@ -891,7 +891,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 189px; /* Raised by 30% of button height (from 172px to 189px) */
+        bottom: 189px; /* Previously raised by 30% of button height */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the button */
     }
