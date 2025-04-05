@@ -146,11 +146,17 @@
                 bottomSheet.classList.remove('slide-up');
                 bottomSheet.classList.add('slide-down');
                 overlay.style.opacity = '0';
-                setTimeout(() => {
-                    bottomSheet.style.display = 'none';
-                    overlay.style.display = 'none';
-                    document.body.classList.remove('no-scroll');
-                }, 700); // Match the new transition duration (0.7s)
+
+                // Use transitionend to hide the bottom sheet after the animation completes
+                bottomSheet.addEventListener('transitionend', function handler(e) {
+                    if (e.propertyName === 'transform' && bottomSheet.classList.contains('slide-down')) {
+                        bottomSheet.style.display = 'none';
+                        overlay.style.display = 'none';
+                        document.body.classList.remove('no-scroll');
+                        // Remove the event listener to avoid multiple triggers
+                        bottomSheet.removeEventListener('transitionend', handler);
+                    }
+                });
             }
 
             // Document-wide click handler to dismiss the bottom sheet
@@ -191,9 +197,9 @@
                 if (!isDragging) return;
                 isDragging = false;
                 bottomSheet.setAttribute('data-dragging', 'false');
-                bottomSheet.style.transition = 'transform 0.7s linear'; // Smooth settle with new duration
+                bottomSheet.style.transition = 'transform 0.7s ease-out'; // Smooth settle with new easing
                 const deltaY = touchCurrentY - touchStartY;
-                if (deltaY > window.innerHeight * 0.3) { // Dismiss threshold
+                if (deltaY > window.innerHeight * 0.4) { // Increased threshold for dismissal
                     dismissBottomSheet();
                 } else {
                     bottomSheet.style.transform = 'translateY(0)'; // Snap back

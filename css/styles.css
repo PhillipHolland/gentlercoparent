@@ -724,7 +724,7 @@ footer p {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     z-index: 999; /* Below the bottom sheet */
     opacity: 0;
-    transition: opacity 0.7s linear; /* Match the new duration */
+    transition: opacity 0.7s ease-out; /* Match the new duration and easing */
     pointer-events: none; /* Allow scrolling through the overlay */
 }
 
@@ -743,7 +743,8 @@ footer p {
     padding: 25px; /* Increased padding for iOS-like spacing */
     box-sizing: border-box;
     transform: translateY(100%); /* Start off-screen */
-    transition: transform 0.7s linear; /* Slower with linear easing */
+    transition: transform 0.7s ease-out; /* Slower with ease-out easing */
+    will-change: transform; /* Optimize for Mobile Safari */
 }
 
 .app-bottom-sheet.slide-up {
