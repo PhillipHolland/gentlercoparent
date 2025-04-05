@@ -857,6 +857,10 @@ footer p {
         background-position: center; /* Center the image vertically and horizontally */
         background-repeat: no-repeat; /* Prevent tiling */
         position: relative; /* Ensure positioning context */
+        padding: 0; /* Remove padding to simplify centering */
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     .hero-content {
@@ -864,12 +868,12 @@ footer p {
         top: 26%; /* Lowered by 50% of first line height */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the container */
-        width: 100%; /* Ensure full width for centering */
+        width: 60%; /* Constrain the container to 60% width */
         display: flex;
         flex-direction: column;
         align-items: center; /* Center items */
         text-align: center; /* Center-align text */
-        padding: 20px; /* Maintain padding */
+        padding: 20px; /* Apply padding here instead */
     }
 
     /* Ensure no line break on mobile, matching desktop */
@@ -881,19 +885,15 @@ footer p {
         font-size: 28px; /* Smaller text */
         white-space: nowrap; /* Keep "Harmonize Your Co-Parenting" on one line */
         line-height: 1.1;
-        max-width: 60%; /* Fit within 60% of the image width */
         margin-bottom: 5px; /* Reduced gap between h1 and subheading */
-        margin-left: auto; /* Center within container */
-        margin-right: auto; /* Center within container */
+        width: 100%; /* Fill the container */
     }
 
     .hero .subheading {
         font-size: 14px; /* Reduced to match first line length */
         white-space: nowrap; /* Prevent line break, match h1 width */
         line-height: 1.1;
-        max-width: 60%; /* Fit within 60% of the image width, matches h1 */
-        margin-left: auto; /* Center within container */
-        margin-right: auto; /* Center within container */
+        width: 100%; /* Fill the container */
     }
 
     .hero .btn {
