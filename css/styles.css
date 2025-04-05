@@ -859,18 +859,28 @@ footer p {
     }
 
     .hero-content {
-        top: 30%; /* Move text higher to reduce gap */
-        transform: translateY(-50%); /* Center vertically within the adjusted top */
+        top: 10%; /* Position at the top */
+        left: 10%; /* Position at the left */
+        transform: translateY(0); /* Remove vertical centering */
+        align-items: flex-start; /* Align items to the left */
+        text-align: left; /* Left-align text */
         padding: 20px; /* Maintain padding */
     }
 
-    /* Show the <br> on mobile to control the line break */
+    /* Ensure no line break on mobile, matching desktop */
     .mobile-break {
-        display: inline; /* Show the <br> on mobile */
+        display: none; /* Hide the <br> on mobile */
     }
 
     .hero h1 {
         font-size: 36px;
+        white-space: nowrap; /* Keep "Harmonize Your Co-Parenting" on one line */
+        line-height: 1.1;
+        max-width: 90%; /* Prevent text from being too wide */
+    }
+
+    .hero .subheading {
+        font-size: 20px;
         white-space: normal;
         line-height: 1.1;
         max-width: 90%; /* Prevent text from being too wide */
@@ -880,14 +890,9 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 80px; /* Reduced to bring button closer to text */
-    }
-
-    .hero .subheading {
-        font-size: 20px;
-        white-space: normal;
-        line-height: 1.1;
-        max-width: 90%; /* Prevent text from being too wide */
+        bottom: 60px; /* Adjusted to be closer to the text */
+        left: 10%; /* Align with the text on the left */
+        transform: translateX(0); /* Remove centering */
     }
 
     /* Match the Download Now button on the About page to the home page on mobile */
