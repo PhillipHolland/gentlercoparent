@@ -852,9 +852,9 @@ footer p {
     /* Adjust hero section for mobile */
     .hero {
         margin-top: 144px; /* Adjusted to match header height (81px logo + 32px social icons + 31px padding) */
-        height: 80vh; /* Maintain section height */
-        background-size: 260% auto; /* Adjusted to fill the height of the section */
-        background-position: center top; /* Align top of image with top of section */
+        height: 390px; /* Match the image height to remove negative space */
+        background-size: 150% auto; /* Revert to original cropping */
+        background-position: center; /* Revert to original centering */
         background-repeat: no-repeat; /* Prevent tiling */
         position: relative; /* Ensure positioning context for the button */
         padding: 0; /* Remove padding */
@@ -898,7 +898,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 189px; /* Previously raised by 30% of button height */
+        bottom: 109px; /* Adjusted for new section height (189px * 390/675) */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the button */
     }
