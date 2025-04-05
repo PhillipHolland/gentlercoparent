@@ -867,7 +867,7 @@ footer p {
         position: absolute;
         top: 30%; /* Revert to previous vertical position */
         left: 50%;
-        transform: translateX(-60%); /* Shift left from -50% to -60% */
+        transform: translateX(-64%); /* Shift left from -60% to -64% (additional 4% for the width of "H") */
         z-index: 2;
         text-align: center; /* Center-align text */
         padding: 0; /* Remove padding */
