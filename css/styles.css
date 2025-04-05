@@ -834,7 +834,7 @@ footer p {
 /* Show the bottom sheet and overlay on mobile in portrait orientation */
 @media (max-width: 768px) and (orientation: portrait) {
     :root {
-        --header-height: 126px; /* Adjusted to close the remaining top gap */
+        --header-height: 125px; /* Adjusted to close the remaining top gap */
     }
 
     .app-bottom-sheet {
@@ -859,10 +859,9 @@ footer p {
     /* Adjust hero section for mobile */
     .hero {
         position: relative;
-        top: var(--header-height); /* Starts hero right below the header */
-        margin-top: 0; /* Remove old margin */
+        margin-top: var(--header-height); /* Use margin-top instead of top for proper flow */
         height: 375px; /* Fixed height to match image */
-        background-size: 150% auto; /* Revert to original sizing */
+        background-size: 150% auto; /* Original sizing */
         background-position: center top; /* Align top of image with top of section */
         background-repeat: no-repeat; /* Prevent tiling */
         background-color: #BADFE7; /* Fallback to match intro section */
@@ -982,8 +981,7 @@ footer p {
 
     .about-hero {
         padding: 80px 20px 40px;
-        top: var(--header-height);
-        margin-top: 0;
+        margin-top: var(--header-height);
     }
 
     .about-hero h2 {
@@ -1013,8 +1011,7 @@ footer p {
 
     .contact-hero {
         padding: 80px 20px 40px;
-        top: var(--header-height);
-        margin-top: 0;
+        margin-top: var(--header-height);
     }
 
     .contact-hero h2 {
@@ -1047,8 +1044,7 @@ footer p {
 
     .privacy-policy {
         padding: 80px 20px 40px;
-        top: var(--header-height);
-        margin-top: 0;
+        margin-top: var(--header-height);
     }
 
     .privacy-policy h3 {
@@ -1065,8 +1061,7 @@ footer p {
 
     .usage-agreement {
         padding: 80px 20px 40px;
-        top: var(--header-height);
-        margin-top: 0;
+        margin-top: var(--header-height);
     }
 
     .usage-agreement h3 {
