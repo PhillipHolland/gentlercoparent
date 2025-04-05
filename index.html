@@ -157,34 +157,6 @@
             let touchStartY = 0;
             let touchCurrentY = 0;
             let isDragging = false;
-            let animationFrameId = null;
-
-            const animate = (targetY) => {
-                let startY = parseFloat(bottomSheet.style.transform.replace('translateY(', '').replace('px)', '') || 0);
-                const duration = 300;
-                const startTime = performance.now();
-
-                function step(timestamp) {
-                    const progress = Math.min((timestamp - startTime) / duration, 1);
-                    const easedProgress = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2; // Ease in-out
-                    let currentY = startY + (targetY - startY) * easedProgress;
-                    bottomSheet.style.transform = `translateY(${Math.round(currentY)}px)`;
-                    overlay.style.opacity = Math.max(0, 1 - (currentY / (window.innerHeight * 0.5)));
-
-                    if (progress < 1) {
-                        animationFrameId = requestAnimationFrame(step);
-                    } else {
-                        if (currentY > window.innerHeight * 0.3) {
-                            dismissBottomSheet();
-                        } else {
-                            bottomSheet.style.transform = 'translateY(0)';
-                            overlay.style.opacity = '1';
-                        }
-                    }
-                }
-
-                animationFrameId = requestAnimationFrame(step);
-            };
 
             bottomSheet.addEventListener('touchstart', (e) => {
                 if (e.target === downloadBtn || e.target === dismissLink) return;
@@ -192,25 +164,29 @@
                 isDragging = true;
                 touchStartY = e.touches[0].clientY;
                 bottomSheet.setAttribute('data-dragging', 'true');
-                bottomSheet.style.transition = 'none';
-                cancelAnimationFrame(animationFrameId);
+                bottomSheet.style.transition = 'none'; // Disable transition during drag
             }, { passive: false });
 
             bottomSheet.addEventListener('touchmove', (e) => {
                 if (!isDragging) return;
                 touchCurrentY = e.touches[0].clientY;
                 const deltaY = touchCurrentY - touchStartY;
-                bottomSheet.style.transform = `translateY(${deltaY}px)`;
-                overlay.style.opacity = Math.max(0, 1 - (deltaY / (window.innerHeight * 0.5)));
+                bottomSheet.style.transform = `translateY(${deltaY}px)`; // Real-time update
+                overlay.style.opacity = Math.max(0, 1 - (Math.abs(deltaY) / (window.innerHeight * 0.5))); // Adjust opacity
             }, { passive: true });
 
             bottomSheet.addEventListener('touchend', () => {
                 if (!isDragging) return;
                 isDragging = false;
                 bottomSheet.setAttribute('data-dragging', 'false');
-                bottomSheet.style.transition = 'transform 0.3s ease-out';
+                bottomSheet.style.transition = 'transform 0.3s ease-out'; // Smooth settle
                 const deltaY = touchCurrentY - touchStartY;
-                animate(deltaY);
+                if (deltaY > window.innerHeight * 0.3) { // Dismiss threshold
+                    dismissBottomSheet();
+                } else {
+                    bottomSheet.style.transform = 'translateY(0)'; // Snap back
+                    overlay.style.opacity = '1';
+                }
             });
 
             // Dismiss when tapping outside the sheet
