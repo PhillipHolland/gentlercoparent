@@ -851,7 +851,7 @@ footer p {
 
     /* Adjust hero section for mobile */
     .hero {
-        margin-top: 125px; /* Maintain existing margin */
+        margin-top: 144px; /* Adjusted to match header height (81px logo + 32px social icons + 31px padding) */
         height: 80vh; /* Maintain section height */
         background-size: 150% auto; /* Stretch width to crop sides, fit height to section */
         background-position: center; /* Center the image vertically and horizontally */
@@ -966,7 +966,7 @@ footer p {
 
     .about-hero {
         padding: 80px 20px 40px;
-        margin-top: 140px;
+        margin-top: 144px; /* Match mobile header height */
     }
 
     .about-hero h2 {
@@ -996,7 +996,7 @@ footer p {
 
     .contact-hero {
         padding: 80px 20px 40px;
-        margin-top: 140px;
+        margin-top: 144px; /* Match mobile header height */
     }
 
     .contact-hero h2 {
@@ -1029,7 +1029,7 @@ footer p {
 
     .privacy-policy {
         padding: 80px 20px 40px;
-        margin-top: 140px;
+        margin-top: 144px; /* Match mobile header height */
     }
 
     .privacy-policy h3 {
@@ -1046,7 +1046,7 @@ footer p {
 
     .usage-agreement {
         padding: 80px 20px 40px;
-        margin-top: 140px;
+        margin-top: 144px; /* Match mobile header height */
     }
 
     .usage-agreement h3 {
