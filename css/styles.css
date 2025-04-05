@@ -860,7 +860,7 @@ footer p {
     .hero {
         position: relative;
         margin-top: var(--header-height);
-        height: 366px;
+        height: 367px; /* Adjusted to close the gap with the intro section */
         background-size: 150% auto;
         background-position: center top;
         background-repeat: no-repeat;
@@ -874,7 +874,7 @@ footer p {
 
     .hero-content {
         position: absolute;
-        top: 21.6%; /* Raised by the height of the first line (from 30% to 21.6%) */
+        top: 13.1%; /* Reapplied: Raised by 31px (same as previous adjustment) */
         left: 50%;
         transform: translateX(-64%);
         z-index: 2;
@@ -907,10 +907,10 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 153px; /* Lowered by the button height (105px + 48px) */
+        bottom: 202px; /* Reapplied: Lowered by the button height (201px + 48px, adjusted for new height) */
         left: 50%;
         transform: translateX(-50%);
-        border: 2px solid #000000; /* Changed to black border */
+        border: 2px solid #000000;
     }
 
     /* Match the Download Now button on the About page to the home page on mobile */
@@ -923,7 +923,7 @@ footer p {
 
     .intro {
         position: relative;
-        margin-top: 0;
+        margin-top: 0; /* Unchanged to maintain section alignment */
         background-color: #BADFE7;
     }
 
