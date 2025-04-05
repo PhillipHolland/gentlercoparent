@@ -463,7 +463,7 @@ footer p {
 /* Style the Download Now button on the About page to match the home page */
 .download-btn {
     display: block; /* Ensure it can be centered */
-    margin: 30px auto 0; /* Add more padding above the button, center horizontally */
+    margin: 15px auto 0; /* Add more padding above the button, center horizontally */
     max-width: 90%; /* Match home page max-width */
 }
 
