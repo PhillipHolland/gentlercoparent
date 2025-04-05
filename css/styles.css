@@ -859,8 +859,8 @@ footer p {
     /* Adjust hero section for mobile */
     .hero {
         position: relative;
-        margin-top: var(--header-height); /* Use margin-top instead of top for proper flow */
-        height: 375px; /* Fixed height to match image */
+        margin-top: var(--header-height); /* Use margin-top for proper flow */
+        height: 380px; /* Increased to close the bottom gap */
         background-size: 150% auto; /* Original sizing */
         background-position: center top; /* Align top of image with top of section */
         background-repeat: no-repeat; /* Prevent tiling */
@@ -907,7 +907,7 @@ footer p {
         padding: 15px 30px;
         font-size: 18px;
         max-width: 80%;
-        bottom: 108px; /* Adjusted for section height */
+        bottom: 110px; /* Adjusted for new section height (189px * 380/675) */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the button */
     }
