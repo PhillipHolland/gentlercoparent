@@ -17,9 +17,9 @@ enum GCPTheme {
     static let cardFill = Color.white
     static let fieldFill = Color.white
     
-    /// Assistant message bubbles — OG soft mint on sky blue (#C2EDCE)
-    static let assistantBubble = mint
-    static let assistantBubbleStroke = Color.clear
+    /// Assistant bubbles — lighter mint card on sky so contrast holds (not mint-on-sky wash)
+    static let assistantBubble = Color(hex: "F2FBF6")
+    static let assistantBubbleStroke = Color(hex: "388083").opacity(0.12)
     static let assistantText = Color(hex: "1C2B2C")
     
     /// User message bubbles

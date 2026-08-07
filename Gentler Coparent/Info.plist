@@ -31,6 +31,9 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>46</string>
+	<!-- Chat backend (Grok key is env on this Vercel project only — not in the app) -->
+	<key>GCPChatAPIURL</key>
+	<string>https://gentler-coparent-simple-rag.vercel.app/api/enhanced-chat</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
