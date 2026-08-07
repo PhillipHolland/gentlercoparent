@@ -51,16 +51,8 @@ struct ChatContentView: View {
     }
     
     private var chatBackgroundGradient: some View {
-        // Signature light blue (#BADFE7) — matches rest of app (login, settings, welcome)
-        LinearGradient(
-            colors: [
-                GCPTheme.sky,
-                GCPTheme.sky.opacity(0.92),
-                Color(hex: "D4EBF0")
-            ],
-            startPoint: .top,
-            endPoint: .bottom
-        )
+        // Cream paper only for the message card (parent provides blue frame)
+        GCPTheme.chatCanvas
     }
     
     // Separate message row — no drawingGroup (that rasterizes every stream frame)

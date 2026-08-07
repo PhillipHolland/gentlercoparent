@@ -113,7 +113,8 @@ struct InputBarView: View {
         .padding(.horizontal, GCPTheme.spaceL)
         .padding(.vertical, GCPTheme.spaceS)
         .background(
-            GCPTheme.sky
+            // Composer sits on the blue frame (not cream paper)
+            GCPTheme.chatFrame
                 .ignoresSafeArea(edges: .bottom)
         )
     }

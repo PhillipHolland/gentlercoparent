@@ -68,15 +68,14 @@ struct ContentView: View {
     private let promptQuotaLimit: Int = 5
     private let waitingPeriodDays: Double = 7
     
-    // Prompt helpers from 1.0.11
+    // Legacy labels (Chat uses GCPChatPrompts.starters — top 6 only)
     private let promptHelpers = [
         "💡Usage Tips",
         "🌟How to talk to GCP",
         "🖼️Help me reply to the message in this screenshot",
         "🥺Make this message empathetic",
         "☮️Communicate an issue without conflict",
-        "💸Help me discuss this expense",
-        "🚧Resolve this issue but keep boundaries"
+        "💸Help me discuss this expense"
     ]
 
     // Intro flow state
@@ -495,10 +494,15 @@ struct ContentView: View {
             // Full-width logo — Settings lives in the tab bar (not overlaid on the banner).
             bannerView
             usageIndicatorView
+            // Cream message card sits inside sky-blue frame (side + vertical gutter)
             chatAreaView
+                .padding(.horizontal, GCPTheme.chatFrameInset)
+                .padding(.top, 4)
+                .padding(.bottom, 6)
             inputBarView
         }
-        .background(GCPTheme.sky.ignoresSafeArea())
+        // BLUE FRAMING — outer shell must stay sky (not cream)
+        .background(GCPTheme.chatFrame.ignoresSafeArea())
     }
     
     private var mainContentView: some View {

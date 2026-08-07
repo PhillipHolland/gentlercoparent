@@ -24,6 +24,7 @@ enum GCPChatPrompts {
         case boundaries
     }
     
+    /// Top 6 starters only (keep the grid tight on launch).
     static let starters: [Starter] = [
         Starter(id: "usage", icon: "lightbulb.fill", title: "Usage tips", subtitle: "How to get the most from GCP", cannedKey: .usageTips),
         Starter(id: "howto", icon: "bubble.left.and.bubble.right.fill", title: "How to talk to GCP", subtitle: "Better prompts, better replies", cannedKey: .howToTalk),
@@ -31,7 +32,6 @@ enum GCPChatPrompts {
         Starter(id: "empathy", icon: "heart.fill", title: "Make this empathetic", subtitle: "Warm tone, clear points", cannedKey: .makeEmpathetic),
         Starter(id: "conflict", icon: "hand.raised.fill", title: "Raise an issue calmly", subtitle: "Diplomacy without drama", cannedKey: .noConflict),
         Starter(id: "expense", icon: "dollarsign.circle.fill", title: "Discuss an expense", subtitle: "Clear, fair money talk", cannedKey: .expense),
-        Starter(id: "boundary", icon: "shield.fill", title: "Hold a boundary", subtitle: "Firm without escalating", cannedKey: .boundaries),
     ]
     
     /// Display string shown as the user bubble when a starter is tapped.

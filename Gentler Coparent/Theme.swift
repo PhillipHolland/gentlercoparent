@@ -1,33 +1,36 @@
 import SwiftUI
 
 // MARK: - Gentler Coparent design tokens
-/// Brand palette: soft sky blue (#BADFE7) canvas, teal primary (#388083), mint accents.
+/// OG: sky-blue frame (#BADFE7) + cream chat paper (#F6F6F2) + mint AI bubbles (#C2EDCE).
 enum GCPTheme {
-    // Brand (classic app colors)
+    // Brand
     static let primary = Color(hex: "388083")       // brand teal
-    static let secondary = Color(hex: "6FB3B8")     // lighter teal
-    static let mint = Color(hex: "C2EDCE")          // soft mint chips / selections
-    static let sky = Color(hex: "BADFE7")           // signature light blue shell
-    static let cream = Color(hex: "F6F6F2")         // warm paper for cards
+    static let secondary = Color(hex: "6FB3B8")
+    static let mint = Color(hex: "C2EDCE")          // AI bubbles / chips
+    static let sky = Color(hex: "BADFE7")           // BLUE FRAMING — outer shell, never remove
+    static let cream = Color(hex: "F6F6F2")         // cream chat paper (message column only)
     static let accentSoft = Color(hex: "D4E8E6")
     
-    // Surfaces — chat must use sky so the light blue shows (not near-white cream)
-    static let canvas = sky
-    static let chatCanvas = sky
+    // Surfaces
+    static let canvas = sky                         // app chrome / blue frame
+    static let chatFrame = sky                      // alias: outer chat tab blue
+    static let chatCanvas = cream                   // message paper inside the blue frame
     static let cardFill = Color.white
     static let fieldFill = Color.white
     
-    /// Assistant bubbles — lighter mint card on sky so contrast holds (not mint-on-sky wash)
-    static let assistantBubble = Color(hex: "F2FBF6")
-    static let assistantBubbleStroke = Color(hex: "388083").opacity(0.12)
+    /// Assistant — mint on cream (OG)
+    static let assistantBubble = mint
+    static let assistantBubbleStroke = Color.clear
     static let assistantText = Color(hex: "1C2B2C")
     
-    /// User message bubbles
+    /// User — teal
     static let userBubble = primary
     static let userText = Color.white
     
-    /// Typing / soft chrome
-    static let typingFill = Color(hex: "E3F2F4")
+    static let typingFill = Color(hex: "EEF4F1")
+    
+    /// Side inset so sky blue peeks around the cream message card
+    static let chatFrameInset: CGFloat = 10
     
     // Typography (custom fonts OK per product preference)
     static func title(_ size: CGFloat = 18) -> Font {
