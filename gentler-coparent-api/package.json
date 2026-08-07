@@ -1,0 +1,29 @@
+{
+  "name": "gentler-coparent-simple-rag",
+  "version": "2.0.0",
+  "description": "Enhanced RAG system for Gentler Coparent with comprehensive knowledge base integration",
+  "main": "api/enhanced-chat.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "coparenting",
+    "family-law", 
+    "rag",
+    "ai",
+    "legal-guidance"
+  ],
+  "author": "Gentler Coparent",
+  "license": "Private",
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

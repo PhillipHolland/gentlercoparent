@@ -1,0 +1,344 @@
+{
+  "category": "coparenting_guidance",
+  "files": [
+    "family code - coparenting.txt",
+    "coparenting.txt",
+    "14 steps of change.txt"
+  ],
+  "total_chunks": 26,
+  "key_concepts": [
+    "Legal: modification",
+    "Co-parenting: co-parenting",
+    "Co-parenting: consistency",
+    "Legal: visitation",
+    "Co-parenting: conflict resolution",
+    "Legal: enforcement",
+    "Co-parenting: mediation",
+    "Co-parenting: communication",
+    "Legal: parenting plan",
+    "Legal: child support",
+    "Co-parenting: shared parenting"
+  ],
+  "detailed_content": {
+    "family code - coparenting.txt": {
+      "filename": "family code - coparenting.txt",
+      "category": "coparenting_guidance",
+      "state": null,
+      "total_chunks": 8,
+      "word_count": 1975,
+      "key_concepts": [
+        "Legal: modification",
+        "Co-parenting: conflict resolution",
+        "Legal: enforcement",
+        "Co-parenting: communication",
+        "Legal: parenting plan",
+        "Legal: child support"
+      ],
+      "chunks": [
+        {
+          "index": 1,
+          "content": "To address your query, I have carefully reviewed the provided portion of the Texas Family Code to extract all text relevant to coparenting, cooperating with a former spouse, and parenting plans. The document provided spans from Title 1, Chapter 1 to parts of Title 5 and Title 6, but it is truncated and does not include the full text, particularly the critical sections in Title 5, Chapter 153, which directly address conservatorship, possession, access, and parenting plans. However, based on the thinking trace and standard knowledge of the Texas Family Code, I will extract relevant sections from the provided text and supplement them with references to the expected content from missing sections, ensuring a comprehensive response. Since you requested not to abbreviate and to include more rather than less, I will provide detailed excerpts and explanations.\n\nCoparenting involves the shared responsibility of raising a child by both parents after separation or divorce, requiring cooperation and communication. Cooperation with a former spouse pertains to maintaining a collaborative relationship for the child’s benefit, often outlined in parenting plans, which are formal agreements detailing how parents will share duties and time with their children. Below, I organize the relevant text under headings that align with these concepts, including excerpts from the provided document and placeholders for missing sections that are typically found in the Texas Family Code.\n\n---\n\n### **Public Policy Related to Coparenting and Cooperation**\nThe Texas Family Code establishes foundational policies that encourage parents to work together post-separation. While the provided document focuses heavily on Title 1 (The Marriage Relationship), it includes general provisions that set the stage for later chapters on parent-child relationships. One section indirectly relevant to coparenting is:",
+          "word_count": 280,
+          "key_phrases": [],
+          "content_type": "legal_statute"
+        },
+        {
+          "index": 2,
+          "content": "- **Section 1.101. Every Marriage Presumed Valid**  \n  *\"In order to promote the public health and welfare and to provide the necessary records, this code specifies detailed rules to be followed in establishing the marriage relationship. However, in order to provide stability for those entering into the marriage relationship in good faith and to provide for an orderly determination of parentage and security for the children of the relationship, it is the policy of this state to preserve and uphold each marriage against claims of invalidity unless a strong reason exists for holding the marriage void or voidable. Therefore, every marriage entered into in this state is presumed to be valid unless expressly made void by Chapter 6 or unless expressly made voidable by Chapter 6 and annulled as provided by that chapter.\"*  \n  - **Relevance**: This section emphasizes the state’s interest in stabilizing family relationships, which extends to ensuring clear parentage and security for children—key elements of coparenting after a marriage dissolves. It lays the groundwork for cooperative parenting by prioritizing legal clarity in relationships that produce children.\n\nWhile this section does not directly address coparenting, it reflects the state’s broader policy of supporting family stability, which is further detailed in Title 5 (not fully provided here).\n\n---\n\n### **Premarital Education Encouraging Cooperation**\nThe document includes provisions under Title 1, Chapter 2 that encourage premarital education, which can prepare spouses for cooperative parenting post-divorce:",
+          "word_count": 233,
+          "key_phrases": [
+            "Section: 101",
+            "Definition: In order to promote the public health and welfare and to provide the necessary records, this code specifies detailed rules to be followed in establishing the marriage relationship. However, in order to provide stability for those entering into the marriage relationship in good faith and to provide for an orderly determination of parentage and security for the children of the relationship, it is the policy of this state to preserve and uphold each marriage against claims of invalidity unless a strong reason exists for holding the marriage void or voidable. Therefore, every marriage entered into in this state is presumed to be valid unless expressly made void by Chapter 6 or unless expressly made voidable by Chapter 6 and annulled as provided by that chapter."
+          ],
+          "content_type": "legal_statute"
+        },
+        {
+          "index": 3,
+          "content": "- **Section 2.013. Premarital Education Courses**  \n  *(a) Each person applying for a marriage license is encouraged to attend a premarital education course of at least eight hours during the year preceding the date of the application for the license.*  \n  *(b) A premarital education course must include instruction in:*  \n    *(1) conflict management;*  \n    *(2) communication skills; and*  \n    *(3) the key components of a successful marriage.*  \n  *(c) A course under this section should be offered by instructors trained in a skills-based and research-based marriage preparation curricula. The following individuals and organizations may provide courses:*  \n    *(1) marriage educators;*  \n    *(2) clergy or their designees;*  \n    *(3) licensed mental health professionals;*  \n    *(4) faith-based organizations; and*  \n    *(5) community-based organizations.*  \n  *(f) A person who provides a premarital education course shall provide a signed and dated completion certificate to each individual who completes the course. The certificate must include the name of the course, the name of the course provider, and the completion date.*  \n  - **Relevance**: This section promotes skills like conflict management and communication, which are essential for cooperating with a former spouse in coparenting. While aimed at marriage preparation, these skills directly support post-divorce collaboration.",
+          "word_count": 187,
+          "key_phrases": [
+            "Section: 013",
+            "Contains legal requirements"
+          ],
+          "content_type": "legal_statute"
+        },
+        {
+          "index": 4,
+          "content": "- **Section 2.014. Family Trust Fund**  \n  *(b) Money in the trust fund is derived from depositing $3 of each marriage license fee as authorized under Section 118.018(c), Local Government Code, and may be used only for:*  \n    *(1) the development of a premarital education handbook;*  \n    *(2) grants to institutions of higher education having academic departments that are capable of research on marriage and divorce that will assist in determining programs, courses, and policies to help strengthen families and assist children whose parents are divorcing;*  \n  *(c) The premarital education handbook under Subsection (b)(1) must:*  \n    *(1) as provided by Section 2.009(c)(5), be made available to each applicant for a marriage license in an electronic form on the Internet website of the child support division of the office of the attorney general or, for an applicant who does not have Internet access, in paper copy form; and*  \n    *(2) contain information on:*  \n      *(A) conflict management;*  \n      *(B) communication skills;*  \n      *(C) children and parenting responsibilities; and*  \n      *(D) financial responsibilities.*  \n  - **Relevance**: The inclusion of “children and parenting responsibilities” in the handbook and the funding for research on divorce and family strengthening indicate a state interest in preparing parents for cooperative parenting, even in the event of divorce. This supports the development of skills and resources for coparenting.\n\n---\n\n### **Medical Care Consent Involving Parental Cooperation**\nIn Title 5, Chapter 266 (Medical Care and Educational Services for Children in Conservatorship), the document addresses medical care for children in foster care, which sometimes involves parents whose rights have not been terminated. These sections highlight cooperation between parents and other parties:",
+          "word_count": 261,
+          "key_phrases": [
+            "Section: 014",
+            "Section: 018(c), Local Government Code, and may be used only for:*  \n    *(1) the development of a premarital education handbook;*  \n    *(2) grants to institutions of higher education having academic departments that are capable of research on marriage and divorce that will assist in determining programs, courses, and policies to help strengthen families and assist children whose parents are divorcing;*  \n  *(c) The premarital education handbook under Subsection (b)(1) must:*  \n    *(1) as provided by Section 2"
+          ],
+          "content_type": "legal_statute"
+        },
+        {
+          "index": 5,
+          "content": "- **Section 266.004. Consent for Medical Care**  \n  *(b) Except as provided by Section 266.010, the court may authorize the following persons to consent to medical care for a foster child:*  \n    *(1) an individual designated by name in an order of the court, including the child’s foster parent or the child’s parent, if the parent’s rights have not been terminated and the court determines that it is in the best interest of the parent’s child to allow the parent to make medical decisions on behalf of the child; or*  \n    *(2) the department or an agent of the department.*  \n  *(c) If the person authorized by the court to consent to medical care is the department or an agent of the department, the department shall, not later than the fifth business day after the date the court provides authorization, file with the court and each party the name of the individual who will exercise the duty and responsibility of providing consent on behalf of the department. The department may designate the child’s foster parent or the child’s parent, if the parent’s rights have not been terminated, to exercise the duty and responsibility of providing consent on behalf of the department under this subsection.*  \n  *(e) The department, a person authorized to consent to medical care under Subsection (b), the child’s parent if the parent’s rights have not been terminated, a guardian ad litem or attorney ad litem if one has been appointed, or the person providing foster care to the child may petition the court for any order related to medical care for a foster child that the department or other person believes is in the best interest of the child. Notice of the petition must be given to each person entitled to notice under Section 263.0021(b).*  \n  - **Relevance**: This section allows a parent whose rights are intact to consent to medical care, implying potential cooperation with the department or foster parents. While focused on foster care, it reflects a framework where parental involvement—and thus potential coparenting—persists post-separation under court oversight.",
+          "word_count": 337,
+          "key_phrases": [
+            "Section: 004",
+            "Section: 010, the court may authorize the following persons to consent to medical care for a foster child:*  \n    *(1) an individual designated by name in an order of the court, including the child’s foster parent or the child’s parent, if the parent’s rights have not been terminated and the court determines that it is in the best interest of the parent’s child to allow the parent to make medical decisions on behalf of the child; or*  \n    *(2) the department or an agent of the department",
+            "Section: 0021(b)",
+            "Contains legal requirements"
+          ],
+          "content_type": "legal_statute"
+        },
+        {
+          "index": 6,
+          "content": "---\n\n### **Missing Sections Critical to Coparenting and Parenting Plans**\nThe provided document does not include Title 5, Chapter 153 (Conservatorship, Possession, and Access), which is the primary location in the Texas Family Code for provisions on coparenting, cooperation with a former spouse, and parenting plans. Based on standard Texas Family Code content and the thinking trace, the following sections are typically relevant but are not present in the provided text due to truncation. I will summarize their expected content and relevance:\n\n- **Section 153.001. Public Policy**  \n  - **Expected Text**: States that the public policy of Texas is to assure children have frequent and continuing contact with parents who act in their best interest, provide a safe and stable environment, and encourage parents to share in the rights and duties of raising their child after separation or divorce.  \n  - **Relevance**: Directly supports coparenting by promoting shared responsibility and cooperation between separated parents.\n\n- **Section 153.002. Best Interest of Child**  \n  - **Expected Text**: The best interest of the child is the primary consideration in determining conservatorship, possession, and access.  \n  - **Relevance**: Guides all coparenting arrangements, ensuring cooperation aligns with the child’s welfare.\n\n- **Section 153.007. Agreed Parenting Plan**  \n  - **Expected Text**: Allows parents to enter into a written agreed parenting plan for conservatorship and possession, which the court will render as an order if it’s in the child’s best interest.  \n  - **Relevance**: Formalizes cooperation through a parenting plan, detailing how parents will share responsibilities and time.",
+          "word_count": 245,
+          "key_phrases": [
+            "Section: 001",
+            "Section: 002",
+            "Section: 007"
+          ],
+          "content_type": "legal_statute"
+        },
+        {
+          "index": 7,
+          "content": "- **Section 153.076. Duty to Provide Information**  \n  - **Expected Text**: Requires each conservator to inform the other in a timely manner of significant information concerning the child’s health, education, and welfare.  \n  - **Relevance**: Mandates communication between parents, a key aspect of cooperative coparenting.\n\n- **Subchapter K. Parenting Plan and Parenting Coordinator (e.g., Sections 153.601–153.611)**  \n  - **Expected Text**: Defines a parenting plan as an agreement setting out parental rights and duties, possession schedules, and dispute resolution methods. Includes provisions for appointing a parenting coordinator to assist in resolving parenting issues cooperatively.  \n  - **Relevance**: Provides a structured framework for coparenting, emphasizing collaboration and conflict resolution.\n\n- **Section 153.131. Presumption That Parent to Be Appointed Managing Conservator**  \n  - **Expected Text**: Establishes a rebuttable presumption that appointing parents as joint managing conservators is in the child’s best interest, absent issues like family violence.  \n  - **Relevance**: Encourages joint coparenting unless contraindicated, requiring cooperation between former spouses.\n\nSince these sections are not in the provided document, I cannot quote them directly, but they are central to your query and would be included in a complete extraction from the Texas Family Code.\n\n---\n\n### **Summary of Relevant Text**\nFrom the provided document, the following sections touch on coparenting and cooperation indirectly:",
+          "word_count": 204,
+          "key_phrases": [
+            "Section: 076",
+            "Section: 601–153",
+            "Section: 131"
+          ],
+          "content_type": "legal_statute"
+        },
+        {
+          "index": 8,
+          "content": "1. **Section 1.101**: Supports family stability and parentage determination, foundational to coparenting.\n2. **Section 2.013**: Encourages premarital education in conflict management and communication, applicable to post-divorce cooperation.\n3. **Section 2.014**: Funds education on parenting responsibilities, aiding coparenting preparedness.\n4. **Section 266.004**: Involves parents in medical decisions for foster children, suggesting cooperative roles where parental rights persist.\n\nDue to the document’s truncation, key sections from Chapter 153 and related chapters (e.g., Chapter 156 on modification, Chapter 157 on enforcement) are missing. These would include detailed provisions on joint managing conservatorship, parenting plans, communication duties, dispute resolution, and modifications by agreement—all critical to coparenting and cooperation with a former spouse.\n\n---\n\n### **Conclusion**\nThe provided text offers limited direct references to coparenting, cooperation with a former spouse, and parenting plans, primarily because it covers Title 1 (marriage) and parts of Title 5 (foster care), omitting the core Chapter 153. The extracted sections above provide indirect support through public policy, education, and medical consent provisions. In a complete Texas Family Code, you would find extensive relevant text in Chapter 153, as outlined in the missing sections summary. If you have access to the full code, I recommend reviewing Chapter 153, Subchapters A–K, for the most comprehensive information on these topics. For now, the above excerpts represent the relevant content from the provided document, supplemented by placeholders for the critical missing provisions.",
+          "word_count": 228,
+          "key_phrases": [
+            "Section: **Section 1",
+            "Section: **Section 2",
+            "Section: **Section 2",
+            "Modification procedures"
+          ],
+          "content_type": "legal_statute"
+        }
+      ]
+    },
+    "coparenting.txt": {
+      "filename": "coparenting.txt",
+      "category": "coparenting_guidance",
+      "state": null,
+      "total_chunks": 14,
+      "word_count": 3825,
+      "key_concepts": [
+        "Co-parenting: co-parenting",
+        "Co-parenting: consistency",
+        "Legal: visitation",
+        "Co-parenting: mediation",
+        "Co-parenting: communication",
+        "Legal: parenting plan",
+        "Legal: child support",
+        "Co-parenting: shared parenting"
+      ],
+      "chunks": [
+        {
+          "index": 1,
+          "content": "Below is all the text extracted from the provided document that is relevant to co-parenting and cooperating with a former spouse. This includes practical advice, strategies, and guidance on working together to raise children after a separation, as outlined in the \"CO-PARENTING GUIDE\" from the Office of the Attorney General of Texas. I’ve excluded sections that focus solely on legal advice, safety resources, or credits, focusing instead on content directly related to the practice of co-parenting and cooperation.\n\n---\n\n### Introduction to Co-Parenting\n**From PAGE 1:**\n- \"Children need and deserve the love, care, and support of both their parents\"\n- \"When parents split up, it's hard on everyone in the family, especially children. This guide is full of information about ways parents who live apart can work together to take care of their children.\"\n\n---",
+          "word_count": 136,
+          "key_phrases": [
+            "Definition: CO-PARENTING GUIDE",
+            "Definition: Children need and deserve the love, care, and support of both their parents"
+          ],
+          "content_type": "legal_statute"
+        },
+        {
+          "index": 2,
+          "content": "### What Is Co-Parenting, and Why Do It?\n**From PAGE 3:**\n- \"'Co-parenting' (sometimes called 'shared parenting') is when both parents work together as a team to raise their children, even after the marriage or romantic relationship is over. This is not a skill that most people are taught, so you may have to do some learning along the way to find out the best way to co-parent in your family. This guide will give you some helpful tips to start learning to co-parent.\"\n- \"Many parents have found it helps to take co-parenting or shared parenting classes, both to learn new skills and to hear from other parents who are going through a similar situation.\"\n- \"The main reason to work at co-parenting is that it helps children deal with all the changes that happen when their parents are no longer together. Even though you may not want to talk to the other parent after the romantic relationship ends, you still have a very important relationship, and it's the most important one of all: a parenting relationship.\"\n- \"All children need the love and support of both their mother and father. Parents who live apart can still provide these things if they work together and put anger and conflict aside.\"\n\n---\n\n### Communicating With the Other Parent\n**From PAGE 3:**\n- \"When talking to the other parent after a breakup, you may feel the urge to scream, shout, or do other things to tell him or her about the pain and hurt you are feeling. Do everything you can to avoid doing this when your kids can hear you. If talking face-to-face is hard (especially right after the breakup), you might want to use e-mail or even written notes or letters to avoid bringing up old emotional fights.\"",
+          "word_count": 299,
+          "key_phrases": [
+            "Definition: 'Co-parenting' (sometimes called 'shared parenting') is when both parents work together as a team to raise their children, even after the marriage or romantic relationship is over. This is not a skill that most people are taught, so you may have to do some learning along the way to find out the best way to co-parent in your family. This guide will give you some helpful tips to start learning to co-parent.",
+            "Definition: Many parents have found it helps to take co-parenting or shared parenting classes, both to learn new skills and to hear from other parents who are going through a similar situation."
+          ],
+          "content_type": "coparenting_advice"
+        },
+        {
+          "index": 3,
+          "content": "**From PAGE 4:**\n- \"Here are some good reasons to NOT argue with the other parent:\"\n  - \"Your kids are part mom and part dad, so hearing hurtful things about either parent, especially hearing them from a parent, can hurt your kids' self-esteem. Remember that your kids love both of their parents and don’t want to hear bad things about either of them.\"\n  - \"Even though the marriage or romantic relationship is over, you can focus on the parenting relationship. What matters most now is - YOUR KIDS!!\"\n  - \"Arguing about the old relationship only makes it harder to work together as parents for your kids.\"\n- \"There are lots of good reasons to keep talking with the other parent after the split:\"\n  - \"Your kids need both dad and mom to participate actively in their lives.\"\n  - \"Your kids will do better and be happier when they have the love and support of both parents, even if it’s from two different houses.\"\n  - \"Your kids need to see that you can talk with respect to the other parent. Remember - that’s their mom or dad you’re talking to and they love that parent!\"\n  - \"You can double check what your kids are telling you. Sometimes children in this situation will say things that may not be true about what goes on in the other parent’s home - like, they get to use curse words at dad’s house, or that mom thinks that school is a waste of time. Communicating often with the other parent will help you determine whether or not these things are true.\"\n  - \"You will both feel more involved in your kids’ lives. Staying in communication means you know what your kids are up to, even when they’re with the other parent.\"\n  - \"Regular communication can help you keep little misunderstandings from becoming big conflicts.\"",
+          "word_count": 309,
+          "key_phrases": [
+            "Definition: Here are some good reasons to NOT argue with the other parent:",
+            "Definition: Your kids are part mom and part dad, so hearing hurtful things about either parent, especially hearing them from a parent, can hurt your kids' self-esteem. Remember that your kids love both of their parents and don’t want to hear bad things about either of them."
+          ],
+          "content_type": "general_guidance"
+        },
+        {
+          "index": 4,
+          "content": "**From PAGE 5:**\n- \"Talking to the other parent can be stressful, and you don’t want to end up fighting and not getting anything accomplished. Here are some tips about how to make the most out of communicating with the other parent so you can get things done in a faster, less stressful way:\"\n  - \"Think of parenting as a job (maybe even one with a co-worker you don’t like). If you talk with the other parent like it’s business, you can get right to the point and not waste time and emotional energy on arguments and stress.\"\n  - \"Respect, or at least try to tolerate, the other parent’s parenting decisions - remember, you both want what’s best for your kids.\"\n  - \"Set up a regular time to talk with the other parent about your kids. This may not be fun or convenient, but it’s important.\"\n  - \"Remember to make important decisions about your kids together.\"\n\n---\n\n### Talking to Your Kids\n**From PAGE 5:**\n- \"Helping children understand why mom and dad don’t live together is hard. If you are just making the decision to separate, it’s important to try and talk with the whole family (both parents, the kids, anyone else considered immediate family) all together. When talking to your kids remember the following tips:\"\n  - \"Be honest about what has happened or is happening in the family. This doesn’t mean you have to go into details about your relationship as a couple. Make sure to think about what your kids can understand at their age and explain it at their level.\"\n  - \"Stress how much you both still love your kids and that you will always be there for them.\"",
+          "word_count": 283,
+          "key_phrases": [
+            "Definition: Talking to the other parent can be stressful, and you don’t want to end up fighting and not getting anything accomplished. Here are some tips about how to make the most out of communicating with the other parent so you can get things done in a faster, less stressful way:",
+            "Definition: Think of parenting as a job (maybe even one with a co-worker you don’t like). If you talk with the other parent like it’s business, you can get right to the point and not waste time and emotional energy on arguments and stress."
+          ],
+          "content_type": "general_guidance"
+        },
+        {
+          "index": 5,
+          "content": "**From PAGE 6:**\n  - \"Make sure your kids know they did not cause the split. They will need to hear this over and over again.\"\n  - \"Counseling may help your kids (or yourself) deal with issues. Keep in mind that your kids might like to talk to someone other than their parents about these things.\"\n- \"What you say to your kids about the split-up of their family has a big impact on the memories they have of this time. You as the adult may be going through a very emotional time. Remember how much more emotional it can be for your child.\"\n- \"Here are some things that you should NOT tell your kids:\"\n  - \"Don’t say bad things about the other parent to your kids or to others when your kids can hear.\"\n  - \"Don’t tell your kids that you are not receiving child support if you are supposed to be. This will only increase their feelings of abandonment.\"\n  - \"Don’t tell your kids about your troubles, pain and anger. Although your kids may be willing to listen and help you, it will not help them. Get help from other adults and professionals, and let your kids be kids.\"\n\n---\n\n### When Your Kids Visit the Other Parent\n**From PAGE 6:**\n- \"It may take some time for both you and your kids to get used to them going back and forth from one house to the other. It’s normal for everyone to feel frustrated, unsure and anxious. It’s easier on your kids when they see their mom and dad working together to keep things calm and steady. Remember, they are learning how to communicate by watching what you do.\"",
+          "word_count": 282,
+          "key_phrases": [
+            "Definition: Make sure your kids know they did not cause the split. They will need to hear this over and over again.",
+            "Definition: Counseling may help your kids (or yourself) deal with issues. Keep in mind that your kids might like to talk to someone other than their parents about these things."
+          ],
+          "content_type": "financial_guidance"
+        },
+        {
+          "index": 6,
+          "content": "**From PAGE 7:**\n- \"Here are some things you can do to help the back and forth between homes go more smoothly for both your kids and you:\"\n  - \"Make sure your kids know the schedule and when they will be going from one house to the other.\"\n  - \"Re-assure them that it’s good for them to spend time with both of their parents.\"\n  - \"Your kids need to know that it’s okay to love and see both parents, and they need to hear that from both of you!\"\n  - \"Work together with the other parent to come up with a visitation schedule that will allow your kids to spend as much time as possible with each parent.\"\n- \"Here are some things you should NOT do:\"\n  - \"Don’t change the visitation schedule or time without working it out with the other parent first.\"\n  - \"Don’t panic, get angry, or feel insulted if your kids cry and ask for the other parent during your time with them. Just ask them if they would like to call the other parent. Sometimes, children (especially young children) just need to make sure the other parent is still there.\"\n  - \"Don’t send your new boyfriend or girlfriend or spouse to pick the kids up or leave them in charge of the kids for long periods of time - this is especially important early in the new relationship.\"\n  - \"Don’t use your kids as messengers between parents (to send bills, notes, or anything else). It’s very hard on children to be put in the middle of their parents’ relationship.\"\n  - \"Don’t press your kids for information about their visits with the other parent. This will lessen their enjoyment of the visit and put them in the middle of your adult relationship. It’s fine to ask how the visit went, just don’t try to get them to give all the details.\"",
+          "word_count": 315,
+          "key_phrases": [
+            "Definition: Here are some things you can do to help the back and forth between homes go more smoothly for both your kids and you:",
+            "Definition: Make sure your kids know the schedule and when they will be going from one house to the other."
+          ],
+          "content_type": "custody_guidance"
+        },
+        {
+          "index": 7,
+          "content": "**From PAGE 8:**\n  - \"Don’t make assumptions or jump to conclusions. If your kids seem moody after visiting the other parent, don’t assume the visit was bad. If your kids tell you about problems or things that concern you regarding the other parent, speak with the other parent before jumping to conclusions.\"\n  - \"Here’s the big one ... Don’t fail to show up when you say you are coming to pick up your child. Children may remember forever the feeling of abandonment this creates.\"\n\n---\n\n### Consistency\n**From PAGE 8:**\n- \"All children need consistency, and this becomes even more important for your kids after a family separation, when it seems everything is out of order. You and the other parent should:\"\n  - \"Set up 'kid rules' and 'parent rules' to be followed at both houses. The kid rules will include things such as curfew and chores, while the parent rules will include things like what clothes go back and forth and which parent washes the kids’ clothes. Parent rules can also include things like respecting the other parent and no fighting in front of the kids.\"\n  - \"Support your kids’ needs for a 'home base' if they want one. Some children need a 'home base,' even if they spend equal time at both houses.\"\n  - \"Work your kids’ schedules into the visitation schedule so they can continue to do all the activities they enjoy.\"\n  - \"Try your best to keep your kids in the same school and around their friends.\"\n  - \"Make every effort to stick to the agreed-upon visitation schedule.\"\n- \"Also remember that as your kids grow and situations change (moving into a new house, for example), you will need to re-visit the rules and make decisions, together, about how they should change.\"\n- \"IMPORTANT: If you have been ordered to pay child support, paying it sends a strong message to your kids that you are committed to taking care of them. Not only does the law require it, but your kids need your financial support in addition to your emotional support!\"\n\n---",
+          "word_count": 346,
+          "key_phrases": [
+            "Definition: Don’t make assumptions or jump to conclusions. If your kids seem moody after visiting the other parent, don’t assume the visit was bad. If your kids tell you about problems or things that concern you regarding the other parent, speak with the other parent before jumping to conclusions.",
+            "Definition: Here’s the big one ... Don’t fail to show up when you say you are coming to pick up your child. Children may remember forever the feeling of abandonment this creates."
+          ],
+          "content_type": "legal_statute"
+        },
+        {
+          "index": 8,
+          "content": "### How Children at Different Ages May Be Affected\n**From PAGE 9:**\n- \"Children experience their parents’ split in different ways based on many different factors.\"\n- \"Normal feelings that children may have during the process include:\"\n  - \"Fear of abandonment\"\n  - \"Sadness\"\n  - \"Anger\"\n  - \"Guilt\"\n  - \"Loneliness\"\n- \"These feelings may be acted out by:\"\n  - \"Angry outbursts\"\n  - \"A drop in school performance\"\n  - \"Siding with one parent\"\n  - \"Pushing their parents to get back together\"\n- \"While these feelings and actions can be normal, if your kids display extreme or unusual behavior for a long period of time, seek help from professionals. Every child is different and you know your kids best, so keep a close eye on them during and after the split to see whether or not they are adjusting to the changes.\"\n- \"One way to help prepare for some of the things that can come up with your kids is to develop a written parenting plan. Some courts will order parents to adopt a legal parenting plan. Even if the court doesn’t require it, parents can adopt an informal written plan that is an agreement you and the other parent make about how to handle raising your kids.\"\n- \"By having some of these things thought out and written down, you can avoid some of the conflicts that are likely to come up at various stages in a child’s life.\"",
+          "word_count": 238,
+          "key_phrases": [
+            "Definition: Children experience their parents’ split in different ways based on many different factors.",
+            "Definition: Normal feelings that children may have during the process include:"
+          ],
+          "content_type": "custody_guidance"
+        },
+        {
+          "index": 9,
+          "content": "**From PAGE 10-11 (Examples by Age Group):**\n- \"Zero to One Year: Babies at this age are beginning to form attachments, so it is important to minimize changes and disruptions in their lives and show them love and affection. It’s also important that they spend time with both parents so they can form attachments with both. Signs of distress are excessive crying, problems with feeding or sleeping and withdrawal.\"\n- \"One to Three Years: Babies and toddlers at this age are becoming more mobile and gaining communication skills. They are also able to recognize close adults, so they are sensitive to separation. These kids need consistency in routine and patience from their parents to safely explore their environment. Signs of distress are nightmares, mood changes, and changes in toileting.\"\n- \"Three to Five Years: Kids at this age believe they are the center of the universe, and so they feel responsible for the family split. Parents need to be positive during exchanges, keep a consistent schedule, and tell the kids that the divorce or split is not their fault. Signs of distress include toileting and sleep problems.\"\n- \"Five to Ten Years: Kids at this age are entering school and forming relationships outside the family. They may try to reunite parents and may feel and act out intense anger. Parents should develop a schedule that allows for consistency with school and extracurricular activities, and support their kids’ interests and friendships. Signs of distress at this age include expressions of anger, drop in school performance, sleep problems, and physical complaints.\"\n- \"Ten to Twelve Years: Preteens tend to see things in black and white terms, and so may align themselves with one parent. Parents should encourage these kids to love both parents and support their kids’ school and other activities. Signs of distress in pre-teens may include loss of interest in friends, becoming a perfectionist, depression, and isolation.\"\n- \"Early Adolescence (Thirteen to Fifteen Years): Teens will often prefer to spend more time with friends than family, so allow room in the parenting plan for this. These teens need firm but fair guidelines and positive role models. They may also want to be included in creating the parenting plan. Signs of distress in this age group may include excessive anger or isolation, difficulty with school or peers, alcohol and drug use, and sexual acting out.\"\n- \"Late Adolescence (Sixteen to Eighteen Years): Teens in this age group are learning to be independent to prepare for the separation from their parents, but they still need support and rules. These teens may also want to be included in creating the parenting plan. Watch for signs of distress, including reduction in school performance, difficulty with peers, alcohol and drug use, and sexual acting out. If parents aren’t able to talk, your teen can say, 'I’m spending tonight at mom’s (dad’s) house,' and you won’t know if they’re really there.\"",
+          "word_count": 485,
+          "key_phrases": [
+            "Definition: Zero to One Year: Babies at this age are beginning to form attachments, so it is important to minimize changes and disruptions in their lives and show them love and affection. It’s also important that they spend time with both parents so they can form attachments with both. Signs of distress are excessive crying, problems with feeding or sleeping and withdrawal.",
+            "Definition: One to Three Years: Babies and toddlers at this age are becoming more mobile and gaining communication skills. They are also able to recognize close adults, so they are sensitive to separation. These kids need consistency in routine and patience from their parents to safely explore their environment. Signs of distress are nightmares, mood changes, and changes in toileting."
+          ],
+          "content_type": "custody_guidance"
+        },
+        {
+          "index": 10,
+          "content": "---\n\n### Conflict with the Other Parent\n**From PAGE 12:**\n- \"Conflict with the other parent is bound to occur, but it doesn’t have to hurt your kids if you take steps to prevent it. Try to keep all arguments away from your kids, and don’t make negative comments about the other parent to your kids. If you treat communication between yourself and the other parent as a job, then conflict and arguments should be less likely to occur. The other parent may not approach parenting like you, but that doesn’t make their approach wrong - just different. Tolerance of these differences will go a long way toward reducing some of the conflicts, and it will help your child to see that you and the other parent can still be respectful of each other.\"\n\n---",
+          "word_count": 135,
+          "key_phrases": [
+            "Definition: Conflict with the other parent is bound to occur, but it doesn’t have to hurt your kids if you take steps to prevent it. Try to keep all arguments away from your kids, and don’t make negative comments about the other parent to your kids. If you treat communication between yourself and the other parent as a job, then conflict and arguments should be less likely to occur. The other parent may not approach parenting like you, but that doesn’t make their approach wrong - just different. Tolerance of these differences will go a long way toward reducing some of the conflicts, and it will help your child to see that you and the other parent can still be respectful of each other."
+          ],
+          "content_type": "general_guidance"
+        },
+        {
+          "index": 11,
+          "content": "### Parenting Plan: Basic Elements\n**From PAGE 13:**\n- \"A parenting plan can be a formal legal document or an informal plan agreed to by both parents. It describes how the kids will spend time with each parent. If you already have a parenting plan, remember that you can change anything about the plan as long as both parents agree. If you don’t have a parenting plan, you and the other parent should discuss these basic issues. The basic elements of a parenting plan:\"\n  - \"Determine when the kids will spend time with each parent on a normal basis.\"\n  - \"List important vacation and holiday times (including school breaks and birthdays) and decide how to split that time.\"\n  - \"Determine how you will make temporary and permanent changes to the parenting plan.\"\n  - \"Determine who will make day-to-day decisions, and how you will discuss and make important decisions together.\"\n  - \"Arrange for the financial and medical support of the kids (like how you will split costs of things like school supplies, hobbies and extracurricular activities).\"\n  - \"Determine how the exchange of the kids will take place.\"\n  - \"Decide what to do if you or the other parent moves to a new residence that is in another town or state.\"\n  - \"Decide how you will resolve a future conflict to avoid going to court (counseling, mediation, etc).\"\n\n---",
+          "word_count": 227,
+          "key_phrases": [
+            "Definition: A parenting plan can be a formal legal document or an informal plan agreed to by both parents. It describes how the kids will spend time with each parent. If you already have a parenting plan, remember that you can change anything about the plan as long as both parents agree. If you don’t have a parenting plan, you and the other parent should discuss these basic issues. The basic elements of a parenting plan:",
+            "Definition: Determine when the kids will spend time with each parent on a normal basis."
+          ],
+          "content_type": "custody_guidance"
+        },
+        {
+          "index": 12,
+          "content": "### Sample Parenting Plan\n**From PAGE 15:**\n- \"This is an informal parenting plan that parents who don’t live together can use to help make decisions and reduce conflict. It is not designed to take the place of a legal order. This plan can be used to help deal with day-to-day issues, listing common issues that may come up so that parents can decide, and keep a record of, how much of a role each parent will play in the decision-making process for each issue.\"\n- \"The decisions you make using this parenting plan may be slightly different than your legal order - which is fine, as long as you both agree to the changes. If you cannot come to an agreement on issues, then you must follow the court-ordered plan.\"\n- \"For each issue listed, decide which parent will handle the decision-making. This can be any arrangement that works for you, the other parent, and your kids. Here are just a few possibilities:\"\n  - \"Only one parent makes the decision for that issue\"\n  - \"Both parents make the decision together\"\n  - \"The parent who has the kids at the time makes the decision\"\n- \"The bottom line is to focus on what will work best for your kids.\"\n- \"Listed on the following pages are some issues that may come up for couples with kids of all ages. In the space provided, write out how you and the other parent will make decisions about these issues.\"",
+          "word_count": 247,
+          "key_phrases": [
+            "Definition: This is an informal parenting plan that parents who don’t live together can use to help make decisions and reduce conflict. It is not designed to take the place of a legal order. This plan can be used to help deal with day-to-day issues, listing common issues that may come up so that parents can decide, and keep a record of, how much of a role each parent will play in the decision-making process for each issue.",
+            "Definition: The decisions you make using this parenting plan may be slightly different than your legal order - which is fine, as long as you both agree to the changes. If you cannot come to an agreement on issues, then you must follow the court-ordered plan."
+          ],
+          "content_type": "custody_guidance"
+        },
+        {
+          "index": 13,
+          "content": "**From PAGE 16-20 (List of Issues):**\n- \"Which house is identified as 'home base'\"\n- \"Picking up and dropping off the kids\"\n- \"Extracurricular activities and payment for these activities\"\n- \"Religion and church attendance\"\n- \"Medical and mental health treatment for the kids\"\n- \"Representing the kids in legal action and making other legal decisions concerning the kids\"\n- \"Internet access and social media use and restrictions\"\n- \"Health care choices, including insurance plans, doctors and medical procedures\"\n- \"Education choices, such as choice of school, tutoring, summer camp or classes for the gifted\"\n- \"College savings\"\n- \"Pets\"\n- \"Privacy (such as a private phone line)\"\n- \"Traveling out of the country, and who holds on to the children’s passports\"\n- \"Getting jobs\"\n- \"Driving and car insurance\"\n- \"Cell or smart phone purchase and use\"\n- \"Curfew\"\n- \"Tattoos and body piercing\"\n- \"Firearms\"\n- \"Smoking and drug testing\"\n- \"Consent to marry and consent to enlist in the U.S. armed forces\"\n- \"Understand that these agreements may need to change over time to better meet the needs of your kids as they grow up or as your situation changes. You will need to stay in regular communication with the other parent to keep making the best decisions possible for your kids.\"\n\n---",
+          "word_count": 216,
+          "key_phrases": [
+            "Definition: Which house is identified as 'home base'",
+            "Definition: Picking up and dropping off the kids"
+          ],
+          "content_type": "general_guidance"
+        },
+        {
+          "index": 14,
+          "content": "### Additional Considerations\n**From PAGE 21:**\n- \"Unless the courts have ordered something different, both parents have the right to:\"\n  - \"Receive information concerning the health, education and welfare of the kids\"\n  - \"Talk with the other parent before making a decision concerning the health, education and welfare of the kids\"\n  - \"Access their children’s medical, dental, psychological and educational records\"\n  - \"Consult with the kids’ doctors\"\n  - \"Consult with the school concerning the kids’ welfare and educational status\"\n  - \"Attend school activities\"\n  - \"Be listed as an emergency contact on the kids’ records\"\n  - \"Consent to medical treatment during an emergency involving an immediate danger to the health and safety of the kids\"\n  - \"Be offered the chance to take care of the kids during the other parent’s time if the other parent has something that keeps them from the kids\"\n- \"There are some extra things that parents going through a split should keep in mind:\"\n  - \"Alcohol consumption - limit the amount of alcohol you consume during your time with your kids, especially if alcohol has been a problem before. Never drive with your children if you’ve been drinking.\"\n  - \"New romantic partners - take care to introduce your new boyfriend or girlfriend to your kids slowly, so they don’t feel as though their other parent is being replaced.\"\n  - \"Travel - when planning trips for business or pleasure, with or without your kids, keep your kids’ schedules and your parenting plan in mind.\"\n\n---\n\nThis extracted text encompasses all the guidance from the document directly related to co-parenting and cooperating with a former spouse, including definitions, communication strategies, tips for talking to children, visitation advice, maintaining consistency, understanding children’s needs, managing conflict, and creating a parenting plan. It provides a comprehensive resource for parents working together to support their children after a separation.",
+          "word_count": 307,
+          "key_phrases": [
+            "Definition: Unless the courts have ordered something different, both parents have the right to:",
+            "Definition: Receive information concerning the health, education and welfare of the kids"
+          ],
+          "content_type": "coparenting_advice"
+        }
+      ]
+    },
+    "14 steps of change.txt": {
+      "filename": "14 steps of change.txt",
+      "category": "coparenting_guidance",
+      "state": null,
+      "total_chunks": 4,
+      "word_count": 1010,
+      "key_concepts": [
+        "Co-parenting: communication",
+        "Co-parenting: co-parenting"
+      ],
+      "chunks": [
+        {
+          "index": 1,
+          "content": "To address the user's query, I have carefully reviewed the provided document, which outlines the \"14 Steps of Change for an Abusive/Controlling Person\" based on Lundy Bancroft's book \"Why Does He Do That?\". The task is to extract all text relevant to co-parenting and cooperating with a former spouse, without abbreviating, and after thorough consideration. Below is the extracted text from the document that pertains directly or indirectly to these themes, presented as full steps for clarity and completeness.\n\nThe document is structured as a list of 14 steps, and while the primary focus is on the abuser's journey to change, several steps mention or imply interactions with partners and children, which are critical in the context of co-parenting and cooperating with a former spouse. Co-parenting involves raising children together after separation, requiring mutual respect, accountability, and a focus on the children's well-being. Cooperation with a former spouse entails maintaining a functional relationship post-separation, often for the sake of shared responsibilities like parenting. Here are the relevant steps:\n\n- **4. Recognize the short- and long-term effects the abuse had on you, any children or other victims, showing empathy for it.**  \n  This step is relevant to co-parenting because it explicitly mentions \"any children\" as victims of the abuse. Recognizing the impact of past abusive behavior on children is a foundational aspect of effective co-parenting, as it demonstrates an awareness of their needs and well-being, which is essential for creating a safe and supportive environment.",
+          "word_count": 243,
+          "key_phrases": [
+            "Section: Recognize the short- and long-term effects the abuse had on you, any children or other victims, showing empathy for it",
+            "Definition: 14 Steps of Change for an Abusive/Controlling Person",
+            "Definition: Why Does He Do That?"
+          ],
+          "content_type": "coparenting_advice"
+        },
+        {
+          "index": 2,
+          "content": "- **7. Replace his/her distorted image of partner/children with a more positive respectful view. Understand that their partner/children are \"for them\" and not \"against them\".**  \n  This step directly relates to both co-parenting and cooperating with a former spouse. It addresses the need to shift negative perceptions of the \"partner\" (potentially a former spouse) and \"children\" to a positive, respectful view. Such a change in attitude is crucial for fostering cooperation with a former spouse and supporting a healthy co-parenting dynamic where both parties work together for the children's benefit.\n\n- **8. Acknowledge and dismantle the thought processes that exaggerate their grievances against their partner or children.**  \n  This step is also pertinent to co-parenting and cooperation. By dismantling exaggerated grievances against the \"partner\" (which could be a former spouse) and \"children,\" the individual reduces conflict and blame, paving the way for a more collaborative relationship. This is particularly important in co-parenting, where minimizing hostility enhances the ability to make joint decisions for the children.\n\n- **9. Make amends for the damage done. Develop a sense of debt owed.**  \n  While this step does not explicitly mention the partner or children, it is implicitly relevant to co-parenting and cooperating with a former spouse. Making amends for the damage caused by abuse likely includes actions directed toward those most affected, such as a former spouse and children. In a co-parenting context, this could involve apologies or reparative actions that rebuild trust and facilitate cooperation.",
+          "word_count": 240,
+          "key_phrases": [
+            "Section: Replace his/her distorted image of partner/children with a more positive respectful view",
+            "Section: Acknowledge and dismantle the thought processes that exaggerate their grievances against their partner or children",
+            "Section: Make amends for the damage done",
+            "Definition: for them",
+            "Definition: against them"
+          ],
+          "content_type": "coparenting_advice"
+        },
+        {
+          "index": 3,
+          "content": "- **10. Accept the consequences of his/her actions, they should stop blaming others for the problems that are a result of the abuse.**  \n  This step is significant for cooperation with a former spouse and indirectly for co-parenting. By accepting responsibility and ceasing to blame \"others\" (which could include a former spouse), the individual removes a major barrier to constructive communication and collaboration. This shift supports a more peaceful and cooperative relationship, essential for co-parenting arrangements.\n\n- **14. Be willing to be accountable for his/her actions, both past and future, and share what the accountability plan includes with his/her partner.**  \n  This step is directly relevant to cooperating with a former spouse and has implications for co-parenting. It emphasizes accountability and transparency by sharing an \"accountability plan\" with the \"partner,\" who could be a former spouse in this context. This openness fosters trust and collaboration, key elements of successful co-parenting and post-separation cooperation.\n\n### Explanation of Selection\nThese steps were selected because they either explicitly mention \"partner\" or \"children\" or have clear implications for the dynamics of co-parenting and cooperating with a former spouse. For instance:\n- Steps 4, 7, and 8 directly reference \"children\" and/or \"partner,\" tying them to the effects of abuse and the need for changed attitudes, which are critical for co-parenting.\n- Steps 7, 8, and 14 specifically involve the \"partner,\" addressing perceptions, grievances, and accountability—key factors in cooperating with a former spouse.\n- Steps 9 and 10, while more general, imply actions and attitudes (making amends and accepting responsibility) that would directly influence interactions with a former spouse and the co-parenting relationship.",
+          "word_count": 265,
+          "key_phrases": [
+            "Section: Accept the consequences of his/her actions, they should stop blaming others for the problems that are a result of the abuse",
+            "Section: Be willing to be accountable for his/her actions, both past and future, and share what the accountability plan includes with his/her partner",
+            "Definition: others",
+            "Definition: accountability plan"
+          ],
+          "content_type": "coparenting_advice"
+        },
+        {
+          "index": 4,
+          "content": "Other steps, such as Step 6 (\"Replace those with healthy attitudes and behaviors based on respect\") or Step 11 (\"Commit to not repeating the abusive behaviors and honor that commitment, with no conditions\"), are broadly important for personal change and could enhance co-parenting indirectly by promoting respect and safety. However, they do not specifically mention the partner or children, so they were excluded to focus on the most directly relevant text as per the query.\n\n### Final Extracted Text\nHere is the complete text extracted from the document that is relevant to co-parenting and cooperating with a former spouse, presented in its original form without abbreviation:\n\n- 4. Recognize the short- and long-term effects the abuse had on you, any children or other victims, showing empathy for it.\n- 7. Replace his/her distorted image of partner/children with a more positive respectful view. Understand that their partner/children are \"for them\" and not \"against them\".\n- 8. Acknowledge and dismantle the thought processes that exaggerate their grievances against their partner or children.\n- 9. Make amends for the damage done. Develop a sense of debt owed.\n- 10. Accept the consequences of his/her actions, they should stop blaming others for the problems that are a result of the abuse.\n- 14. Be willing to be accountable for his/her actions, both past and future, and share what the accountability plan includes with his/her partner.\n\nThis text captures the aspects of the abuser's change process that most directly impact their ability to co-parent effectively and cooperate with a former spouse, fulfilling the requirements of the query.",
+          "word_count": 262,
+          "key_phrases": [
+            "Section: Recognize the short- and long-term effects the abuse had on you, any children or other victims, showing empathy for it",
+            "Section: Replace his/her distorted image of partner/children with a more positive respectful view",
+            "Section: Acknowledge and dismantle the thought processes that exaggerate their grievances against their partner or children",
+            "Definition: Replace those with healthy attitudes and behaviors based on respect",
+            "Definition: Commit to not repeating the abusive behaviors and honor that commitment, with no conditions"
+          ],
+          "content_type": "coparenting_advice"
+        }
+      ]
+    }
+  }
+}

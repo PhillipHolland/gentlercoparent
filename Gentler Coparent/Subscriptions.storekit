@@ -1,0 +1,152 @@
+{
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "",
+        "policyURL" : ""
+      }
+    ]
+  },
+  "identifier" : "9726C9A5",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "745AB118",
+      "localizations" : [
+
+      ],
+      "name" : "Gentler Coparent",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "99.99",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "D17BC51A",
+          "introductoryOffer" : {
+            "displayPrice" : "0.99",
+            "internalID" : "792BAC44",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.gentlercoparent.year",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "GCP - Year",
+          "subscriptionGroupID" : "745AB118",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "12.99",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "E960D829",
+          "introductoryOffer" : {
+            "displayPrice" : "0.99",
+            "internalID" : "14E46488",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P3D"
+          },
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.gentlercoparent.month",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "GCP - Month",
+          "subscriptionGroupID" : "745AB118",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		844B28D62D874A8C00C7F5DC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 844B28D52D874A8C00C7F5DC /* GoogleSignIn */; };
+		84A5C0442D8A7233001E4027 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84A5C0432D8A7233001E4027 /* FirebaseAuth */; };
+		84A5C0462D8A7233001E4027 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 84A5C0452D8A7233001E4027 /* FirebaseCore */; };
+		84A7C6562D8BE572008ED763 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849F1CE22D7A250200B1B67E /* StoreKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84F7FFD12D7948C40065D848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F7FFB12D7948C00065D848 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F7FFB82D7948C10065D848;
+			remoteInfo = "Gentler Coparent";
+		};
+		84F7FFDB2D7948C40065D848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F7FFB12D7948C00065D848 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F7FFB82D7948C10065D848;
+			remoteInfo = "Gentler Coparent";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		849F1CE22D7A250200B1B67E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		84F7FFB92D7948C10065D848 /* Gentler Coparent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gentler Coparent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F7FFD02D7948C40065D848 /* Gentler CoparentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gentler CoparentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F7FFDA2D7948C40065D848 /* Gentler CoparentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gentler CoparentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		84DB593F2D8B8CC4008428FB /* Exceptions for "Gentler Coparent" folder in "Gentler Coparent" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 84F7FFB82D7948C10065D848 /* Gentler Coparent */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		84F7FFBB2D7948C10065D848 /* Gentler Coparent */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				84DB593F2D8B8CC4008428FB /* Exceptions for "Gentler Coparent" folder in "Gentler Coparent" target */,
+			);
+			path = "Gentler Coparent";
+			sourceTree = "<group>";
+		};
+		84F7FFD32D7948C40065D848 /* Gentler CoparentTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Gentler CoparentTests";
+			sourceTree = "<group>";
+		};
+		84F7FFDD2D7948C40065D848 /* Gentler CoparentUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Gentler CoparentUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F7FFB62D7948C10065D848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5C0442D8A7233001E4027 /* FirebaseAuth in Frameworks */,
+				84A5C0462D8A7233001E4027 /* FirebaseCore in Frameworks */,
+				84A7C6562D8BE572008ED763 /* StoreKit.framework in Frameworks */,
+				844B28D62D874A8C00C7F5DC /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7FFCD2D7948C40065D848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7FFD72D7948C40065D848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		849F1CE12D7A250200B1B67E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				849F1CE22D7A250200B1B67E /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84F7FFB02D7948C00065D848 = {
+			isa = PBXGroup;
+			children = (
+				84F7FFBB2D7948C10065D848 /* Gentler Coparent */,
+				84F7FFD32D7948C40065D848 /* Gentler CoparentTests */,
+				84F7FFDD2D7948C40065D848 /* Gentler CoparentUITests */,
+				849F1CE12D7A250200B1B67E /* Frameworks */,
+				84F7FFBA2D7948C10065D848 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84F7FFBA2D7948C10065D848 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F7FFB92D7948C10065D848 /* Gentler Coparent.app */,
+				84F7FFD02D7948C40065D848 /* Gentler CoparentTests.xctest */,
+				84F7FFDA2D7948C40065D848 /* Gentler CoparentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F7FFB82D7948C10065D848 /* Gentler Coparent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F7FFE32D7948C40065D848 /* Build configuration list for PBXNativeTarget "Gentler Coparent" */;
+			buildPhases = (
+				84F7FFB52D7948C10065D848 /* Sources */,
+				84F7FFB62D7948C10065D848 /* Frameworks */,
+				84F7FFB72D7948C10065D848 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				84F7FFBB2D7948C10065D848 /* Gentler Coparent */,
+			);
+			name = "Gentler Coparent";
+			packageProductDependencies = (
+				844B28D52D874A8C00C7F5DC /* GoogleSignIn */,
+				84A5C0432D8A7233001E4027 /* FirebaseAuth */,
+				84A5C0452D8A7233001E4027 /* FirebaseCore */,
+			);
+			productName = "Gentler Coparent";
+			productReference = 84F7FFB92D7948C10065D848 /* Gentler Coparent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84F7FFCF2D7948C40065D848 /* Gentler CoparentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F7FFE82D7948C40065D848 /* Build configuration list for PBXNativeTarget "Gentler CoparentTests" */;
+			buildPhases = (
+				84F7FFCC2D7948C40065D848 /* Sources */,
+				84F7FFCD2D7948C40065D848 /* Frameworks */,
+				84F7FFCE2D7948C40065D848 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84F7FFD22D7948C40065D848 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				84F7FFD32D7948C40065D848 /* Gentler CoparentTests */,
+			);
+			name = "Gentler CoparentTests";
+			packageProductDependencies = (
+			);
+			productName = "Gentler CoparentTests";
+			productReference = 84F7FFD02D7948C40065D848 /* Gentler CoparentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84F7FFD92D7948C40065D848 /* Gentler CoparentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F7FFEB2D7948C40065D848 /* Build configuration list for PBXNativeTarget "Gentler CoparentUITests" */;
+			buildPhases = (
+				84F7FFD62D7948C40065D848 /* Sources */,
+				84F7FFD72D7948C40065D848 /* Frameworks */,
+				84F7FFD82D7948C40065D848 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84F7FFDC2D7948C40065D848 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				84F7FFDD2D7948C40065D848 /* Gentler CoparentUITests */,
+			);
+			name = "Gentler CoparentUITests";
+			packageProductDependencies = (
+			);
+			productName = "Gentler CoparentUITests";
+			productReference = 84F7FFDA2D7948C40065D848 /* Gentler CoparentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84F7FFB12D7948C00065D848 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					84F7FFB82D7948C10065D848 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					84F7FFCF2D7948C40065D848 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 84F7FFB82D7948C10065D848;
+					};
+					84F7FFD92D7948C40065D848 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 84F7FFB82D7948C10065D848;
+					};
+				};
+			};
+			buildConfigurationList = 84F7FFB42D7948C00065D848 /* Build configuration list for PBXProject "Gentler Coparent" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84F7FFB02D7948C00065D848;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				844B28D42D874A8C00C7F5DC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				84A5C0402D8A7233001E4027 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 84F7FFBA2D7948C10065D848 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84F7FFB82D7948C10065D848 /* Gentler Coparent */,
+				84F7FFCF2D7948C40065D848 /* Gentler CoparentTests */,
+				84F7FFD92D7948C40065D848 /* Gentler CoparentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84F7FFB72D7948C10065D848 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7FFCE2D7948C40065D848 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7FFD82D7948C40065D848 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F7FFB52D7948C10065D848 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7FFCC2D7948C40065D848 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7FFD62D7948C40065D848 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84F7FFD22D7948C40065D848 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F7FFB82D7948C10065D848 /* Gentler Coparent */;
+			targetProxy = 84F7FFD12D7948C40065D848 /* PBXContainerItemProxy */;
+		};
+		84F7FFDC2D7948C40065D848 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F7FFB82D7948C10065D848 /* Gentler Coparent */;
+			targetProxy = 84F7FFDB2D7948C40065D848 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		84F7FFE42D7948C40065D848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Gentler Coparent/Gentler_Coparent.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Gentler Coparent/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Gentler Coparent/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gentler Coparent";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pbh.Gentler-Coparent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		84F7FFE52D7948C40065D848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Gentler Coparent/Gentler_Coparent.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Gentler Coparent/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Gentler Coparent/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gentler Coparent";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pbh.Gentler-Coparent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		84F7FFE62D7948C40065D848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UJ7MTXLSHG;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84F7FFE72D7948C40065D848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UJ7MTXLSHG;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		84F7FFE92D7948C40065D848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pbh.Gentler-Coparent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gentler Coparent.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gentler Coparent";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		84F7FFEA2D7948C40065D848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pbh.Gentler-Coparent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gentler Coparent.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gentler Coparent";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		84F7FFEC2D7948C40065D848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pbh.Gentler-Coparent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = "Gentler Coparent";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		84F7FFED2D7948C40065D848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pbh.Gentler-Coparent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = "Gentler Coparent";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84F7FFB42D7948C00065D848 /* Build configuration list for PBXProject "Gentler Coparent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F7FFE62D7948C40065D848 /* Debug */,
+				84F7FFE72D7948C40065D848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F7FFE32D7948C40065D848 /* Build configuration list for PBXNativeTarget "Gentler Coparent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F7FFE42D7948C40065D848 /* Debug */,
+				84F7FFE52D7948C40065D848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F7FFE82D7948C40065D848 /* Build configuration list for PBXNativeTarget "Gentler CoparentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F7FFE92D7948C40065D848 /* Debug */,
+				84F7FFEA2D7948C40065D848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F7FFEB2D7948C40065D848 /* Build configuration list for PBXNativeTarget "Gentler CoparentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F7FFEC2D7948C40065D848 /* Debug */,
+				84F7FFED2D7948C40065D848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		844B28D42D874A8C00C7F5DC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		84A5C0402D8A7233001E4027 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		844B28D52D874A8C00C7F5DC /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 844B28D42D874A8C00C7F5DC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		84A5C0432D8A7233001E4027 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84A5C0402D8A7233001E4027 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		84A5C0452D8A7233001E4027 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84A5C0402D8A7233001E4027 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 84F7FFB12D7948C00065D848 /* Project object */;
+}
