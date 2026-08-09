@@ -2,128 +2,129 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-itunes-app" content="app-id=6742896499">
-    <title>Contact - Gentler Coparent</title>
+    <meta name="description" content="Contact Gentler Coparent with questions about the co-parenting app, free trial, or support. We respond as fellow parents who’ve been there.">
+    <meta name="theme-color" content="#0F3D3A">
+    <title>Contact | Gentler Coparent</title>
+    <link rel="canonical" href="https://www.gentlercoparent.com/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gentlercoparent.com/contact.html">
+    <meta property="og:title" content="Contact | Gentler Coparent">
+    <meta property="og:description" content="Questions about Gentler Coparent? Reach out—we’re here to help.">
+    <meta property="og:image" content="https://www.gentlercoparent.com/images/logos/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logos/main-logo.png" alt="Gentler Coparent Logo">
+<body class="page-inner page-contact">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/logos/main-logo.png" alt="Gentler Coparent" width="320" height="58">
             </a>
-        </div>
-        <div class="social-icons">
-            <a href="http://facebook.com/gentlercoparent" target="_blank">
-                <img src="images/icons/facebook.svg" alt="Facebook">
-            </a>
-            <a href="http://instagram.com/gentlercoparent" target="_blank">
-                <img src="images/icons/instagram.svg" alt="Instagram">
-            </a>
-            <a href="http://x.com/gentlercoparent" target="_blank">
-                <img src="images/icons/x-twitter.svg" alt="X">
-            </a>
+            <nav class="header-nav" aria-label="Primary">
+                <a href="about.html">About</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+                <a href="https://apps.apple.com/us/app/gentler-coparent/id6742896499"
+                   class="nav-cta"
+                   data-app-store-link
+                   target="_blank"
+                   rel="noopener noreferrer">Get the app</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="contact-hero">
-        <div class="hero-text">
-            <h2>We want to hear from you!</h2>
-        </div>
-    </section>
-
-    <!-- Main Content Section -->
-    <section class="contact-main">
-        <div class="content">
-            <p>Hello and thank you for reaching out to us at Gentler Coparent. We understand deeply the challenges and complexities that come with navigating high-conflict coparenting situations. Having been where you are, we recognize the importance of clear, empathetic, and effective communication.</p>
-            <p>We're here to support you on this journey and are eager to hear from you. Whether you have questions, need guidance, or are seeking assistance with our AI tool, please let us know how we can help. Together, we can work towards creating a more harmonious and cooperative coparenting environment for you and your family.</p>
-           
-            <div class="contact-form">
-                <form action="https://formspree.io/f/xkgjqpdz" method="POST">
-                    <div class="form-item name-fields">
-                        <div class="field first-name">
-                            <input type="text" name="fname" placeholder="First Name" aria-label="First Name" required>
-                        </div>
-                        <div class="field last-name">
-                            <input type="text" name="lname" placeholder="Last Name" aria-label="Last Name" required>
-                        </div>
-                    </div>
-                    <div class="form-item">
-                        <input type="email" name="email" placeholder="Email" aria-label="Email" required>
-                    </div>
-                    <div class="form-item">
-                        <textarea name="message" placeholder="Message" aria-label="Message" required rows="5"></textarea>
-                    </div>
-                    <div class="form-button-wrapper">
-                        <input type="submit" value="Send" class="btn">
-                    </div>
-                </form>
+    <main>
+        <section class="page-hero">
+            <div class="section-inner page-hero-inner">
+                <p class="page-eyebrow">Support</p>
+                <h1>We want to hear from you</h1>
+                <p class="page-lead">Questions, feedback, or help with the app—we’re here. You’ve got this, and so do we.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="privacy-policy.html">PRIVACY POLICY</a>
-            <a href="usage-agreement.html">USAGE AGREEMENT</a>
+        <section class="contact-main">
+            <div class="content">
+                <p>Hello and thank you for reaching out to us at Gentler Coparent. We understand the challenges of high-conflict co-parenting. Having been where you are, we know how much clear, empathetic communication matters.</p>
+                <p>Whether you have questions, need guidance, or want help with the app, please let us know how we can help.</p>
+
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xkgjqpdz" method="POST" id="contact-form">
+                        <div class="form-item name-fields">
+                            <div class="field first-name">
+                                <input type="text" name="fname" placeholder="First Name" aria-label="First Name" required autocomplete="given-name">
+                            </div>
+                            <div class="field last-name">
+                                <input type="text" name="lname" placeholder="Last Name" aria-label="Last Name" required autocomplete="family-name">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <input type="email" name="email" placeholder="Email" aria-label="Email" required autocomplete="email">
+                        </div>
+                        <div class="form-item">
+                            <textarea name="message" placeholder="Message" aria-label="Message" required rows="5"></textarea>
+                        </div>
+                        <div class="form-button-wrapper">
+                            <input type="submit" value="Send message" class="btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <nav class="footer-links" aria-label="Footer">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="usage-agreement.html">Terms</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/gentlercoparent" target="_blank" rel="noopener noreferrer">
+                    <img src="images/icons/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/gentlercoparent" target="_blank" rel="noopener noreferrer">
+                    <img src="images/icons/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://x.com/gentlercoparent" target="_blank" rel="noopener noreferrer">
+                    <img src="images/icons/x-twitter.svg" alt="X">
+                </a>
+            </div>
+            <p class="footer-copy">© 2026 Gentler Coparent. All rights reserved.</p>
         </div>
-        <div class="social-icons">
-            <a href="http://facebook.com/gentlercoparent" target="_blank">
-                <img src="images/icons/facebook.svg" alt="Facebook">
-            </a>
-            <a href="http://instagram.com/gentlercoparent" target="_blank">
-                <img src="images/icons/instagram.svg" alt="Instagram">
-            </a>
-            <a href="http://x.com/gentlercoparent" target="_blank">
-                <img src="images/icons/x-twitter.svg" alt="X">
-            </a>
-        </div>
-        <p>© 2025, Gentler Coparent - All Rights Reserved</p>
     </footer>
 
     <script>
-        document.querySelector('form').addEventListener('submit', async function (event) {
-            event.preventDefault(); // Prevent the default form submission
-
+        document.getElementById('contact-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
             const submitButton = form.querySelector('input[type="submit"]');
-            submitButton.disabled = true; // Disable the button while submitting
-
+            submitButton.disabled = true;
             try {
                 const response = await fetch(form.action, {
                     method: form.method,
                     body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'Accept': 'application/json' }
                 });
-
                 if (response.ok) {
-                    // Success: Show a success message
                     form.innerHTML = '<p class="success-message">Thank you! Your message has been sent.</p>';
                 } else {
-                    // Error: Show an error message
                     throw new Error('Form submission failed');
                 }
             } catch (error) {
-                // Error: Show an error message
                 form.insertAdjacentHTML('beforeend', '<p class="error-message">There was an error submitting your form. Please try again later.</p>');
-                submitButton.disabled = false; // Re-enable the button
+                submitButton.disabled = false;
             }
         });
     </script>
+    <script src="js/analytics.bundle.js" defer></script>
 </body>
 </html>
