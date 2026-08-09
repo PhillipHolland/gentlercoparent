@@ -31,6 +31,11 @@
       "source": "/high-conflict-co-parenting-messages.html",
       "destination": "/high-conflict-co-parenting-messages",
       "permanent": true
+    },
+    {
+      "source": "/co-parenting-text-message-templates.html",
+      "destination": "/co-parenting-text-message-templates",
+      "permanent": true
     }
   ],
   "headers": [
