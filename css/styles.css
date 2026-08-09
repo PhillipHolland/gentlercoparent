@@ -36,8 +36,9 @@ header {
     justify-content: flex-start;
     align-items: center;
     padding: 15px 40px 16px;
-    background-color: #FAFAF8;
-    border-bottom: 1px solid rgba(15, 61, 58, 0.08);
+    /* Deep teal so white logo accents (dove) stay visible */
+    background-color: #0F3D3A;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     position: fixed;
     width: 100%;
     max-width: 100%;
@@ -1327,14 +1328,16 @@ footer p {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(250, 250, 248, 0.94);
-    backdrop-filter: saturate(1.2) blur(10px);
-    -webkit-backdrop-filter: saturate(1.2) blur(10px);
-    border-bottom: 1px solid rgba(15, 61, 58, 0.08);
+    /* Solid deep teal — brand mark has white dove that vanishes on stone/white */
+    background: #0F3D3A;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0;
     min-height: 0;
     flex-direction: row;
     width: 100%;
+    box-shadow: 0 2px 16px rgba(10, 30, 28, 0.28);
 }
 
 .header-inner {
@@ -1372,19 +1375,25 @@ footer p {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: var(--gcp-teal);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    opacity: 0.88;
+    opacity: 1;
 }
 
 .header-nav a:hover {
-    opacity: 1;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.header-nav a[aria-current="page"] {
+    color: #fff;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
 .header-nav .nav-cta {
-    background: var(--gcp-teal);
+    background: var(--gcp-teal-bright, #2A9B8F);
     color: #fff !important;
     padding: 9px 16px;
     border-radius: 999px;
@@ -1392,14 +1401,15 @@ footer p {
     text-decoration: none !important;
     font-weight: 700;
     letter-spacing: 0.01em;
-    box-shadow: 0 2px 10px rgba(15, 61, 58, 0.18);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.22);
     transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .header-nav .nav-cta:hover {
-    background: var(--gcp-teal-deep);
+    background: #238A7F;
+    color: #fff !important;
     transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(15, 61, 58, 0.24);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
     text-decoration: none !important;
 }
 
@@ -2030,11 +2040,7 @@ footer p {
     max-width: 36em;
 }
 
-.header-nav a[aria-current="page"] {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    opacity: 1;
-}
+/* aria-current for header links is styled with .header-nav above */
 
 /* About content */
 .page-about .about-journey {
