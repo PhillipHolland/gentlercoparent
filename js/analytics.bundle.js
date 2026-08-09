@@ -1,9 +1,10 @@
 (() => {
   // node_modules/@vercel/analytics/dist/index.mjs
   var name = "@vercel/analytics";
-  var version = "1.5.0";
+  var version = "1.6.1";
   var initQueue = () => {
-    if (window.va) return;
+    if (window.va)
+      return;
     window.va = function a(...params) {
       (window.vaq = window.vaq || []).push(params);
     };
@@ -13,7 +14,7 @@
   }
   function detectEnvironment() {
     try {
-      const env = "development";
+      const env = "production";
       if (env === "development" || env === "test") {
         return "development";
       }
@@ -51,14 +52,16 @@
     debug: true
   }) {
     var _a;
-    if (!isBrowser()) return;
+    if (!isBrowser())
+      return;
     setMode(props.mode);
     initQueue();
     if (props.beforeSend) {
       (_a = window.va) == null ? void 0 : _a.call(window, "beforeSend", props.beforeSend);
     }
     const src = getScriptSrc(props);
-    if (document.head.querySelector(`script[src*="${src}"]`)) return;
+    if (document.head.querySelector(`script[src*="${src}"]`))
+      return;
     const script = document.createElement("script");
     script.src = src;
     script.defer = true;
@@ -88,5 +91,5 @@
   }
 
   // js/analytics.js
-  inject();
+  inject({ mode: "production" });
 })();
