@@ -2792,3 +2792,408 @@ html {
         scroll-behavior: auto;
     }
 }
+
+/* ========== Product preview (How it works phone demo) ========== */
+.page-home .product-preview {
+    display: grid;
+    grid-template-columns: minmax(240px, 300px) 1fr;
+    gap: 32px 40px;
+    align-items: center;
+    max-width: 880px;
+    margin: 40px auto 8px;
+    padding: 8px 0 0;
+    text-align: left;
+}
+
+.page-home .phone-frame {
+    background: linear-gradient(165deg, #1a2c2e 0%, #0d1415 100%);
+    border-radius: 32px;
+    padding: 12px 10px 16px;
+    box-shadow:
+        0 20px 48px rgba(15, 61, 58, 0.22),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+    max-width: 300px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-home .phone-notch {
+    width: 36%;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    margin: 4px auto 12px;
+}
+
+.page-home .phone-screen {
+    background: #FAFAF8;
+    border-radius: 22px;
+    padding: 14px 12px 16px;
+    min-height: 280px;
+}
+
+.page-home .phone-app-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #0F3D3A;
+    text-align: center;
+    margin: 0 0 12px;
+    opacity: 0.75;
+}
+
+.page-home .phone-bubble {
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #1A2221;
+}
+
+.page-home .phone-bubble p {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    color: inherit;
+}
+
+.page-home .phone-chip {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    opacity: 0.7;
+}
+
+.page-home .phone-chip-good {
+    color: #0F3D3A;
+    opacity: 1;
+}
+
+.page-home .phone-bubble-in {
+    background: #E8EEF0;
+    border: 1px solid rgba(15, 61, 58, 0.08);
+}
+
+.page-home .phone-bubble-draft {
+    background: #F5E8E6;
+    border: 1px solid rgba(160, 60, 50, 0.12);
+    color: #5c3330;
+}
+
+.page-home .phone-bubble-out {
+    background: #D8EBE7;
+    border: 1px solid rgba(15, 61, 58, 0.14);
+    box-shadow: 0 4px 12px rgba(15, 61, 58, 0.08);
+}
+
+.page-home .phone-arrow {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #2A9B8F;
+    margin: 2px 0 10px;
+}
+
+.page-home .product-preview-copy h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0F3D3A;
+    margin: 0 0 10px;
+}
+
+.page-home .product-preview-copy p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #5C6664;
+    margin: 0 0 14px;
+    max-width: 28em;
+}
+
+.page-home .preview-link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0F3D3A;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.page-home .preview-link:hover {
+    color: #2A9B8F;
+}
+
+@media (max-width: 800px) {
+    .page-home .product-preview {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 28px;
+        text-align: center;
+    }
+
+    .page-home .product-preview-copy p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .page-home .phone-frame {
+        max-width: 280px;
+    }
+}
+
+/* ========== SEO guide article page ========== */
+.page-seo .seo-article {
+    background: #FAFAF8;
+    padding: 32px 24px 64px;
+}
+
+.page-seo .seo-breadcrumb {
+    font-size: 13px;
+    color: #5C6664;
+    margin: 0 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.page-seo .seo-breadcrumb a {
+    color: #0F3D3A;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.page-seo .seo-dek {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #3d4a48;
+    margin: 0 0 28px;
+}
+
+.page-seo .seo-article h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 700;
+    color: #0F3D3A;
+    margin: 32px 0 12px;
+    line-height: 1.25;
+}
+
+.page-seo .seo-article h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F3D3A;
+    margin: 0 0 14px;
+}
+
+.page-seo .seo-article p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #5C6664;
+    margin: 0 0 14px;
+}
+
+.page-seo .seo-list {
+    margin: 0 0 20px;
+    padding-left: 1.25em;
+    color: #5C6664;
+}
+
+.page-seo .seo-list li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.page-seo .seo-steps {
+    margin: 0 0 24px;
+    padding-left: 1.25em;
+    color: #5C6664;
+}
+
+.page-seo .seo-steps li {
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 10px;
+}
+
+.page-seo .seo-steps strong {
+    color: #0F3D3A;
+}
+
+.page-seo .seo-example {
+    background: #fff;
+    border: 1px solid rgba(15, 61, 58, 0.1);
+    border-radius: 16px;
+    padding: 22px 20px;
+    margin: 24px 0 28px;
+    box-shadow: 0 8px 28px rgba(15, 61, 58, 0.06);
+}
+
+.page-seo .seo-example-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.page-seo .seo-bubble {
+    border-radius: 12px;
+    padding: 14px 14px 12px;
+}
+
+.page-seo .seo-bubble-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    opacity: 0.7;
+}
+
+.page-seo .seo-bubble p:last-child {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.5;
+}
+
+.page-seo .seo-bubble-before {
+    background: #F5E8E6;
+    border: 1px solid rgba(160, 60, 50, 0.12);
+    color: #5c3330;
+}
+
+.page-seo .seo-bubble-after {
+    background: #D8EBE7;
+    border: 1px solid rgba(15, 61, 58, 0.14);
+    color: #1A2221;
+}
+
+.page-seo .seo-cta-box {
+    background: linear-gradient(165deg, #143D3A 0%, #0A1F1E 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin: 32px 0;
+    text-align: center;
+}
+
+.page-seo .seo-cta-box h2 {
+    color: #fff;
+    margin: 0 0 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(26px, 4vw, 34px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.page-seo .seo-cta-box p {
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0 auto 20px;
+    max-width: 32em;
+}
+
+.page-seo .seo-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-seo .seo-cta-box .btn-cta {
+    background: #2A9B8F;
+    color: #fff;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 6px 20px rgba(42, 155, 143, 0.35);
+}
+
+.page-seo .seo-cta-box .btn-cta:hover {
+    background: #238A7F;
+    color: #fff;
+}
+
+.page-seo .seo-faq.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 0 28px;
+}
+
+.page-seo .seo-faq .faq-item {
+    background: #fff;
+    border: 1px solid rgba(15, 61, 58, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(15, 61, 58, 0.05);
+    overflow: hidden;
+}
+
+.page-seo .seo-faq .faq-item summary {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0F3D3A;
+    padding: 16px 18px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.page-seo .seo-faq .faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.page-seo .seo-faq .faq-item summary::after {
+    content: '+';
+    float: right;
+    color: #2A9B8F;
+    font-size: 18px;
+}
+
+.page-seo .seo-faq .faq-item[open] summary::after {
+    content: '−';
+}
+
+.page-seo .seo-faq .faq-item p {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: #5C6664;
+    margin: 0;
+    padding: 0 18px 16px;
+}
+
+.page-seo .seo-related {
+    font-size: 15px;
+    color: #5C6664;
+}
+
+.page-seo .seo-related a {
+    color: #0F3D3A;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .page-seo .seo-example-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-seo .seo-article {
+        padding: 24px 16px 48px;
+    }
+}
+
+/* Sitemap entry helper for guide — footer link optional */

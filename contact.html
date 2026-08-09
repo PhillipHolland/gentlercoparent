@@ -27,10 +27,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=20260809h">
+
+    <!-- Critical: fixed header (wins over cached CSS) -->
+    <style id="critical-header">
+      html { scroll-padding-top: var(--site-header-h, 88px); }
+      body {
+        margin: 0;
+        padding-top: var(--site-header-h, 88px) !important;
+      }
+      header.site-header,
+      .site-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        z-index: 99999 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+      }
+    </style>
 </head>
 <body class="page-inner page-contact">
-        <script src="js/header-offset.js"></script>
+        <script src="js/header-offset.js?v=2"></script>
 <header class="site-header">
         <div class="header-inner">
             <a href="/" class="logo">
