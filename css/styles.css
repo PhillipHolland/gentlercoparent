@@ -781,13 +781,31 @@ footer p {
 }
 
 .app-bottom-sheet-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 14px; /* iOS app-icon corner feel */
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    object-fit: contain;
-    padding: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* square icon — not wide wordmark */
+    object-position: center;
+    padding: 0;
+    display: block;
+}
+
+.sheet-drag-region {
+    padding: 4px 0 8px;
+    touch-action: none;
+    cursor: grab;
+}
+
+.sheet-swipe-hint {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    color: #2F6F72;
+    opacity: 0.55;
+    margin: -8px 0 12px;
+    text-align: center;
 }
 
 .app-sheet-brand-text {
@@ -880,6 +898,113 @@ footer p {
 
 .app-bottom-sheet .dismiss-btn:hover {
     color: #1C2B2C;
+}
+
+.app-bottom-sheet.is-dragging {
+    transition: none !important;
+}
+
+/* —— Desktop corner promo (not a mobile sheet) —— */
+.app-desktop-promo {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    width: min(360px, calc(100vw - 32px));
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(28, 43, 44, 0.18);
+    border: 1px solid rgba(47, 111, 114, 0.12);
+    padding: 16px 16px 14px;
+    transform: translateY(16px) scale(0.98);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.app-desktop-promo.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.app-desktop-promo[hidden] {
+    display: none !important;
+}
+
+.desktop-promo-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: #2F6F72;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.55;
+    border-radius: 8px;
+}
+
+.desktop-promo-close:hover {
+    opacity: 1;
+    background: rgba(186, 223, 231, 0.45);
+}
+
+.desktop-promo-inner {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding-right: 20px;
+}
+
+.desktop-promo-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.desktop-promo-eyebrow {
+    margin: 0 0 2px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #2F6F72;
+    opacity: 0.7;
+}
+
+.desktop-promo-copy h3 {
+    margin: 0 0 4px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #2F6F72;
+    text-transform: uppercase;
+}
+
+.desktop-promo-desc {
+    margin: 0 0 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    color: #1C2B2C;
+    opacity: 0.85;
+}
+
+.desktop-promo-badge .app-store-badge {
+    width: 140px;
+}
+
+@media (max-width: 900px) {
+    .app-desktop-promo {
+        display: none !important;
+    }
 }
 
 /* Mobile layout tweaks only — sheet visibility is JS-driven (iOS + localStorage) */

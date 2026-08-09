@@ -101,7 +101,7 @@
         <p>© 2026 Gentler Coparent. All rights reserved.</p>
     </footer>
 
-    <!-- iOS App Store promo sheet -->
+    <!-- Mobile: native-style App Store bottom sheet (swipe down to dismiss) -->
     <div id="app-bottom-sheet-overlay" class="app-bottom-sheet-overlay" hidden></div>
     <div id="app-bottom-sheet"
          class="app-bottom-sheet"
@@ -113,9 +113,17 @@
          hidden
          data-dragging="false">
         <div class="app-bottom-sheet-content">
-            <div class="grab-handle" role="presentation" aria-hidden="true"></div>
+            <div class="sheet-drag-region">
+                <div class="grab-handle" role="presentation" aria-hidden="true"></div>
+            </div>
             <div class="app-sheet-brand">
-                <img src="images/logos/logo-symbol.png" alt="" class="app-bottom-sheet-icon" width="56" height="56">
+                <!-- Square app icon (not wide wordmark — avoids garbled crop) -->
+                <img src="images/logos/apple-touch-icon.png"
+                     alt="Gentler Coparent app icon"
+                     class="app-bottom-sheet-icon"
+                     width="60"
+                     height="60"
+                     decoding="async">
                 <div class="app-sheet-brand-text">
                     <p class="app-sheet-eyebrow">Available on the App Store</p>
                     <h3 id="app-sheet-title">Gentler Coparent</h3>
@@ -125,6 +133,7 @@
                 Calmer messages, clearer boundaries, child-first guidance.
                 Free trial: <strong>7 days or 20 messages</strong>, whichever comes first.
             </p>
+            <p class="sheet-swipe-hint">Swipe down to dismiss</p>
             <div class="button-container app-sheet-actions">
                 <a href="https://apps.apple.com/us/app/gentler-coparent/id6742896499"
                    class="app-store-cta app-store-badge-link"
@@ -141,6 +150,47 @@
             </div>
         </div>
     </div>
+
+    <!-- Desktop: corner promo card (not a mobile sheet) -->
+    <aside id="app-desktop-promo"
+           class="app-desktop-promo"
+           role="dialog"
+           aria-labelledby="desktop-promo-title"
+           aria-hidden="true"
+           hidden>
+        <button type="button"
+                id="dismiss-desktop-promo"
+                class="desktop-promo-close"
+                aria-label="Dismiss">
+            <span aria-hidden="true">×</span>
+        </button>
+        <div class="desktop-promo-inner">
+            <img src="images/logos/apple-touch-icon.png"
+                 alt=""
+                 class="desktop-promo-icon"
+                 width="52"
+                 height="52"
+                 decoding="async">
+            <div class="desktop-promo-copy">
+                <p class="desktop-promo-eyebrow">On your iPhone</p>
+                <h3 id="desktop-promo-title">Get Gentler Coparent</h3>
+                <p class="desktop-promo-desc">
+                    Free trial · 7 days or 20 messages
+                </p>
+                <a href="https://apps.apple.com/us/app/gentler-coparent/id6742896499"
+                   class="app-store-cta app-store-badge-link desktop-promo-badge"
+                   data-app-store-link
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <img src="images/icons/app-store-badge.svg"
+                         alt="Download on the App Store"
+                         class="app-store-badge"
+                         width="140"
+                         height="47">
+                </a>
+            </div>
+        </div>
+    </aside>
 
     <script src="js/app-store-sheet.js" defer></script>
     <script src="js/analytics.bundle.js" defer></script>
