@@ -91,9 +91,9 @@ header {
     object-fit: contain;
 }
 
-/* Hero Section (Index Page) */
+/* Hero Section (Index Page) — compressed JPG for faster mobile load */
 .hero {
-    background: url('../images/Phil-Holland_draw_an_illustration_based_on_this_idea_Developing_7dbfdf76-ed00-47c5-869e-dfa789619cfd.png') no-repeat center center;
+    background: url('../images/hero-bg.jpg') no-repeat center center;
     background-size: cover;
     background-position: center 15%;
     height: 70vh;
@@ -757,16 +757,7 @@ footer p {
     text-decoration: none;
 }
 
-/* Prevent Wrapping on Wider Screens */
-@media (min-width: 769px) {
-    .intro h2,
-    .intro p,
-    .video-section h2,
-    .cta h2,
-    .final-message p {
-        white-space: nowrap;
-    }
-}
+/* Do not force nowrap — it clips long headings on tablets and narrow desktops */
 
 /* App Bottom Sheet — App Store promo (iOS only, JS-controlled) */
 .app-bottom-sheet-overlay {
@@ -2454,4 +2445,309 @@ footer p {
 /* Old fixed header rules still apply to bare <header> — hide conflict if any leftover */
 header:not(.site-header) {
     /* legacy pages only; new pages use .site-header */
+}
+
+/* ========== Skip link, trust bar, how-it-works, a11y ========== */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 10000;
+    padding: 12px 18px;
+    background: #0F3D3A;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 0 0 8px 0;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+/* Trust bar under hero */
+.page-home .trust-bar {
+    background: #0F3D3A;
+    color: #fff;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-home .trust-bar-inner {
+    padding: 0 16px;
+}
+
+.page-home .trust-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 22px;
+    text-align: center;
+}
+
+.page-home .trust-list li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.3;
+}
+
+.page-home .trust-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #9FD5CF;
+    margin-bottom: 2px;
+}
+
+/* How it works */
+.page-home .how-section {
+    background: var(--gcp-stone, #FAFAF8);
+    padding: 56px 0 60px;
+    border-top: 1px solid rgba(15, 61, 58, 0.06);
+}
+
+.page-home .how-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 400;
+    color: var(--gcp-teal, #0F3D3A);
+    text-align: center;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.page-home .how-lead {
+    text-align: center;
+    font-size: 16px;
+    color: var(--gcp-muted, #5C6664);
+    max-width: 32em;
+    margin: 0 auto 32px;
+    line-height: 1.5;
+}
+
+.page-home .how-steps {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 960px;
+    counter-reset: none;
+}
+
+.page-home .how-step {
+    background: #fff;
+    border: 1px solid rgba(15, 61, 58, 0.08);
+    border-radius: 14px;
+    padding: 22px 18px 20px;
+    box-shadow: 0 6px 20px rgba(15, 61, 58, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.page-home .how-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--gcp-teal, #0F3D3A);
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+}
+
+.page-home .how-step h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gcp-teal, #0F3D3A);
+    margin: 0 0 6px;
+}
+
+.page-home .how-step p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gcp-muted, #5C6664);
+    margin: 0;
+}
+
+.page-home .how-cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.page-home .btn-how {
+    background: var(--gcp-teal-bright, #2A9B8F);
+    color: #fff;
+    padding: 14px 26px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 999px;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 6px 18px rgba(42, 155, 143, 0.32);
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.page-home .btn-how:hover {
+    background: #238A7F;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Home: never force single-line headings */
+.page-home .intro h2,
+.page-home .video-section h2,
+.page-home .cta h2,
+.page-home .diff-section h2,
+.page-home .faq-section h2,
+.page-home .how-section h2,
+.page-home .final-message p {
+    white-space: normal;
+}
+
+/* Footer social icons — ensure fill shows on stone */
+.site-footer .social-icons a {
+    opacity: 0.75;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.site-footer .social-icons a:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.site-footer .social-icons img {
+    width: 22px;
+    height: 22px;
+    /* SVGs are black paths — deep teal tint */
+    filter: invert(18%) sepia(24%) saturate(900%) hue-rotate(131deg) brightness(90%) contrast(95%);
+}
+
+/* CTA actions stack cleanly on narrow widths */
+.page-home .cta-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px 16px;
+}
+
+.page-home .cta .subheading,
+.page-home .cta h2 {
+    white-space: normal;
+    max-width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+/* Mobile how + trust */
+@media (max-width: 800px) {
+    .page-home .how-steps {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .page-home .how-step {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px 16px;
+    }
+
+    .page-home .how-num {
+        flex-shrink: 0;
+    }
+
+    .page-home .trust-list {
+        gap: 12px 14px;
+    }
+
+    .page-home .trust-list li {
+        flex: 1 1 40%;
+        min-width: 120px;
+        font-size: 12px;
+    }
+
+    .page-home .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-home .intro h2,
+    .page-home .video-section h2,
+    .page-home .cta h2 {
+        white-space: normal;
+        max-width: 100%;
+        padding: 0 4px;
+    }
+
+    .page-home .intro {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-home .section-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+
+    /* Hide "How it works" nav on very small if crowded — keep on tablet */
+    .header-nav .nav-link-how {
+        display: none;
+    }
+}
+
+@media (min-width: 801px) {
+    .header-nav .nav-link-how {
+        display: inline;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-home .trust-list li {
+        flex: 1 1 42%;
+    }
+
+    .page-home .btn-how {
+        width: min(100%, 280px);
+        text-align: center;
+    }
+
+    .page-home .faq-item summary {
+        font-size: 14px;
+        padding: 14px 14px;
+    }
+
+    .page-home .faq-item p {
+        padding: 0 14px 14px;
+        font-size: 14px;
+    }
+}
+
+/* Smooth scroll for in-page anchors */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

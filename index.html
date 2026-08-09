@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png">
+    <link rel="preload" as="image" href="images/hero-bg.jpg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
@@ -108,6 +109,7 @@
     </script>
 </head>
 <body class="page-home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
         <div class="header-inner">
             <a href="index.html" class="logo">
@@ -116,6 +118,7 @@
             <nav class="header-nav" aria-label="Primary">
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
+                <a href="#how-it-works" class="nav-link-how">How it works</a>
                 <a href="https://apps.apple.com/us/app/gentler-coparent/id6742896499"
                    class="nav-cta"
                    data-app-store-link
@@ -125,7 +128,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="hero-inner">
                 <div class="hero-content">
@@ -157,6 +160,17 @@
             </div>
         </section>
 
+        <section class="trust-bar" aria-label="Highlights">
+            <div class="section-inner trust-bar-inner">
+                <ul class="trust-list">
+                    <li><span class="trust-label">iPhone</span> App Store</li>
+                    <li><span class="trust-label">Free trial</span> 7 days or 20 msgs</li>
+                    <li><span class="trust-label">You send it</span> Not a shared inbox</li>
+                    <li><span class="trust-label">Child-first</span> High-conflict ready</li>
+                </ul>
+            </div>
+        </section>
+
         <section class="intro">
             <div class="section-inner">
                 <h2>Transform your post-divorce parenting journey</h2>
@@ -184,6 +198,43 @@
                         <p>Designed for high-tension co-parenting—not generic chat advice.</p>
                     </li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="how-section" id="how-it-works" aria-labelledby="how-heading">
+            <div class="section-inner">
+                <h2 id="how-heading">How it works</h2>
+                <p class="how-lead">Three steps from a heated draft to a message you’re proud to send.</p>
+                <ol class="how-steps">
+                    <li class="how-step">
+                        <span class="how-num" aria-hidden="true">1</span>
+                        <div>
+                            <h3>Paste the hard message</h3>
+                            <p>Drop in what you want to say—or the text that just landed in your inbox.</p>
+                        </div>
+                    </li>
+                    <li class="how-step">
+                        <span class="how-num" aria-hidden="true">2</span>
+                        <div>
+                            <h3>Get a calmer rewrite</h3>
+                            <p>Brief, firm, civil language that keeps the focus on the kids—not the fight.</p>
+                        </div>
+                    </li>
+                    <li class="how-step">
+                        <span class="how-num" aria-hidden="true">3</span>
+                        <div>
+                            <h3>You send it</h3>
+                            <p>Copy into your own texts or email. You’re always in control of what goes out.</p>
+                        </div>
+                    </li>
+                </ol>
+                <div class="how-cta-wrap">
+                    <a href="https://apps.apple.com/us/app/gentler-coparent/id6742896499"
+                       class="btn btn-how"
+                       data-app-store-link
+                       target="_blank"
+                       rel="noopener noreferrer">Try it free on iPhone</a>
+                </div>
             </div>
         </section>
 
@@ -246,7 +297,7 @@
                 <h2 id="faq-heading">Frequently asked questions</h2>
                 <p class="faq-intro">Straight answers for parents comparing tools and starting a free trial.</p>
                 <div class="faq-list">
-                    <details class="faq-item" open>
+                    <details class="faq-item">
                         <summary>What is Gentler Coparent?</summary>
                         <p>An iOS app for high-conflict co-parenting: draft calmer, child-first messages and use optional family context—without a shared inbox or surveillance layer.</p>
                     </details>
