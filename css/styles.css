@@ -7,8 +7,10 @@
 html {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    /* clip (not hidden) so position:sticky works on iOS Safari / all platforms */
+    overflow-x: clip;
     overscroll-behavior-x: none;
+    scroll-padding-top: 5.5rem; /* anchor links clear sticky header */
 }
 
 body {
@@ -17,20 +19,21 @@ body {
     background-color: #FAFAF8;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     overscroll-behavior-x: none;
-    overscroll-behavior-y: contain; /* Prevent iOS overscroll/refresh */
+    overscroll-behavior-y: auto;
     margin: 0; /* Reset default body margin */
 }
 
 body.no-scroll {
-    position: fixed; /* Lock scroll position */
+    position: fixed; /* Lock scroll position (mobile promo sheet) */
     width: 100%; /* Prevent width changes */
     overflow: hidden; /* Prevent scrolling */
 }
 
-/* Header */
-header {
+/* Header — sticky on every platform (mobile + desktop) */
+header,
+header.site-header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -39,13 +42,20 @@ header {
     /* Soft sky teal: logo wordmark readable; dove still has contrast vs pure white */
     background-color: #B8D9D4;
     border-bottom: 1px solid rgba(15, 61, 58, 0.12);
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     max-width: 100%;
-    top: 0;
-    z-index: 1000;
+    z-index: 1100;
     min-height: 0;
-    overflow-x: hidden;
+    /* iOS notch safe area */
+    padding-top: max(12px, env(safe-area-inset-top, 0px));
+    /* Keep header above page paint without breaking sticky (no transform) */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .logo {
@@ -1323,13 +1333,15 @@ footer p {
     background: var(--gcp-stone);
 }
 
-/* Header — stone bar, teal accents */
-.site-header {
-    position: sticky;
-    top: 0;
+/* Header — sticky on all viewports (mobile portrait/landscape + desktop) */
+.site-header,
+header.site-header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1100;
     /*
       Soft sky teal — light enough for teal logo wordmark,
       tinted enough that the white dove still reads (unlike pure stone/white).
@@ -1339,10 +1351,15 @@ footer p {
     -webkit-backdrop-filter: none;
     border-bottom: 1px solid rgba(15, 61, 58, 0.12);
     padding: 0;
+    padding-top: env(safe-area-inset-top, 0px);
     min-height: 0;
     flex-direction: row;
     width: 100%;
+    max-width: 100%;
+    margin: 0;
     box-shadow: 0 1px 12px rgba(15, 61, 58, 0.08);
+    /* Solid bar while scrolling — no transparency glitches on iOS */
+    background-clip: padding-box;
 }
 
 .header-inner {
@@ -2438,13 +2455,51 @@ footer p {
 .page-inner .privacy-policy,
 .page-inner .usage-agreement,
 .page-inner .about-hero,
-.page-inner .contact-hero {
+.page-inner .contact-hero,
+.page-inner .page-hero,
+.page-inner main {
     margin-top: 0;
 }
 
-/* Old fixed header rules still apply to bare <header> — hide conflict if any leftover */
-header:not(.site-header) {
-    /* legacy pages only; new pages use .site-header */
+/* Sticky header must not live inside a transformed / overflow-hidden parent */
+body > .site-header,
+body > header.site-header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1100;
+}
+
+/* Mobile: keep sticky even when column layout stacks logo + nav */
+@media (max-width: 800px) {
+    .site-header,
+    header.site-header {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1100;
+        width: 100%;
+    }
+
+    .header-inner {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Fallback browsers without sticky: fixed bar + small body pad */
+@supports not (position: sticky) {
+    .site-header,
+    header.site-header {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    body {
+        padding-top: 88px;
+    }
 }
 
 /* ========== Skip link, trust bar, how-it-works, a11y ========== */
