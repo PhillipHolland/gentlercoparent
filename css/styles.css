@@ -1258,7 +1258,8 @@ footer p {
 
 /* Header */
 .page-home .site-header {
-    position: fixed;
+    /* sticky avoids cream gap under fixed nav when --gcp-header-h ≠ real height */
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -1332,16 +1333,17 @@ footer p {
     transform: translateY(-1px);
 }
 
-/* Hero */
+/* Hero — flush under sticky nav (no cream strip) */
 .page-home .hero {
-    margin-top: var(--gcp-header-h);
-    height: min(72vh, 640px);
-    min-height: 420px;
+    margin-top: 0;
+    height: min(68vh, 580px);
+    min-height: 400px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     padding: 0;
-    background-position: center 20%;
+    background-position: center 22%;
+    background-size: cover;
 }
 
 .page-home .hero::before {
@@ -1542,15 +1544,23 @@ footer p {
     max-width: none;
 }
 
-/* Banner */
+/* Banner — constrained so it doesn’t dominate the page */
 .page-home .banner-section {
     background: var(--gcp-cream);
-    padding: 8px 0 0;
+    padding: 28px 24px 8px;
+    display: flex;
+    justify-content: center;
 }
 
 .page-home .banner-image {
-    border-radius: 0;
-    max-width: 100%;
+    border-radius: 12px;
+    max-width: min(720px, 100%);
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 8px 28px rgba(47, 111, 114, 0.1);
 }
 
 /* CTA */
@@ -1689,15 +1699,20 @@ footer p {
         gap: 12px;
     }
 
-    .page-home {
-        --gcp-header-h: 112px;
+    .page-home .hero {
+        margin-top: 0;
+        min-height: 360px;
+        height: 58vh;
+        align-items: flex-end;
     }
 
-    .page-home .hero {
-        margin-top: var(--gcp-header-h);
-        min-height: 380px;
-        height: 62vh;
-        align-items: flex-end;
+    .page-home .banner-section {
+        padding: 20px 16px 4px;
+    }
+
+    .page-home .banner-image {
+        max-height: 140px;
+        border-radius: 10px;
     }
 
     .page-home .hero-inner {
