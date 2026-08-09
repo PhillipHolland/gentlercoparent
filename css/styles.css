@@ -868,9 +868,12 @@ footer p {
 }
 
 .app-store-badge {
-    width: 168px;
+    width: 150px;
     height: auto;
+    max-width: 100%;
     display: block;
+    /* Official Apple SVG — preserve crisp edges */
+    image-rendering: auto;
 }
 
 .grab-handle {
@@ -998,7 +1001,7 @@ footer p {
 }
 
 .desktop-promo-badge .app-store-badge {
-    width: 140px;
+    width: 135px;
 }
 
 @media (max-width: 900px) {
