@@ -43,11 +43,34 @@
     } catch (e) { /* private mode */ }
   }
 
+  function trackAppStoreClick(el) {
+    try {
+      var label = (el.getAttribute('data-store-location')
+        || el.className
+        || 'app_store_link').toString().slice(0, 80);
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'app_store_click', {
+          event_category: 'conversion',
+          event_label: label,
+          transport_type: 'beacon'
+        });
+      }
+      if (typeof window.va === 'function') {
+        window.va('event', { name: 'app_store_click', data: { location: label } });
+      }
+    } catch (e) { /* ignore */ }
+  }
+
   function wireStoreLinks() {
     document.querySelectorAll('[data-app-store-link]').forEach(function (el) {
       el.setAttribute('href', APP_STORE_URL);
       el.setAttribute('rel', 'noopener noreferrer');
       if (!el.getAttribute('target')) el.setAttribute('target', '_blank');
+      if (el.dataset.storeTracked === '1') return;
+      el.dataset.storeTracked = '1';
+      el.addEventListener('click', function () {
+        trackAppStoreClick(el);
+      });
     });
   }
 

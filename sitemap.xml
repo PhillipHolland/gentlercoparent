@@ -7,25 +7,25 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.gentlercoparent.com/about.html</loc>
+        <loc>https://www.gentlercoparent.com/about</loc>
         <lastmod>2026-08-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.gentlercoparent.com/contact.html</loc>
+        <loc>https://www.gentlercoparent.com/contact</loc>
         <lastmod>2026-08-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.gentlercoparent.com/privacy-policy.html</loc>
+        <loc>https://www.gentlercoparent.com/privacy-policy</loc>
         <lastmod>2026-08-09</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
-        <loc>https://www.gentlercoparent.com/usage-agreement.html</loc>
+        <loc>https://www.gentlercoparent.com/usage-agreement</loc>
         <lastmod>2026-08-09</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
