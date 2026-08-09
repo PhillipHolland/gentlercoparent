@@ -109,7 +109,7 @@ header.site-header {
     height: 70vh;
     position: relative;
     padding: 0 20px;
-    margin-top: 143px; /* Default for desktop */
+    margin-top: 0; /* sticky header — no fixed offset */
     margin-bottom: 0; /* Ensure no gap below */
     overflow: visible;
     width: 100%;
@@ -409,7 +409,7 @@ footer p {
     padding: 100px 40px 60px;
     text-align: center;
     position: relative;
-    margin-top: 140px;
+    margin-top: 0; /* sticky header */
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -531,7 +531,7 @@ footer p {
     padding: 100px 40px 60px;
     text-align: center;
     position: relative;
-    margin-top: 140px;
+    margin-top: 0; /* sticky header */
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -684,7 +684,7 @@ footer p {
     background-color: #FAFAF8;
     padding: 60px 40px;
     text-align: left;
-    margin-top: 140px;
+    margin-top: 0; /* sticky header */
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -728,7 +728,7 @@ footer p {
     background-color: #FAFAF8;
     padding: 60px 40px;
     text-align: left;
-    margin-top: 140px;
+    margin-top: 0; /* sticky header */
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -1215,7 +1215,7 @@ footer p {
 
     .about-hero {
         padding: 80px 20px 40px;
-        margin-top: var(--header-height);
+        margin-top: 0; /* sticky header */
     }
 
     .about-hero h2 {
@@ -1245,7 +1245,7 @@ footer p {
 
     .contact-hero {
         padding: 80px 20px 40px;
-        margin-top: var(--header-height);
+        margin-top: 0; /* sticky header */
     }
 
     .contact-hero h2 {
@@ -1278,7 +1278,7 @@ footer p {
 
     .privacy-policy {
         padding: 80px 20px 40px;
-        margin-top: var(--header-height);
+        margin-top: 0; /* sticky header */
     }
 
     .privacy-policy h3 {
@@ -1295,7 +1295,7 @@ footer p {
 
     .usage-agreement {
         padding: 80px 20px 40px;
-        margin-top: var(--header-height);
+        margin-top: 0; /* sticky header */
     }
 
     .usage-agreement h3 {
