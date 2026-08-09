@@ -1076,12 +1076,17 @@ footer p {
         --header-height: 125px; /* Adjusted to close the remaining top gap */
     }
 
-    /* Adjust hero section for mobile */
+    /*
+      Legacy hero rules (absolute + translateX + nowrap) cut text off on
+      phones. Home uses .page-home .hero flex layout instead — do not
+      reintroduce absolute positioning here.
+    */
     .hero {
         position: relative;
-        margin-top: var(--header-height);
-        height: 307px;
-        background-size: 150% auto;
+        margin-top: 0;
+        height: auto;
+        min-height: 320px;
+        background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
         background-color: #F4F2EE;
@@ -1090,62 +1095,68 @@ footer p {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
+        box-sizing: border-box;
     }
 
     .hero-content {
-        position: absolute;
-        top: 13.1%;
-        left: 50%;
-        transform: translateX(-64%);
-        z-index: 2;
-        text-align: center;
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
         padding: 0;
+        text-align: center;
+        align-items: center;
     }
 
-    /* Ensure no line break on mobile, matching desktop */
     .mobile-break {
-        display: none; /* Hide the <br> on mobile */
+        display: none;
     }
 
     .hero h1 {
-        font-size: 28px; /* Smaller text */
-        white-space: nowrap; /* Keep "Harmonize Your Co-Parenting" on one line */
-        line-height: 1.1;
-        margin-bottom: 5px; /* Reduced gap between h1 and subheading */
-        max-width: 60%; /* Constrain width */
+        font-size: clamp(28px, 8vw, 40px);
+        white-space: normal;
+        line-height: 1.05;
+        margin-bottom: 8px;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     .hero .subheading {
-        font-size: 14px; /* Reduced to match first line length */
-        white-space: nowrap; /* Prevent line break, match h1 width */
-        line-height: 1.1;
-        max-width: 60%; /* Constrain width */
+        font-size: clamp(14px, 3.8vw, 17px);
+        white-space: normal;
+        line-height: 1.4;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     .hero .btn {
-        position: absolute;
-        padding: 15px 30px;
-        font-size: 18px;
-        max-width: 80%;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 2px solid #000000;
+        position: static;
+        transform: none;
+        left: auto;
+        bottom: auto;
+        padding: 14px 24px;
+        font-size: 16px;
+        max-width: 100%;
+        border: none;
     }
 
-    /* Match the Download Now button on the About page to the home page on mobile */
     .download-btn {
         padding: 15px 30px;
         font-size: 18px;
-        max-width: 80%;
-        margin: 30px auto 0; /* Maintain the increased padding above on mobile */
+        max-width: 90%;
+        margin: 30px auto 0;
     }
 
     .intro {
         position: relative;
         margin-top: 0;
         background-color: #F4F2EE;
-        padding: 30px 40px 20px 40px; /* Reduced bottom padding by 33% (from 30px to 20px) */
+        padding: 30px 20px 20px;
     }
 
     .intro h2 {
@@ -1429,6 +1440,8 @@ footer p {
     padding: 0;
     background-position: center 22%;
     background-size: cover;
+    overflow-x: clip;
+    box-sizing: border-box;
 }
 
 .page-home .hero::before {
@@ -1446,48 +1459,67 @@ footer p {
     width: 100%;
     max-width: var(--gcp-max);
     padding: 48px 24px 40px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .page-home .hero-content {
     position: static;
     top: auto;
-    max-width: 560px;
+    left: auto;
+    transform: none;
+    max-width: min(560px, 100%);
     align-items: flex-start;
     text-align: left;
     padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 
 .page-home .hero-eyebrow {
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #D8EBE7;
     margin: 0 0 10px;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 .page-home .hero h1 {
-    font-size: clamp(40px, 7vw, 64px);
+    font-size: clamp(36px, 7vw, 64px);
     letter-spacing: 0.02em;
     line-height: 0.98;
     margin-bottom: 12px;
     opacity: 1;
     text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: manual;
 }
 
 .page-home .hero .subheading {
     font-family: 'Raleway', sans-serif;
-    font-size: clamp(16px, 2.2vw, 19px);
+    font-size: clamp(15px, 2.2vw, 19px);
     font-weight: 500;
     text-transform: none;
     letter-spacing: 0;
     line-height: 1.45;
     margin-bottom: 22px;
-    max-width: 28em;
+    max-width: min(28em, 100%);
+    width: 100%;
     opacity: 0.95;
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 .page-home .hero-actions {
@@ -1495,17 +1527,25 @@ footer p {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .page-home .hero-actions-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-start;
     gap: 12px 14px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .page-home .hero .btn,
-.page-home .hero > .app-store-cta {
+.page-home .hero > .app-store-cta,
+.page-home .hero .app-store-cta {
     position: static;
     transform: none;
     left: auto;
@@ -1523,6 +1563,9 @@ footer p {
     box-shadow: 0 6px 20px rgba(42, 155, 143, 0.4);
     text-decoration: none;
     border: none;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .page-home .btn-hero:hover {
@@ -1538,10 +1581,20 @@ footer p {
     font-size: 13px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.88);
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.page-home .hero-badge {
+    flex-shrink: 0;
 }
 
 .page-home .hero-badge .app-store-badge {
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    width: min(150px, 46vw);
+    height: auto;
 }
 
 /* Shared section width */
@@ -1938,9 +1991,12 @@ footer p {
 
     .page-home .hero {
         margin-top: 0;
-        min-height: 360px;
-        height: 58vh;
+        min-height: min(420px, 72vh);
+        height: auto;
+        max-height: none;
         align-items: flex-end;
+        padding: 0;
+        background-position: center 18%;
     }
 
     .page-home .banner-section {
@@ -1953,12 +2009,47 @@ footer p {
     }
 
     .page-home .hero-inner {
-        padding: 28px 20px 32px;
+        padding: 32px 16px 28px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .page-home .hero-content {
         align-items: center;
         text-align: center;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        transform: none;
+        left: auto;
+    }
+
+    .page-home .hero-eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        padding: 0 4px;
+    }
+
+    .page-home .hero h1 {
+        font-size: clamp(30px, 9vw, 44px);
+        line-height: 1.02;
+        letter-spacing: 0.01em;
+        max-width: 100%;
+        white-space: normal;
+        padding: 0 2px;
+    }
+
+    /* Allow natural wrap: "Harmonize your" / "co-parenting" */
+    .page-home .hero h1 br {
+        display: block;
+    }
+
+    .page-home .hero .subheading {
+        font-size: clamp(14px, 3.6vw, 17px);
+        margin-bottom: 18px;
+        max-width: 22em;
+        padding: 0 4px;
+        white-space: normal;
     }
 
     .page-home .hero-actions {
@@ -1968,13 +2059,30 @@ footer p {
 
     .page-home .hero-actions-row {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
 
-    .page-home .hero h1 br {
-        display: none;
+    .page-home .btn-hero {
+        width: min(100%, 280px);
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    .page-home .hero-badge .app-store-badge {
+        width: 150px;
+        max-width: 70vw;
+    }
+
+    .page-home .hero-trial {
+        font-size: 12px;
+        padding: 0 8px;
+        text-align: center;
     }
 }
 
+/* Narrow phones (portrait) */
 @media (max-width: 480px) {
     .header-nav a:not(.nav-cta) {
         font-size: 13px;
@@ -1983,6 +2091,67 @@ footer p {
     .header-nav .nav-cta {
         padding: 8px 14px;
         font-size: 13px;
+    }
+
+    .page-home .hero {
+        min-height: min(400px, 70vh);
+    }
+
+    .page-home .hero-inner {
+        padding: 28px 14px 24px;
+    }
+
+    .page-home .hero h1 {
+        font-size: clamp(28px, 8.5vw, 36px);
+    }
+
+    .page-home .hero-eyebrow {
+        font-size: 10.5px;
+        letter-spacing: 0.05em;
+    }
+
+    .page-home .hero .subheading {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+/* Explicit portrait safety (overrides any leftover absolute/nowrap) */
+@media (max-width: 768px) and (orientation: portrait) {
+    .page-home .hero {
+        margin-top: 0 !important;
+        height: auto !important;
+        min-height: min(420px, 72vh);
+        display: flex !important;
+        align-items: flex-end !important;
+        overflow-x: clip;
+    }
+
+    .page-home .hero-content {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .page-home .hero h1,
+    .page-home .hero .subheading,
+    .page-home .hero-eyebrow,
+    .page-home .hero-trial {
+        white-space: normal !important;
+        max-width: 100% !important;
+        overflow-wrap: anywhere;
+    }
+
+    .page-home .hero .btn,
+    .page-home .btn-hero {
+        position: static !important;
+        left: auto !important;
+        bottom: auto !important;
+        transform: none !important;
     }
 }
 
