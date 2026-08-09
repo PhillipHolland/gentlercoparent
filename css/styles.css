@@ -713,157 +713,179 @@ footer p {
     }
 }
 
-/* App Bottom Sheet Overlay */
+/* App Bottom Sheet — App Store promo (iOS only, JS-controlled) */
 .app-bottom-sheet-overlay {
-    display: none; /* Hidden by default, shown via JavaScript */
+    display: block;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 999; /* Below the bottom sheet */
+    inset: 0;
+    background: rgba(28, 43, 44, 0.45);
+    z-index: 999;
     opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
 }
 
-/* App Bottom Sheet */
+.app-bottom-sheet-overlay.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.app-bottom-sheet[hidden],
+.app-bottom-sheet-overlay[hidden] {
+    display: none !important;
+}
+
 .app-bottom-sheet {
-    display: none; /* Hidden by default, shown via JavaScript */
+    display: block;
     position: fixed;
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
-    background-color: #BADFE7; /* Site's blue color */
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    max-width: 520px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #E8F4F6 0%, #BADFE7 55%, #A8D4DE 100%);
+    box-shadow: 0 -8px 32px rgba(47, 111, 114, 0.2);
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
     z-index: 1000;
-    padding: 25px; /* Increased padding for iOS-like spacing */
+    padding: 12px 20px calc(20px + env(safe-area-inset-bottom, 0px));
     box-sizing: border-box;
-    transform: translateY(100%); /* Start off-screen */
-    will-change: transform; /* Optimize for Mobile Safari */
+    transform: translateY(110%);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
 }
 
 .app-bottom-sheet.slide-up {
-    transform: translateY(0); /* Slide up to final position */
-    transition: transform 0.7s ease-out; /* Slide-up animation */
+    transform: translateY(0);
 }
 
 .app-bottom-sheet.slide-down {
-    transform: translateY(100%); /* Slide down to dismiss */
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.6, 1); /* Slower, smoother slide-down */
+    transform: translateY(110%);
 }
 
 .app-bottom-sheet[data-dragging="true"] {
-    transition: none; /* Disable transition during drag */
+    transition: none;
 }
 
 .app-bottom-sheet-content {
     text-align: center;
 }
 
-.button-container {
+.app-sheet-brand {
     display: flex;
-    justify-content: center;
-    gap: 10px; /* Space between buttons */
-    margin-top: 15px;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    margin: 8px 0 12px;
 }
 
-.grab-handle {
-    width: 40px;
-    height: 4px;
-    background-color: #999; /* Darker gray for contrast on blue */
-    border-radius: 2px;
-    margin: 0 auto 10px;
-    cursor: grab; /* Indicate draggability on desktop */
-    touch-action: none; /* Prevent default touch behaviors like scrolling */
+.app-bottom-sheet-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    object-fit: contain;
+    padding: 6px;
 }
 
-.app-bottom-sheet[data-dragging="true"] .grab-handle {
-    cursor: grabbing; /* Change cursor during drag */
+.app-sheet-brand-text {
+    flex: 1;
+    min-width: 0;
 }
 
-.app-bottom-sheet-logo {
-    max-width: 80%; /* Fit within the bottom sheet */
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
+.app-sheet-eyebrow {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #2F6F72;
+    opacity: 0.75;
+    margin: 0 0 2px;
 }
 
 .app-bottom-sheet h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 400;
-    color: #2a5b6d;
-    margin-bottom: 10px;
+    color: #2F6F72;
+    margin: 0;
     text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
-.app-bottom-sheet p {
+.app-bottom-sheet #app-sheet-desc {
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.45;
+    color: #1C2B2C;
+    margin: 0 0 16px;
+    text-align: left;
 }
 
-.app-bottom-sheet .app-download-btn {
-    background-color: #000000; /* Black background */
-    color: #F6F6F2; /* Light-colored lettering */
-    padding: 12px 30px; /* Reduced size */
-    border-radius: 30px;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px; /* Reduced font size */
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: 2px solid #BADFE7;
+.app-bottom-sheet #app-sheet-desc strong {
+    color: #2F6F72;
 }
 
-.app-bottom-sheet .app-download-btn:hover {
-    background-color: #a3c7d6; /* Revert to original background on hover */
-    color: #388083; /* Revert to original text color on hover */
+.button-container.app-sheet-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.app-store-badge-link {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 8px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.app-store-badge-link:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+.app-store-badge {
+    width: 168px;
+    height: auto;
+    display: block;
+}
+
+.grab-handle {
+    width: 40px;
+    height: 5px;
+    background-color: rgba(47, 111, 114, 0.28);
+    border-radius: 3px;
+    margin: 4px auto 10px;
+    touch-action: none;
 }
 
 .app-bottom-sheet .dismiss-btn {
-    background-color: #C2EDCE; /* Light teal background */
-    color: #388083; /* Darker teal text */
-    padding: 12px 30px; /* Same size as FREE TRIAL */
-    border-radius: 30px;
+    background: transparent;
+    color: #2F6F72;
+    padding: 10px 20px;
+    border-radius: 24px;
     font-family: 'Raleway', sans-serif;
-    font-size: 18px; /* Same font size */
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    border: 2px solid #A3C7D6; /* Slightly darker border */
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
     cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .app-bottom-sheet .dismiss-btn:hover {
-    background-color: #B2DDCE; /* Slightly darker on hover */
+    color: #1C2B2C;
 }
 
-/* Show the bottom sheet and overlay on mobile in portrait orientation */
+/* Mobile layout tweaks only — sheet visibility is JS-driven (iOS + localStorage) */
 @media (max-width: 768px) and (orientation: portrait) {
     :root {
         --header-height: 125px; /* Adjusted to close the remaining top gap */
-    }
-
-    .app-bottom-sheet {
-        display: block; /* Shown by default on mobile in portrait, controlled by JavaScript */
-        animation: slideUp 0.3s ease-in-out forwards; /* Fallback CSS animation */
-    }
-
-    .app-bottom-sheet-overlay {
-        display: block;
-        opacity: 1; /* Fade in when shown */
-    }
-
-    @keyframes slideUp {
-        from {
-            transform: translateY(100%);
-        }
-        to {
-            transform: translateY(0);
-        }
     }
 
     /* Adjust hero section for mobile */

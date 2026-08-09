@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-itunes-app" content="app-id=6742896499, app-argument=https://gentlercoparent.vercel.app">
-    <meta name="description" content="Discover Gentler Coparent, the best co-parenting app to improve communication and manage schedules. Download now for a free trial!">
+    <meta name="apple-itunes-app" content="app-id=6742896499, app-argument=https://www.gentlercoparent.com">
+    <meta name="description" content="Gentler Coparent: calmer co-parenting communication, AI message help, and schedule-aware guidance. Free trial on the App Store—7 days or 20 messages, whichever comes first.">
     <title>Co-Parenting App to Improve Communication | Gentler Coparent</title>
+    <link rel="canonical" href="https://www.gentlercoparent.com/">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/logos/apple-touch-icon.png">
@@ -38,7 +39,11 @@
             <h1>Harmonize Your Co-Parenting</h1>
             <p class="subheading">Prioritize your children, transform your communication.</p>
         </div>
-        <a href="https://apps.apple.com/app/id6742896499" class="btn">Download Now</a>
+        <a href="https://apps.apple.com/us/app/gentler-coparent/id6742896499"
+           class="btn app-store-cta"
+           data-app-store-link
+           target="_blank"
+           rel="noopener noreferrer">Download on the App Store</a>
     </section>
 
     <section class="intro">
@@ -62,7 +67,11 @@
     <section class="cta">
         <h2>Ready to Simplify CoParenting?</h2>
         <p class="subheading">Download Gentler Coparent today and start building a better future for your family.</p>
-        <a href="https://apps.apple.com/app/id6742896499" class="btn">Get Started Now</a>
+        <a href="https://apps.apple.com/us/app/gentler-coparent/id6742896499"
+           class="btn app-store-cta"
+           data-app-store-link
+           target="_blank"
+           rel="noopener noreferrer">Get it on the App Store</a>
     </section>
 
     <section class="final-message">
@@ -89,148 +98,51 @@
                 <img src="images/icons/x-twitter.svg" alt="X">
             </a>
         </div>
-        <p>© 2025 Gentler Coparent. All rights reserved.</p>
+        <p>© 2026 Gentler Coparent. All rights reserved.</p>
     </footer>
 
-    <!-- Bottom Sheet for App Download -->
-    <div id="app-bottom-sheet-overlay" class="app-bottom-sheet-overlay"></div>
-    <div id="app-bottom-sheet" class="app-bottom-sheet" data-dragging="false">
+    <!-- iOS App Store promo sheet -->
+    <div id="app-bottom-sheet-overlay" class="app-bottom-sheet-overlay" hidden></div>
+    <div id="app-bottom-sheet"
+         class="app-bottom-sheet"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="app-sheet-title"
+         aria-describedby="app-sheet-desc"
+         aria-hidden="true"
+         hidden
+         data-dragging="false">
         <div class="app-bottom-sheet-content">
-            <div class="grab-handle" aria-label="Drag to dismiss"></div>
-            <img src="images/logos/main-logo.png" alt="Gentler Coparent Logo" class="app-bottom-sheet-logo">
-            <h3>Get the Gentler Coparent App</h3>
-            <p>Transform your co-parenting experience today.</p>
-            <div class="button-container">
-                <a href="https://apps.apple.com/app/id6742896499" class="btn app-download-btn">Free Trial</a>
-                <button id="dismiss-bottom-sheet" class="btn dismiss-btn">Not Now</button>
+            <div class="grab-handle" role="presentation" aria-hidden="true"></div>
+            <div class="app-sheet-brand">
+                <img src="images/logos/logo-symbol.png" alt="" class="app-bottom-sheet-icon" width="56" height="56">
+                <div class="app-sheet-brand-text">
+                    <p class="app-sheet-eyebrow">Available on the App Store</p>
+                    <h3 id="app-sheet-title">Gentler Coparent</h3>
+                </div>
+            </div>
+            <p id="app-sheet-desc">
+                Calmer messages, clearer boundaries, child-first guidance.
+                Free trial: <strong>7 days or 20 messages</strong>, whichever comes first.
+            </p>
+            <div class="button-container app-sheet-actions">
+                <a href="https://apps.apple.com/us/app/gentler-coparent/id6742896499"
+                   class="app-store-cta app-store-badge-link"
+                   data-app-store-link
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <img src="images/icons/app-store-badge.svg"
+                         alt="Download on the App Store"
+                         class="app-store-badge"
+                         width="160"
+                         height="54">
+                </a>
+                <button type="button" id="dismiss-bottom-sheet" class="btn dismiss-btn">Not now</button>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript to Show/Hide Bottom Sheet and Handle Dragging -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const bottomSheet = document.getElementById('app-bottom-sheet');
-            const overlay = document.getElementById('app-bottom-sheet-overlay');
-            const dismissBtn = document.getElementById('dismiss-bottom-sheet');
-            const grabHandle = document.querySelector('.grab-handle');
-            const downloadBtn = document.querySelector('.app-download-btn');
-
-            if (!bottomSheet || !overlay || !dismissBtn || !grabHandle || !downloadBtn) {
-                console.error('Bottom sheet elements not found:', {
-                    bottomSheet: !!bottomSheet,
-                    overlay: !!overlay,
-                    dismissBtn: !!dismissBtn,
-                    grabHandle: !!grabHandle,
-                    downloadBtn: !!downloadBtn
-                });
-                return;
-            }
-
-            // Detect if the device is iOS or iPadOS
-            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-            console.log('Is iOS/iPadOS device:', isIOS);
-
-            if (isIOS) {
-                bottomSheet.style.display = 'block';
-                overlay.style.display = 'block';
-                bottomSheet.classList.add('slide-up');
-                document.body.classList.add('no-scroll');
-            } else {
-                bottomSheet.style.display = 'none';
-                overlay.style.display = 'none';
-                document.body.classList.remove('no-scroll');
-                return;
-            }
-
-            // Dismiss the sheet
-            function dismissBottomSheet() {
-                bottomSheet.classList.remove('slide-up');
-                bottomSheet.classList.add('slide-down');
-                overlay.style.opacity = '0';
-
-                const handler = (e) => {
-                    if (e.target === bottomSheet && e.propertyName === 'transform' && bottomSheet.classList.contains('slide-down')) {
-                        bottomSheet.style.display = 'none';
-                        overlay.style.display = 'none';
-                        document.body.classList.remove('no-scroll');
-                        bottomSheet.removeEventListener('transitionend', handler);
-                    }
-                };
-                bottomSheet.addEventListener('transitionend', handler);
-
-                // Fallback: If transitionend doesn't fire within 1 second, force dismissal
-                setTimeout(() => {
-                    if (bottomSheet.style.display === 'block') {
-                        bottomSheet.style.display = 'none';
-                        overlay.style.display = 'none';
-                        document.body.classList.remove('no-scroll');
-                        bottomSheet.removeEventListener('transitionend', handler);
-                    }
-                }, 1000);
-            }
-
-            // Document-wide click handler to dismiss the bottom sheet
-            document.addEventListener('click', (e) => {
-                if (e.target === downloadBtn || downloadBtn.contains(e.target) || e.target === dismissBtn || dismissBtn.contains(e.target)) {
-                    return;
-                }
-                if (bottomSheet.style.display === 'block') {
-                    dismissBottomSheet();
-                }
-            });
-
-            // Dedicated click handler for "Not now" button
-            dismissBtn.addEventListener('click', (e) => {
-                if (bottomSheet.style.display === 'block') {
-                    dismissBottomSheet();
-                }
-            });
-
-            // Touch events for mobile
-            let touchStartY = 0;
-            let touchCurrentY = 0;
-            let isDragging = false;
-
-            bottomSheet.addEventListener('touchstart', (e) => {
-                if (e.target === downloadBtn || e.target === dismissBtn) return;
-                e.preventDefault();
-                isDragging = true;
-                touchStartY = e.touches[0].clientY;
-                bottomSheet.setAttribute('data-dragging', 'true');
-                bottomSheet.style.transition = 'none';
-            }, { passive: false });
-
-            bottomSheet.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                touchCurrentY = e.touches[0].clientY;
-                const deltaY = touchCurrentY - touchStartY;
-                bottomSheet.style.transform = `translateY(${deltaY}px)`;
-                overlay.style.opacity = Math.max(0, 1 - (Math.abs(deltaY) / (window.innerHeight * 0.5)));
-            }, { passive: true });
-
-            bottomSheet.addEventListener('touchend', () => {
-                if (!isDragging) return;
-                isDragging = false;
-                bottomSheet.setAttribute('data-dragging', 'false');
-                const deltaY = touchCurrentY - touchStartY;
-
-                if (deltaY > window.innerHeight * 0.3) {
-                    bottomSheet.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.6, 1)';
-                    dismissBottomSheet();
-                } else {
-                    bottomSheet.style.transition = 'transform 0.7s ease-out';
-                    bottomSheet.style.transform = 'translateY(0)';
-                    overlay.style.opacity = '1';
-                }
-            });
-
-            // Prevent default scrolling during drag
-            bottomSheet.addEventListener('touchmove', (e) => {
-                if (isDragging) e.preventDefault();
-            }, { passive: false });
-        });
-    </script>
-    <script src="js/analytics.bundle.js"></script>
+    <script src="js/app-store-sheet.js" defer></script>
+    <script src="js/analytics.bundle.js" defer></script>
 </body>
 </html>
