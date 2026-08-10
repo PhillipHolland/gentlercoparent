@@ -191,6 +191,51 @@
       "source": "/ohio-co-parenting-messages.html",
       "destination": "/ohio-co-parenting-messages",
       "permanent": true
+    },
+    {
+      "source": "/new-jersey-co-parenting-messages.html",
+      "destination": "/new-jersey-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-school-enrollment-messages.html",
+      "destination": "/co-parenting-school-enrollment-messages",
+      "permanent": true
+    },
+    {
+      "source": "/colorado-co-parenting-messages.html",
+      "destination": "/colorado-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/michigan-co-parenting-messages.html",
+      "destination": "/michigan-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/washington-co-parenting-messages.html",
+      "destination": "/washington-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-relocation-notice-messages.html",
+      "destination": "/co-parenting-relocation-notice-messages",
+      "permanent": true
+    },
+    {
+      "source": "/massachusetts-co-parenting-messages.html",
+      "destination": "/massachusetts-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/virginia-co-parenting-messages.html",
+      "destination": "/virginia-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/states.html",
+      "destination": "/states",
+      "permanent": true
     }
   ],
   "headers": [
