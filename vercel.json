@@ -56,6 +56,16 @@
       "source": "/features/decree.html",
       "destination": "/features/decree",
       "permanent": true
+    },
+    {
+      "source": "/co-parenting-expense-messages.html",
+      "destination": "/co-parenting-expense-messages",
+      "permanent": true
+    },
+    {
+      "source": "/biff-co-parenting-messages.html",
+      "destination": "/biff-co-parenting-messages",
+      "permanent": true
     }
   ],
   "headers": [

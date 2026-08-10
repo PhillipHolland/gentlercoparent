@@ -25,7 +25,9 @@ For each URL below: **URL Inspection** (top bar) → paste URL → **Request ind
 | 3 | `https://www.gentlercoparent.com/co-parenting-text-message-templates` |
 | 4 | `https://www.gentlercoparent.com/features` |
 | 5 | `https://www.gentlercoparent.com/features/message-shield` |
-| 6 | `https://www.gentlercoparent.com/about` |
+| 6 | `https://www.gentlercoparent.com/biff-co-parenting-messages` |
+| 7 | `https://www.gentlercoparent.com/co-parenting-expense-messages` |
+| 8 | `https://www.gentlercoparent.com/about` |
 
 Indexing is a **request**, not instant. Can take hours–days.
 
@@ -49,6 +51,8 @@ Indexing is a **request**, not instant. Can take hours–days.
 | `/features/message-shield` | Message Shield |
 | `/features/tone-guardian` | Tone Guardian |
 | `/features/decree` | Decree-aware answers |
+| `/biff-co-parenting-messages` | BIFF guide |
+| `/co-parenting-expense-messages` | Expense texts |
 | `/about` | Founders |
 | `/contact` | Form |
 
