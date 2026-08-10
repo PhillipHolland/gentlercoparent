@@ -50,6 +50,9 @@ Indexing is a **request**, not instant. Can take hours–days.
 | `/features` | Product hub |
 | `/guides` | Guides hub |
 | `/texas-co-parenting-messages` | Texas SEO hub |
+| `/california-co-parenting-messages` | California hub |
+| `/florida-co-parenting-messages` | Florida hub |
+| `/new-york-co-parenting-messages` | New York hub |
 | `/features/message-shield` | Message Shield |
 | `/features/tone-guardian` | Tone Guardian |
 | `/features/decree` | Decree-aware answers |

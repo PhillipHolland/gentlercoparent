@@ -126,6 +126,31 @@
       "source": "/co-parenting-right-of-first-refusal-messages.html",
       "destination": "/co-parenting-right-of-first-refusal-messages",
       "permanent": true
+    },
+    {
+      "source": "/california-co-parenting-messages.html",
+      "destination": "/california-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/florida-co-parenting-messages.html",
+      "destination": "/florida-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/new-york-co-parenting-messages.html",
+      "destination": "/new-york-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-makeup-time-messages.html",
+      "destination": "/co-parenting-makeup-time-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-extracurricular-messages.html",
+      "destination": "/co-parenting-extracurricular-messages",
+      "permanent": true
     }
   ],
   "headers": [
