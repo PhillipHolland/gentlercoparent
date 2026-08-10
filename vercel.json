@@ -36,6 +36,26 @@
       "source": "/co-parenting-text-message-templates.html",
       "destination": "/co-parenting-text-message-templates",
       "permanent": true
+    },
+    {
+      "source": "/features.html",
+      "destination": "/features",
+      "permanent": true
+    },
+    {
+      "source": "/features/message-shield.html",
+      "destination": "/features/message-shield",
+      "permanent": true
+    },
+    {
+      "source": "/features/tone-guardian.html",
+      "destination": "/features/tone-guardian",
+      "permanent": true
+    },
+    {
+      "source": "/features/decree.html",
+      "destination": "/features/decree",
+      "permanent": true
     }
   ],
   "headers": [

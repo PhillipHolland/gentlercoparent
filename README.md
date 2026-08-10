@@ -23,7 +23,9 @@ For each URL below: **URL Inspection** (top bar) → paste URL → **Request ind
 | 1 | `https://www.gentlercoparent.com/` |
 | 2 | `https://www.gentlercoparent.com/high-conflict-co-parenting-messages` |
 | 3 | `https://www.gentlercoparent.com/co-parenting-text-message-templates` |
-| 4 | `https://www.gentlercoparent.com/about` |
+| 4 | `https://www.gentlercoparent.com/features` |
+| 5 | `https://www.gentlercoparent.com/features/message-shield` |
+| 6 | `https://www.gentlercoparent.com/about` |
 
 Indexing is a **request**, not instant. Can take hours–days.
 
@@ -43,6 +45,10 @@ Indexing is a **request**, not instant. Can take hours–days.
 | `/` | Homepage |
 | `/high-conflict-co-parenting-messages` | SEO guide |
 | `/co-parenting-text-message-templates` | SEO templates |
+| `/features` | Product hub |
+| `/features/message-shield` | Message Shield |
+| `/features/tone-guardian` | Tone Guardian |
+| `/features/decree` | Decree-aware answers |
 | `/about` | Founders |
 | `/contact` | Form |
 
