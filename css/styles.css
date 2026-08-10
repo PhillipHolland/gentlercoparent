@@ -3489,3 +3489,85 @@ html {
 @media (max-width: 520px) {
     .page-home .guides-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
 }
+
+/* ========== 404 not found ========== */
+.page-404 .not-found-body {
+    background: #FAFAF8;
+    padding: 40px 24px 72px;
+}
+
+.page-404 .not-found-app-cta {
+    margin-top: 0;
+}
+
+.page-404 .not-found-kicker {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9FD5CF;
+    margin: 0 0 8px;
+}
+
+.page-404 .not-found-heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 700;
+    color: #0F3D3A;
+    margin: 36px 0 16px;
+    text-align: center;
+}
+
+.page-404 .not-found-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.page-404 .not-found-links a {
+    display: block;
+    height: 100%;
+    background: #fff;
+    border: 1px solid rgba(15, 61, 58, 0.1);
+    border-radius: 14px;
+    padding: 16px 16px 14px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 6px 20px rgba(15, 61, 58, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.page-404 .not-found-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(15, 61, 58, 0.1);
+}
+
+.page-404 .not-found-links strong {
+    display: block;
+    color: #0F3D3A;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.page-404 .not-found-links span {
+    display: block;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #5C6664;
+}
+
+.page-404 .not-found-home {
+    text-align: center;
+    margin: 28px 0 0;
+}
+
+@media (max-width: 600px) {
+    .page-404 .not-found-links {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
