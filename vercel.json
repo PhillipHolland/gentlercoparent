@@ -106,6 +106,26 @@
       "source": "/co-parenting-boundaries-text-examples.html",
       "destination": "/co-parenting-boundaries-text-examples",
       "permanent": true
+    },
+    {
+      "source": "/texas-co-parenting-messages.html",
+      "destination": "/texas-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-summer-schedule-messages.html",
+      "destination": "/co-parenting-summer-schedule-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-stepparent-messages.html",
+      "destination": "/co-parenting-stepparent-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-right-of-first-refusal-messages.html",
+      "destination": "/co-parenting-right-of-first-refusal-messages",
+      "permanent": true
     }
   ],
   "headers": [

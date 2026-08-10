@@ -34,7 +34,7 @@
         <loc>https://www.gentlercoparent.com/guides</loc>
         <lastmod>2026-08-10</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.95</priority>
     </url>
     <url>
         <loc>https://www.gentlercoparent.com/high-conflict-co-parenting-messages</loc>
@@ -73,6 +73,12 @@
         <priority>0.85</priority>
     </url>
     <url>
+        <loc>https://www.gentlercoparent.com/co-parenting-summer-schedule-messages</loc>
+        <lastmod>2026-08-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
         <loc>https://www.gentlercoparent.com/co-parenting-medical-update-messages</loc>
         <lastmod>2026-08-10</lastmod>
         <changefreq>monthly</changefreq>
@@ -83,6 +89,24 @@
         <lastmod>2026-08-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.gentlercoparent.com/co-parenting-stepparent-messages</loc>
+        <lastmod>2026-08-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.gentlercoparent.com/co-parenting-right-of-first-refusal-messages</loc>
+        <lastmod>2026-08-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.gentlercoparent.com/texas-co-parenting-messages</loc>
+        <lastmod>2026-08-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://www.gentlercoparent.com/parallel-parenting-communication</loc>

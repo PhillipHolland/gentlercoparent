@@ -49,6 +49,7 @@ Indexing is a **request**, not instant. Can take hours–days.
 | `/co-parenting-text-message-templates` | SEO templates |
 | `/features` | Product hub |
 | `/guides` | Guides hub |
+| `/texas-co-parenting-messages` | Texas SEO hub |
 | `/features/message-shield` | Message Shield |
 | `/features/tone-guardian` | Tone Guardian |
 | `/features/decree` | Decree-aware answers |
