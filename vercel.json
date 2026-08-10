@@ -81,6 +81,31 @@
       "source": "/co-parenting-app-vs-message-coach.html",
       "destination": "/co-parenting-app-vs-message-coach",
       "permanent": true
+    },
+    {
+      "source": "/guides.html",
+      "destination": "/guides",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-school-pickup-messages.html",
+      "destination": "/co-parenting-school-pickup-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-holiday-schedule-messages.html",
+      "destination": "/co-parenting-holiday-schedule-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-medical-update-messages.html",
+      "destination": "/co-parenting-medical-update-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-boundaries-text-examples.html",
+      "destination": "/co-parenting-boundaries-text-examples",
+      "permanent": true
     }
   ],
   "headers": [
