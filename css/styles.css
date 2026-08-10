@@ -1642,6 +1642,10 @@ header.site-header {
     text-align: left;
 }
 
+.page-home .feature-row.tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .page-home .feature-card {
     background: #fff;
     border: 1px solid rgba(15, 61, 58, 0.08);
@@ -1654,6 +1658,19 @@ header.site-header {
 .page-home .feature-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 32px rgba(15, 61, 58, 0.1);
+}
+
+.page-home .feature-kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gcp-teal);
+    background: var(--gcp-mint);
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
 }
 
 .page-home .feature-icon {
@@ -1683,6 +1700,37 @@ header.site-header {
     color: var(--gcp-muted);
     margin: 0;
     max-width: none;
+}
+
+/* Marketing screenshot strip */
+.page-home .shot-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px 0 48px;
+    align-items: start;
+}
+
+.page-home .shot-card {
+    margin: 0;
+    text-align: center;
+}
+
+.page-home .shot-card img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(15, 61, 58, 0.14);
+    border: 1px solid rgba(15, 61, 58, 0.08);
+    background: #fff;
+}
+
+.page-home .shot-card figcaption {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gcp-teal);
 }
 
 /* Differentiator strip */
@@ -1965,12 +2013,29 @@ header.site-header {
     box-shadow: 0 6px 18px rgba(15, 61, 58, 0.28);
 }
 
+@media (max-width: 900px) {
+    .page-home .feature-row.tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-home .shot-showcase {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 800px) {
     .page-home .feature-row {
         grid-template-columns: 1fr;
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .page-home .feature-row.tools-grid {
+        grid-template-columns: 1fr;
     }
 
     .page-home .diff-grid {
