@@ -151,6 +151,46 @@
       "source": "/co-parenting-extracurricular-messages.html",
       "destination": "/co-parenting-extracurricular-messages",
       "permanent": true
+    },
+    {
+      "source": "/arizona-co-parenting-messages.html",
+      "destination": "/arizona-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/pennsylvania-co-parenting-messages.html",
+      "destination": "/pennsylvania-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/illinois-co-parenting-messages.html",
+      "destination": "/illinois-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/north-carolina-co-parenting-messages.html",
+      "destination": "/north-carolina-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-virtual-visitation-messages.html",
+      "destination": "/co-parenting-virtual-visitation-messages",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-late-for-exchange-messages.html",
+      "destination": "/co-parenting-late-for-exchange-messages",
+      "permanent": true
+    },
+    {
+      "source": "/georgia-co-parenting-messages.html",
+      "destination": "/georgia-co-parenting-messages",
+      "permanent": true
+    },
+    {
+      "source": "/ohio-co-parenting-messages.html",
+      "destination": "/ohio-co-parenting-messages",
+      "permanent": true
     }
   ],
   "headers": [
