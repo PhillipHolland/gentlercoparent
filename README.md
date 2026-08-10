@@ -53,6 +53,9 @@ Indexing is a **request**, not instant. Can take hours–days.
 | `/features/decree` | Decree-aware answers |
 | `/biff-co-parenting-messages` | BIFF guide |
 | `/co-parenting-expense-messages` | Expense texts |
+| `/parallel-parenting-communication` | Parallel parenting |
+| `/before-you-send-co-parenting-text` | Before you send checklist |
+| `/co-parenting-app-vs-message-coach` | Portal vs coach |
 | `/about` | Founders |
 | `/contact` | Form |
 

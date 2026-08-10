@@ -66,6 +66,21 @@
       "source": "/biff-co-parenting-messages.html",
       "destination": "/biff-co-parenting-messages",
       "permanent": true
+    },
+    {
+      "source": "/parallel-parenting-communication.html",
+      "destination": "/parallel-parenting-communication",
+      "permanent": true
+    },
+    {
+      "source": "/before-you-send-co-parenting-text.html",
+      "destination": "/before-you-send-co-parenting-text",
+      "permanent": true
+    },
+    {
+      "source": "/co-parenting-app-vs-message-coach.html",
+      "destination": "/co-parenting-app-vs-message-coach",
+      "permanent": true
     }
   ],
   "headers": [
