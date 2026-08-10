@@ -1694,12 +1694,29 @@ header.site-header {
     text-transform: none;
 }
 
+.page-home .feature-card h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page-home .feature-card h3 a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 .page-home .feature-card p {
     font-size: 14px;
     line-height: 1.5;
     color: var(--gcp-muted);
-    margin: 0;
+    margin: 0 0 10px;
     max-width: none;
+}
+
+.page-home .feature-card .preview-link {
+    display: inline-block;
+    margin-top: 2px;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 /* Marketing screenshot strip */
